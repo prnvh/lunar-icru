@@ -1,0 +1,52 @@
+# Decision and activity log
+
+**Purpose:** Maintain an auditable record of consequential research actions, decisions, results, and concise rationales. This log records outcomes and evidence; it does not expose private chain-of-thought or verbatim hidden reasoning.
+
+## 2026-09-29 — Initial repository review and research
+
+### Repository review
+
+- Inspected the complete top-level repository and Git state. The repository is on `main`, one initial commit exists, and the working tree initially contained untracked `paper.md`, `rules.md`, and an empty `log.md`; the tracked `README.md` was a one-line title.
+- Read the research specification and project rules. The fixed subject is a reproducible intercomparison of lunar-propellant techno-economic models; the repo did not yet contain model code, source files, benchmark data, analysis, or results.
+- **Decision:** Preserve `paper.md` and `rules.md`; create a separate evidence review and make `README.md` a navigation/status page. **Rationale:** those untracked files contain substantive user-authored project work, while the literature review is an evidence artifact that can evolve without rewriting the agreed study design.
+
+### Delegated research
+
+- Started three Astra research workstreams: (1) Jones, Kornuta, and Pelech source/model evidence; (2) Charania–DePasquale, Bennett, and Sowers source/model evidence; (3) methods and current lunar technology/transport evidence.
+- **Decision:** Ask agents for primary sources, reconstruction details, ambiguities, and inclusion assessments, without repository edits. **Rationale:** parallel source review broadens coverage while keeping evidence and responsibility for repository changes with this task.
+- Consolidated their findings in [the initial literature review](research/initial-literature-review.md). Agent observations in that review are treated as preliminary source research and still need page/figure-level checks during actual implementation.
+
+### Research and model-selection decisions
+
+- **Decision:** Treat a specific, versioned model and decision case—not an author name—as the unit of candidate selection. **Rationale:** Jones has separate cislunar, lunar-surface, and Moon/Mars cases; Bennett's papers reuse Jones, Kornuta, and Charania; Sowers has a thermal-mining report and a later journal case.
+- **Decision:** Preserve native metrics and require a metric-compatibility gate before a cross-model comparison. **Rationale:** company NPV/IRR, campaign cost per delivered kilogram, required sale price, and opportunity-cost ratios answer different questions. Converting all of them to one `$ / kg` measure could alter their meaning.
+- **Decision:** Treat Bennett's Jones re-analysis as a model descendant/architecture variant, not an independent “vote”; keep the GTO service and parity-pricing papers as related extensions. **Rationale:** their own publications describe reconstruction or reuse of earlier model inputs and economics.
+- **Decision:** Treat Metzger (2023) as a significant analytical critique and comparator, not as a neutral adjudicator. **Rationale:** it makes explicit model-form claims about earlier studies and also advances a general result about lunar-propellant competitiveness; independently verify its mapping and equations.
+- **Decision:** Keep Blair et al. (2002) on the candidate list pending a search for its announced Excel toolkit. **Rationale:** it is an early private-investment model with documented demand, architecture, and finance, but full report access does not demonstrate that the original workbook is retrievable.
+- **Decision:** Make Pelech (2019) conditional for a complete replication until the full paper/model is available. **Rationale:** the primary abstract and introduction are accessible, but this research pass did not find an open full text or model artifact.
+- **Decision:** Record source-level inconsistencies rather than repair them silently. **Rationale:** Charania's WACC is 21.7% in its tables/plots versus 22.7% in prose; Sowers's NIAC report has scenario-label and revenue/scaling inconsistencies in a printed table. A reconstruction must keep original values and identify alternatives.
+- **Decision:** Version-lock Jones papers separately. **Rationale:** the 2019 cislunar study, 2019 lunar-surface study, and 2020 Moon/Mars extension use different campaign questions and source detail; the 2020 cost-estimating relationships should not be backfilled into a 2019 replication.
+- **Evidence anchors from primary-source review:** Charania reports FY2006 required prices of $26,845/kg (surface), $133,947/kg (LLO), and $7,053,265/kg (GEO); Kornuta's report supports a close DCF reconstruction (30,000 kg mine, $4.05B initial investment, 10-year horizon, 10% discount, source-reported case NPVs); Jones 2019 reports six architecture-case costs but relies on cost-model artifacts not located in this pass; Jones 2020 publishes plant-sizing and cost-estimating relationships; Sowers's NIAC report has source-table inconsistencies verified against its page image. These are review anchors, not reproduced model outputs.
+- **Decision:** Keep Pelech conditional for a replication claim. **Rationale:** no open full text or executable model was found in this pass, so the published opportunity-cost calculation cannot yet be independently checked beyond accessible abstract/introduction evidence.
+
+### Modern-scenario evidence decisions
+
+- **Decision:** Frame modern technology as a parameter space of evidence classes rather than one vendor forecast. **Rationale:** NASA demonstrator tests and engineering studies support specific subsystem anchors, while mine-scale resource grade, plant life, service costs, and orbital propellant transfer remain prospective or uncertain.
+- Checked NASA and USGS source material on lunar water and ISRU demonstrations and the July 2026 GAO major-project review. The sources distinguish remote evidence for water from mine-ready deposit characterization; a 2025 NASA vacuum test demonstrated oxygen extraction from simulant rather than an integrated production plant; GAO reported that a critical orbital storage/transfer technology in SpaceX's lunar plan had not yet been demonstrated as of May 2026.
+- **Decision:** Do not derive probability distributions from scenario ranges unless evidence or explicit expert elicitation supports them. **Rationale:** the cited engineering sweep values and design goals are not probability samples.
+
+### Repository changes made
+
+- Replaced the one-line `README.md` with project navigation and an accurate status statement.
+- Added `research/initial-literature-review.md` with the literature map, source links, preliminary reconstruction notes, comparability rules, current-evidence boundary, and next actions.
+- Added this log. `paper.md` and `rules.md` remain unchanged.
+- No model code or scientific results were added, and no tests were run because this documentation-only research task did not request testing.
+
+### Next decisions requiring evidence
+
+- Choose four to six versioned model cases after inspecting full source packets and companion artifacts.
+- Decide whether Blair (2002) is reconstructable enough for the main set.
+- Acquire complete Pelech text before claiming a reproduction.
+- Set a predeclared functional unit, common service/destination, system boundary, cost year, and currency convention before running harmonized scenarios.
+- Freeze an evidence-backed benchmark version and distinguish reported measurements, engineering extrapolations, program targets, and analyst stress cases.
+- If implementation reveals material gaps or ambiguities, add the resolution, rationale, source location, and affected model version here before changing an input or equation.
