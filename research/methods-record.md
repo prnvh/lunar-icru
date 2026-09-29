@@ -6,9 +6,9 @@ When major lunar-propellant economic models are given the same physical and econ
 
 ## Current objective
 
-The objective is no longer to reconstruct six models. It is to obtain a second independently reconstructed model that can answer a decision question commensurable with Kornuta's mining-company NPV.
+The study is two linked parts. Part I keeps every historical case that was audited, including the ones that cannot be rerun. Part II compares only models that pass the eligibility rules in [benchmark-eligibility.md](benchmark-eligibility.md). Those rules were fixed before the search for further runnable models.
 
-Kornuta is the only operational baseline. Its constant end-of-year cash flows reproduce the seven printed NPVs closely, and the rates of return of those same flows round to the printed table.
+Kornuta remains the positive control. Its constant end-of-year cash flows reproduce the seven printed NPVs closely, and the rates of return of those same flows round to the printed table. It is eligible for Part II. Sowers, Charania, Jones, Blair, and Pelech stay in Part I and are not benchmark-eligible on the public record audited here.
 
 ## Comparison gate
 
@@ -72,6 +72,6 @@ Artifact search on 2026-09-29, aimed at workbooks rather than another narrative 
 
 The public artifact search is recorded in [artifact-search.md](artifact-search.md). Sowers 2021 repeats the NIAC IRR table and does not add annual cash flows. Shishko 2019 names workbook sheets and does not publish them. Blair's report prints Version 5 statements and a toolkit primer; the Excel file is not public, so those statements cannot be rerun and do not open the gate. Charania's financing file was not found.
 
-The fork therefore takes the reproducibility branch. The findings are in [reproducibility-findings.md](reproducibility-findings.md). `py -3 -m unittest tests/test_reproductions.py` regenerates the checks. A matched benchmark still waits on a primary cash-flow or financing file. Pelech still waits on lawful full text.
+Part I is that reproducibility audit. The findings are in [reproducibility-findings.md](reproducibility-findings.md). `py -3 -m unittest tests/test_reproductions.py` regenerates the checks. Part II does not reopen these cases by inventing their missing schedules. It looks for other lunar-propellant models that already can be rerun. Pelech still waits on lawful full text.
 
 The two 2019 Jones papers were checked as campaign-cost sources, not as a way to fill `jones2020`. The lunar-surface paper prices plants and landers with unpublished PCEC response surfaces. The cis-lunar paper prices elements with PCEC and PRICE-H. Neither file is public, so neither case is coded. Their reported headlines stay reported.

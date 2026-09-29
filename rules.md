@@ -12,7 +12,7 @@ architecture differences, meaning different physical systems or mission structur
 model/accounting differences, meaning different equations, cost treatment, financing, replacement, scaling, or decision metrics.
 
 Write a formal inclusion rule for selecting models.
-A model should be included only if it contains enough quantitative information to reconstruct its central economic calculation and represents an important or structurally distinct approach in the literature. The operational rule, the versioned roster, and the reproduction grades are in `research/model-selection-and-reconstruction.md`. That file governs selection and reconstruction where it is more specific than this list.
+A model should be included only if it contains enough quantitative information to reconstruct its central economic calculation and represents an important or structurally distinct approach in the literature. The operational rule, the versioned roster, and the reproduction grades are in `research/model-selection-and-reconstruction.md`. Part I keeps the historical audit, including cases that cannot be rerun. Part II uses only models that pass `research/benchmark-eligibility.md`. Those files govern selection where they are more specific than this list.
 
 Select approximately four to six models.
 Favor structural diversity over model count. A smaller number of well-reconstructed models is better than six weak reconstructions. Select versioned decision cases, not author names.

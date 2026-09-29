@@ -1,6 +1,6 @@
 # Research Specification
 
-Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). The reproducibility record, comparison gate, and the decision that benchmark values stay unset are in [research/methods-record.md](research/methods-record.md). Those documents govern if this file disagrees with them on selection, grades, or which outputs may enter a comparison. The experiment design below remains the design for a comparison that has not yet opened. The write-up of the closed search is [research/manuscript.md](research/manuscript.md).
+Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). The reproducibility record and the comparison gate are in [research/methods-record.md](research/methods-record.md). Part I of the study is the frozen historical audit. Part II admits only models that pass [research/benchmark-eligibility.md](research/benchmark-eligibility.md). Those documents govern if this file disagrees with them on selection, grades, or which outputs may enter a comparison. The experiment design below is the design for Part II. It has not yet been run. The Part I write-up is [research/manuscript.md](research/manuscript.md).
 
 ## 1. Working title
 
@@ -624,20 +624,25 @@ Break-even boundary comparison.
 
 ## 38. Main paper structure
 
+The paper is two linked studies.
+
+Part I, reproducibility audit:
+
 1. Introduction
-2. Previous lunar-propellant economic studies
-3. Research design
-4. Model selection
-5. Reconstruction methodology
-6. Reproduction results
-7. Common benchmark definition
-8. Controlled model intercomparison
-9. Attribution of disagreement
-10. Modern reusable-spaceflight scenarios
-11. Robustness and uncertainty
-12. Discussion
-13. Limitations
-14. Conclusions
+2. Historical sample, selected for influence and structural diversity
+3. What could be checked, what could not, and which artifact is missing
+4. Finding: published conclusions are more available than executable model definitions
+
+Part II, controlled intercomparison, only benchmark-eligible models:
+
+5. Eligibility and comparability rules
+6. Native reproduction
+7. Common benchmark
+8. Common architecture where the models already support it
+9. Model-form disagreement
+10. Modern reusable-spaceflight ranges
+11. Limitations
+12. Conclusions
 
 ## 39. Main contribution statement
 

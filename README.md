@@ -15,7 +15,8 @@ When major lunar-propellant economic models are given the same physical and econ
 | Versioned specifications and parameter extraction | Done for the four packets above. Each case has notes and a parameter file. |
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
-| Common benchmark and cross-model numerical experiments | Not opened. The public search did not recover a second re-runnable financial model. The write-up is [research/manuscript.md](research/manuscript.md). |
+| Part I, historical reproducibility audit | Frozen. Kornuta NPV is executable. Sowers, Charania, and Jones are partial. Blair is outputs only. Pelech is inaccessible. Write-up: [research/manuscript.md](research/manuscript.md). |
+| Part II, benchmark-eligible models | Rules fixed in [research/benchmark-eligibility.md](research/benchmark-eligibility.md). Search not yet started: [research/benchmark-search.md](research/benchmark-search.md). |
 
 ## Current state
 
@@ -46,6 +47,8 @@ py -3 -m unittest tests/test_reproductions.py
 - [Artifact search](research/artifact-search.md)
 - [Reproducibility findings](research/reproducibility-findings.md)
 - [Manuscript](research/manuscript.md)
+- [Benchmark eligibility](research/benchmark-eligibility.md)
+- [Benchmark-model search](research/benchmark-search.md)
 - [Benchmark schema, values unset](research/benchmark-schema.json)
 - [Decision and activity log](log.md)
 

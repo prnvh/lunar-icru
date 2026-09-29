@@ -12,7 +12,7 @@ The unit is a **versioned decision case**: one source edition, one decision ques
 
 An author name is not a model. Jones 2019 cislunar, Jones 2019 lunar-surface, and Jones 2020 Moon/Mars are different cases. The Sowers NIAC Phase I report and the later Sowers journal business case are different cases until a source audit shows they implement the same calculation. A directory may carry a literature-family name, but `notes.md` must name the exact document, edition, and result being reproduced. A second edition gets its own directory.
 
-The immediate objective is not six reconstructions. It is a second independently reconstructed model that can answer a decision question commensurable with Kornuta's NPV. Until that exists, numerical benchmark values stay unset. The comparison gate and the two model families are in [the methods record](../research/methods-record.md).
+The study has two parts. Part I is the frozen historical audit: influential cases stay in the record whether or not they can be rerun. Part II admits only models that pass the predeclared reproducibility gate and, pair by pair, the economic-comparability gate. Those rules, the audit table, and the stopping rule are in [benchmark-eligibility.md](benchmark-eligibility.md). The search log is [benchmark-search.md](benchmark-search.md). Kornuta is the positive control. Numerical benchmark values stay unset until Part II has a pair. The comparison gate and the two historical families are in [the methods record](../research/methods-record.md).
 
 ## 2. What does not count as another baseline
 
@@ -154,11 +154,11 @@ Provenance of every number is one of: directly reported, derived from reported v
 
 ## 11. Order of work
 
-1. Keep the three existing modules inside the grades in section 6. Do not invent Jones's campaign ledger or Sowers's annual phasing.
-2. `charania2007` is recorded and blocked. Do not invent its cash-flow schedule. A later workbook, if obtained, is a new reconstruction, not a silent fill of this one.
-3. Decide `jones2019_cislunar`, `pelech2019`, and `blair2002` by applying section 3 to their source packets. Absence of a workbook or full text keeps the case conditional.
-4. Write the metric-compatibility gate for every pair that a future benchmark would compare.
-5. Only then freeze a common benchmark, before looking at comparative results.
+1. Part I is frozen. Do not invent Jones's campaign ledger, Sowers's annual phasing, or Charania's debt schedule. A later primary file can reopen a historical case. A fitted schedule cannot.
+2. Screen new candidates in [benchmark-search.md](benchmark-search.md) under the Part II rules. Relevance and an independent lineage come before the reproducibility gate. A public repository is not itself a selection criterion.
+3. Code a candidate only after the seven reproducibility items pass against the public file.
+4. Fill the metric-compatibility gate for every pair that a benchmark would compare.
+5. Freeze a common benchmark before looking at comparative results.
 
 ## 12. Selection success
 
