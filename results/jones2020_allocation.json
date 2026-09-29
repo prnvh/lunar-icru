@@ -1,0 +1,23 @@
+{
+  "native_campaign_ratio": null,
+  "plant_mass_kg": 2262.7,
+  "design_lifetime_months": 36,
+  "mass_allocation": "unresolved; bounds assume the four Table 7 subsystems are all present and absorb the Duke Table 5 mass",
+  "development_FY2019_MUSD": {
+    "lower": 552.55185,
+    "upper": 614.32356,
+    "fixed_if_all_subsystems_present": 472.226
+  },
+  "production_FY2019_MUSD": {
+    "lower": 113.93880999999999,
+    "upper": 136.33954,
+    "fixed_if_all_subsystems_present": 76.60426
+  },
+  "excavation_unit_count": null,
+  "nuclear_unit_count": null,
+  "blockers": [
+    "Loader count is not a function of production in the paper.",
+    "Table 5 mass and a 40 kWe reactor count are different power treatments.",
+    "Launch, lander, and replacement events are not a closed ledger."
+  ]
+}

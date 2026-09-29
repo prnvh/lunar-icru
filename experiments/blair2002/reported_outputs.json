@@ -1,0 +1,6 @@
+{
+  "source": "Table 4.3 Version 5. These are comparison targets, not inputs to model.py.",
+  "discount_rate": 0.10,
+  "architecture_1": {"npv_million": 4156, "project_rate_of_return": 0.128, "year_1_return_on_equity": 0.261},
+  "architecture_2": {"npv_million": 4134, "project_rate_of_return": 0.126, "year_1_return_on_equity": 0.263}
+}

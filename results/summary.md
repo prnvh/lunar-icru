@@ -44,6 +44,16 @@ The frozen scenario uses 1,100 tonnes/year, price 500 per kg, 10 operating years
 
 The Sowers NPV sign depends on spending timing within these windows. Its endpoints are mathematically sharp for this declared model class; they do not identify the historical schedule. Sixty rate/price/cost-multiplier cases are in `surface_offtake_sensitivity.csv`.
 
+## Further bounds from printed constraints
+
+Charania's zero-NPV price is an interval, not a point. At 21.7 percent, surface sale spans 14,612 to 67,611 dollars per kilogram, low lunar orbit 66,526 to 313,768, and GEO 3,354,152 to 15,843,653. The printed prices sit inside those intervals. The schedule is still missing. Inflating the surface stack at 2.1 percent gives 7,457 to 8,610 dollars per kilogram, above the printed inflation-only cost of 7,327.
+
+Blair Table 4.4 balances within one million dollars, and ending retained earnings equal summed net income. Discounting net income at 10 percent, with the first year undiscounted, gives 4155.6 and 4134.4, against printed project net present values 4,156 and 4,134. The printed project rates of return are not that row's internal rate. The workbook is still absent.
+
+Jones 2020 campaign ratio stays null. Splitting the Duke plant mass across the four Table 7 subsystems moves development cost from 552.6 to 614.3 million FY2019 dollars. That allocation is not the missing launch ledger.
+
+ROXY rates depend on when the facility is launched. With transport in the delay year, oxygen-only internal rates span 19.8 to 24.6 percent, and the metals case spans 41.1 to 64.3 percent. Paying transport in the first operating year starts the oxygen interval at 22.7 percent, above the printed 19.9. Undiscounted oxygen net from the printed ingredients is 2.57 billion euros, against the table's 2.4.
+
 **Scope:** This is a conditional financial comparison. Unknown source price years, physical product equivalence, construction working costs and differing cost boundaries prevent admission as a fully harmonized historical benchmark. The same-unit-of-account assumption and annual timing windows are explicit. These outputs do not establish Earth-versus-lunar propellant competitiveness.
 
 See [recovery methods](../research/recovery-methods.md) for interpretation and source issues. Full numeric outputs and input/code SHA-256 hashes accompany this report.

@@ -1,0 +1,16 @@
+{
+  "source": "Birch, Seidel, and coauthors, Aerospace 2026, 13, 86. Annual ingredients from section 2.3. Cash-flow figures were not digitized.",
+  "development_meur": 200,
+  "development_years": 5,
+  "holding_cost_meur": 0.5,
+  "facility_mass_kg": 1172,
+  "transport_price_meur_per_kg": 1,
+  "transport_meur": 1172,
+  "operating_years": 10,
+  "operating": {
+    "oxygen_revenue_meur": 577.5,
+    "opex_meur": 183.6,
+    "revenue_rule": "50 percent of 1 million euro per kilogram times 1,155 kilograms",
+    "opex_rule": "115 consumable kilograms at the transport price, plus 0.5 labor, plus 45 power, plus 1 percent of 2,310 kilograms of regolith"
+  }
+}

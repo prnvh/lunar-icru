@@ -48,6 +48,18 @@ Under those conditions Kornuta's modified NPV is −1463.14M; Sowers's interval 
 
 This is a **conditional financial comparison**, not the formerly proposed fully harmonized physical benchmark. Both source price years are unknown. A shared currency scalar is declared for the comparison, and 0.8/1/1.2 relative cost multipliers are stress cases, not inflation estimates. Native cost boundaries and plant designs remain different. The result does not establish delivered LEO cost, Earth-versus-lunar competitiveness, or the share of historical disagreement caused by model form.
 
+## The same treatment of the remaining cases
+
+Charania, Blair, Jones 2020, and the ROXY pilot plant were reopened the same way. A missing file is not the end of the calculation when the paper still states a total, a window, or a full statement.
+
+Charania's chart amounts were not digitized. The chart's year labels and the stated operating years define a pre-operation window for the Table 2 capital total. The resulting zero-NPV price interval contains the three printed prices at 21.7 percent. The historical year of expenditure remains unresolved. The printed inflation-only surface cost lies below the cost of inflating that same stack, at 2.1 percent, to 2013 or to 2021.
+
+Blair's Table 4.4 was read from word positions. The balance-sheet identity holds within one million dollars, and retained earnings match cumulative net income. The stated 10 percent project net present value matches the present value of the net-income row when 2007 is undiscounted: 4,155.6 and 4,134.4 against 4,156 and 4,134. The 12.8 percent and 12.6 percent project rates of return are not the internal rate of that row. The statements still cannot take a new price.
+
+Jones 2020's campaign ratio remains null. The Table 7 cost equations are linear, so an unknown split of the Duke plant mass changes development cost only from about 553 to 614 million FY2019 dollars. The open item is the event ledger.
+
+For ROXY, moving the stated 200 million euro development cost inside the five-year window gives a sharp internal-rate interval, because a fixed outlay paid earlier lowers the rate. The printed 19.9 percent oxygen rate lies in that interval only when transport is paid in the delay year. It lies below the whole interval when transport is paid in the first operating year. The undiscounted ingredients sum to 2.57 billion euros against the table's 2.4. No coefficient was adjusted to close that gap.
+
 ## Reproduce
 
 ```text

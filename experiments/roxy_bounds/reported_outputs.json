@@ -1,0 +1,7 @@
+{
+  "source": "Tables 6 and 7, reference case, 100 percent mass. Comparison targets only.",
+  "oxygen_only_irr": 0.199,
+  "oxygen_and_metals_irr": 0.474,
+  "oxygen_only_total_revenue_beur": 2.4,
+  "oxygen_and_metals_total_revenue_beur": 8.2
+}

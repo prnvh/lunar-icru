@@ -93,6 +93,56 @@ class RecoveryChecks(unittest.TestCase):
         inferred = h["branches"]["table_behavior_inference"]["inferred_reactor_mass_t"]
         self.assertAlmostEqual(h["reactor_mass_t"] / inferred, 1000 ** 0.5, places=10)
 
+    def test_charania_printed_prices_lie_inside_timing_interval(self):
+        result = load("experiments/charania_bounds/model.py").run()
+        reported = json.loads((ROOT / "models/charania2007/reported_outputs.json").read_text())
+        printed = {"case_1": reported["cases"]["1A"]["propellant_price_usd_per_kg"],
+                   "case_2": reported["cases"]["2A"]["propellant_price_usd_per_kg"],
+                   "case_3": reported["cases"]["3A"]["propellant_price_usd_per_kg"]}
+        self.assertIsNone(result["calculated_required_price_usd_per_kg"])
+        for case, price in printed.items():
+            span = result["intervals"][case]["by_wacc"]["table_and_figure"]
+            self.assertLess(span["price_usd_per_kg_lower"], price)
+            self.assertGreater(span["price_usd_per_kg_upper"], price)
+            self.assertGreater(span["price_usd_per_kg_upper"] - span["price_usd_per_kg_lower"], price)
+        inflation = result["case_1_inflation_only_usd_per_kg"]
+        printed_cost = reported["cases"]["1A"]["inflation_only_cost_usd_per_kg"]
+        self.assertLess(printed_cost, inflation["earliest"])
+        self.assertLess(inflation["earliest"], inflation["latest"])
+
+    def test_blair_statement_identities_and_net_income_present_value(self):
+        result = load("experiments/blair2002/model.py").run()
+        reported = json.loads((ROOT / "experiments/blair2002/reported_outputs.json").read_text())
+        for name, target in (("architecture_1", reported["architecture_1"]),
+                             ("architecture_2", reported["architecture_2"])):
+            row = result["architectures"][name]
+            self.assertTrue(all(abs(gap) <= 1 for gap in row["balance_sheet_gap_by_year"]))
+            self.assertEqual(row["net_income_sum"], row["retained_earnings_final"])
+            self.assertAlmostEqual(row["npv_of_net_income_at_stated_rate"], target["npv_million"], delta=1)
+        self.assertIsNone(result["architectures"]["architecture_1"]["project_rate_of_return"])
+        self.assertEqual(result["architectures"]["architecture_1"]["revenue_sum"], 25500)
+
+    def test_jones2020_mass_split_changes_plant_cost_but_not_the_campaign_ratio(self):
+        result = load("experiments/jones2020_allocation/model.py").run()
+        development = result["development_FY2019_MUSD"]
+        self.assertIsNone(result["native_campaign_ratio"])
+        self.assertGreater(development["upper"] - development["lower"], 50)
+        self.assertLess(development["lower"], development["upper"])
+
+    def test_roxy_printed_rates_are_inside_only_some_transport_placements(self):
+        result = load("experiments/roxy_bounds/model.py").run()
+        reported = json.loads((ROOT / "experiments/roxy_bounds/reported_outputs.json").read_text())
+        oxygen = result["irr_bounds"]["oxygen_only"]
+        delay = oxygen["transport_in_year_5"]
+        operations = oxygen["transport_in_year_6"]
+        self.assertLess(delay["irr_lower"], reported["oxygen_only_irr"])
+        self.assertGreater(delay["irr_upper"], reported["oxygen_only_irr"])
+        self.assertLess(reported["oxygen_only_irr"], operations["irr_lower"])
+        metals = result["irr_bounds"]["oxygen_and_metals"]["transport_in_year_5"]
+        self.assertLess(metals["irr_lower"], reported["oxygen_and_metals_irr"])
+        self.assertGreater(metals["irr_upper"], reported["oxygen_and_metals_irr"])
+        self.assertGreater(result["undiscounted_cumulative_net_meur"]["oxygen_only"], 2400)
+
 
 if __name__ == "__main__":
     unittest.main()

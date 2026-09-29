@@ -184,3 +184,11 @@
 - Added an offline standard-library pipeline, machine-readable outputs, code/input checksums, an optional standalone plot, and meaningful checks against independent published values, dimensional identities and all endpoint allocations. Updated README and marked the earlier manuscript/search closure as superseded by this recovery phase.
 - **Executed checks:** All 13 tests passed, including the four existing historical checks, independent launch-cost targets, in-domain Jones 2021 table reproduction, hydrogen power-unit diagnosis, finance/cost identities and exhaustive endpoint extrema. The pipeline regenerated the native outputs and conditional comparisons. The generated plot was visually inspected for legible labels and visible qualification of its scope. `git diff --check` passed. These establish implementation/reproduction checks, not empirical validation of lunar hardware or markets.
 - The manuscript's closing sections now record the recovery results. The first-pass claim that only Kornuta can be run is kept as history and is no longer the paper's conclusion.
+
+## 2026-09-29 — Bounds for Charania, Blair, Jones 2020, and ROXY
+
+- **Decision:** Treat each remaining inconsistency as a calculation with an explicit branch or an interval. **Rationale:** a missing workbook does not erase a printed total, a labeled year span, or a printed statement.
+- Charania chart amounts were not read. The 2013–2021 labels plus 2022–2031 operations make the zero-NPV price an interval that contains the three printed prices. The inflation-only surface cost, 7,327 dollars per kilogram, is below the 2.1 percent inflation of the same cost stack.
+- Blair Table 4.4 was read from word positions. The balance sheet closes. Net-income present value at 10 percent matches the printed project net present values. The printed project rates of return do not match that row. The workbook remains absent.
+- Jones 2020 ratio stays null. The Table 7 mass split moves development cost only from about 553 to 614 million FY2019 dollars.
+- ROXY development timing gives a sharp internal-rate interval. The printed 19.9 percent oxygen rate is inside it only for transport in the delay year. The undiscounted ingredients do not equal the table's 2.4 billion euro total. No coefficient was fitted.

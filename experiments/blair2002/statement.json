@@ -1,0 +1,26 @@
+{
+  "source": "Blair et al. 2002, Table 4.4, page 31. Values in million source dollars, read from word positions. Architecture 1 cumulative revenue prints 25,501; the ten yearly revenues sum to 25,500.",
+  "stated_discount_rate": 0.10,
+  "stated_cost_of_debt": 0.12,
+  "stated_tax_rate": 0.40,
+  "architectures": {
+    "architecture_1": {
+      "revenues": [0, 0, 0, 750, 1500, 2250, 3000, 4500, 6000, 7500],
+      "revenues_cumulative": 25501,
+      "net_income": [-4, -9, -10, 274, 411, 621, 895, 1502, 1867, 2728],
+      "total_assets": [100, 100, 1686, 4589, 7187, 8947, 10043, 12582, 14778, 16950],
+      "liabilities": [0, 1, 1, 1318, 2414, 2986, 3089, 2957, 2581, 2024],
+      "shareholder_equity": [104, 112, 1708, 3020, 4111, 4678, 4776, 5945, 6650, 6650],
+      "retained_earnings": [-4, -13, -23, 251, 662, 1283, 2178, 3680, 5547, 8275]
+    },
+    "architecture_2": {
+      "revenues": [0, 0, 0, 750, 1500, 2250, 3000, 4500, 6000, 7500],
+      "revenues_cumulative": 25501,
+      "net_income": [-4, -9, -10, 276, 411, 621, 896, 1505, 1841, 2698],
+      "total_assets": [100, 100, 1648, 4575, 7195, 8949, 10037, 12561, 14690, 17124],
+      "liabilities": [0, 1, 1, 1329, 2437, 3005, 3104, 2957, 2555, 2146],
+      "shareholder_equity": [104, 112, 1670, 2993, 4095, 4659, 4752, 5918, 6608, 6753],
+      "retained_earnings": [-4, -13, -23, 253, 664, 1285, 2181, 3686, 5528, 8225]
+    }
+  }
+}

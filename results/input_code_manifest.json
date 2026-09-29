@@ -16,6 +16,10 @@
     "models/sowers_niac2020/original_inputs.json": "f4d02de4b2e13930a9977093eeb27e382f2a54947e97b25e3b01edb67e05b1a7",
     "models/sowers_niac2020/source_manifest.json": "6469ccb7162cdbb4177291a8af59af7266ecb653bfd613d2e99e9a0b58364107",
     "models/sowers_niac2020/timing_nonuniqueness.py": "dabf4ca53660b3e8fffcd8b8230e4b398a47ffddcf6ecfbc70840435f5b5281d",
+    "experiments/blair2002/model.py": "f84d5e7151b4428a338a7cbb5519b1c0debb393bfed0f973b9237ebfb284794c",
+    "experiments/blair2002/reported_outputs.json": "9352c8b192cd78aef4021a8be10c73dc80e6c0fa68f40faea8c5001a22ee3d6b",
+    "experiments/blair2002/statement.json": "98193240c6576426a1c625e917979e84882fd3123051428b1ce947dedc602aad",
+    "experiments/charania_bounds/model.py": "b847773ce09619fecf125797d981f5626a27c8125b4035c2b3b95d4d582decbe",
     "experiments/harry_jones2021/input_provenance.json": "df639849d9dece8d5327008043f2e5d4ca818509e2eab9963d277c79331040f8",
     "experiments/harry_jones2021/inputs.json": "34283f5b5c246997df66d0b3e6f8a5bd864046b1e1b0bf2b6045a06e877daba6",
     "experiments/harry_jones2021/model.py": "24347342bd7c33e6e70c721dc2452ccf689f0cd796df045a6937632de2d5937d",
@@ -23,13 +27,17 @@
     "experiments/harry_jones2021/reported_outputs.json": "b2eb185b4f6074aad8a61515cda579611116f684650acb58e488154d74a34867",
     "experiments/harry_jones2021/reproduce.py": "e42a6926236de412e785f73d05fe3e56dcc40e9dbffa09fbb77c74c7d205dafe",
     "experiments/harry_jones2021/source_manifest.json": "2b55b661b9521485812229d07042d59b8dbfb4d30e78e4beab3039b8bddba3b2",
+    "experiments/jones2020_allocation/model.py": "ba871cba7a798c5a4d6a320fb0e6427e7fec3ad148ab851fdc173fcd4fd7c89e",
     "experiments/metzger2023/inputs.json": "fb8e408eb9f9b16b2bf5cad207a5d627550b6c7f894c6fc4f1345365e0657338",
     "experiments/metzger2023/model.py": "f6cfb8cb4d02fb15e5f63d82bee20235515fa6bf78772839afc326d3c1d6cd34",
     "experiments/metzger2023/source_manifest.json": "ea8aa658394848947c5c85e9bd0eb293d66df1e83514e40a31f0744f312c4980",
+    "experiments/roxy_bounds/inputs.json": "0d50cc5094a4efcbb368e567b52ec67c51240edbd2617fa45b15ab359cb2c0a6",
+    "experiments/roxy_bounds/model.py": "5ba405f025928786c502a332574e79c09ac313e58956b77d91974525aebf1554",
+    "experiments/roxy_bounds/reported_outputs.json": "9be3e181094e362df5e10965711aaa0e3501adbdf0eb811f6a45de16a8e68b03",
     "experiments/sowers_bounds/model.py": "82449340f6fa6fbfdd7902be7ef4bbd8513201b36a21b63f4556ca1c25da1cc3",
     "experiments/sowers_bounds/scenario.json": "666d963e4a661a1e5a6efb4c3d7a61b8b677ac7654237342b65a921a608598ee",
     "analysis/plot_results.py": "26f081832342dec0b7b49bda12dd2ee3574829b486046700c7dbab4fca4137e4",
-    "analysis/run_papers.py": "7486f876336f266f3935f59bc77b717aee97b827e5af9df1b1c5458941d03bf1"
+    "analysis/run_papers.py": "d025552bebac9d9a15aab89dd4954ff6208d3b2b574d9fc26524358e32976d83"
   },
   "command": "py -3 analysis/run_papers.py"
 }

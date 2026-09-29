@@ -1,0 +1,63 @@
+{
+  "calculated_required_price_usd_per_kg": null,
+  "window": {
+    "capital_calendar_years": "2013-2021",
+    "operation_calendar_years": "2022-2031",
+    "basis": "Figure year labels and the stated 2022-2031 operating window. Chart amounts were not read."
+  },
+  "intervals": {
+    "case_1": {
+      "capital_fy2006_musd": 2721.0,
+      "sales_kg_per_year": 49400,
+      "by_wacc": {
+        "table_and_figure": {
+          "wacc": 0.217,
+          "price_usd_per_kg_lower": 14611.881118579196,
+          "price_usd_per_kg_upper": 67611.40928114599
+        },
+        "prose_headline": {
+          "wacc": 0.227,
+          "price_usd_per_kg_lower": 15068.432899129723,
+          "price_usd_per_kg_upper": 74483.43967557186
+        }
+      }
+    },
+    "case_2": {
+      "capital_fy2006_musd": 5396.0,
+      "sales_kg_per_year": 21000,
+      "by_wacc": {
+        "table_and_figure": {
+          "wacc": 0.217,
+          "price_usd_per_kg_lower": 66525.84133079847,
+          "price_usd_per_kg_upper": 313768.30166368367
+        },
+        "prose_headline": {
+          "wacc": 0.227,
+          "price_usd_per_kg_lower": 68655.6524707474,
+          "price_usd_per_kg_upper": 345826.2795571596
+        }
+      }
+    },
+    "case_3": {
+      "capital_fy2006_musd": 5841.0,
+      "sales_kg_per_year": 450,
+      "by_wacc": {
+        "table_and_figure": {
+          "wacc": 0.217,
+          "price_usd_per_kg_lower": 3354151.7269899803,
+          "price_usd_per_kg_upper": 15843653.179461781
+        },
+        "prose_headline": {
+          "wacc": 0.227,
+          "price_usd_per_kg_lower": 3461739.555108454,
+          "price_usd_per_kg_upper": 17463068.23027788
+        }
+      }
+    }
+  },
+  "case_1_inflation_only_usd_per_kg": {
+    "earliest": 7457.402894813344,
+    "latest": 8609.72380618328
+  },
+  "historical_schedule": "unresolved"
+}

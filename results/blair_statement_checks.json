@@ -1,0 +1,47 @@
+{
+  "discount_convention": "The first statement year is the present. The stated rate is 10 percent.",
+  "project_rate_of_return_status": "unresolved",
+  "architectures": {
+    "architecture_1": {
+      "revenue_sum": 25500,
+      "revenue_cumulative_printed": 25501,
+      "net_income_sum": 8275,
+      "retained_earnings_final": 8275,
+      "balance_sheet_gap_by_year": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "npv_of_net_income_at_stated_rate": 4155.599888982437,
+      "project_rate_of_return": null
+    },
+    "architecture_2": {
+      "revenue_sum": 25500,
+      "revenue_cumulative_printed": 25501,
+      "net_income_sum": 8225,
+      "retained_earnings_final": 8225,
+      "balance_sheet_gap_by_year": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "npv_of_net_income_at_stated_rate": 4134.354346432358,
+      "project_rate_of_return": null
+    }
+  },
+  "workbook": "not public; these checks do not accept a new price or demand"
+}
