@@ -144,3 +144,9 @@
 - Bennett and Dempster 2020 say they reconstructed Kornuta. A dataset description says the finance spreadsheet was archived. **Decision:** Treat it as Kornuta lineage, not as model two. **Rationale:** the paper says the economic model is Kornuta's. The file was not retrieved in this pass. It is the next file to inspect because it may contain yearly cash flows.
 - Sommariva 2020 and 2023 are relevant and have no attached file on the record that was checked. `pypsa-moon` is a lunar power model and is out. Sercel and Kuhns did not yield a public economic workbook.
 - Eligible count remains one. The search stays open.
+
+## 2026-09-29 — Bennett spreadsheet retrieved; it is Kornuta's model
+
+- Downloaded Mendeley Data 10.17632/ghzjtxzhdf.1, `GTOPaperDataAll.ods`, SHA-256 `de63d2a3ab2d6d0b6b6cc8ec61561575a3413e84ce061d0c7c87e5fd716c934b`. The file stays out of git.
+- **Decision:** Do not count Bennett and Dempster 2020 as a second benchmark model. **Rationale:** the finance sheet is labeled as a Kornuta model. Its LEO check uses the published $630 million revenue, an outlay of $4.05 billion, and ten nets of $501 million. Dated XNPV is about −$972.87 million and XIRR is 4.06%, against Table 14's −$972 million and 4%. The GTO cases change the market, not the calculation lineage.
+- **Decision:** Do not replace the Kornuta reconstruction with this file. **Rationale:** it confirms the annuity for the cases checked. It is not the original workbook, and it does not supply a different historical schedule.
