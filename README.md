@@ -15,7 +15,7 @@ When major lunar-propellant economic models are given the same physical and econ
 | Versioned specifications and parameter extraction | Done for the four packets above. Each case has notes and a parameter file. |
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
-| Common benchmark and cross-model numerical experiments | Not opened. The public search did not recover a second re-runnable financial model. |
+| Common benchmark and cross-model numerical experiments | Not opened. The public search did not recover a second re-runnable financial model. The write-up is [research/manuscript.md](research/manuscript.md). |
 
 ## Current state
 
@@ -45,6 +45,7 @@ py -3 -m unittest tests/test_reproductions.py
 - [Methods record](research/methods-record.md)
 - [Artifact search](research/artifact-search.md)
 - [Reproducibility findings](research/reproducibility-findings.md)
+- [Manuscript](research/manuscript.md)
 - [Benchmark schema, values unset](research/benchmark-schema.json)
 - [Decision and activity log](log.md)
 

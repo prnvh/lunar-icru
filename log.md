@@ -118,3 +118,9 @@
 - Charania: no CABAM or financing workbook found beyond the SEI paper already packeted.
 - Blair: the NSS and ISRU copies are PDFs. Table 4.4 prints Version 5 statements and Appendix 3 describes the toolkit. The Excel file was not found. **Decision:** those printed lines do not open the comparison gate. **Rationale:** they are output of the missing workbook under a stack of relaxed assumptions, and they cannot be rerun for a common scenario.
 - **Decision:** Close the first fork on the reproducibility branch. **Rationale:** no second re-runnable financial model is in the public record. Findings and the search log are in `research/reproducibility-findings.md` and `research/artifact-search.md`. Regression checks are `tests/test_reproductions.py`.
+
+## 2026-09-29 — Jones 2019 papers do not open a campaign reconstruction
+
+- Read the public IAC 2019 lunar-surface paper (NTRS 20200002704). Plant and lander costs are PCEC response surfaces. The coefficients are not in the paper. Contour figures were not digitized. **Decision:** `jones2019_surface` stays conditional, and this paper does not fill the `jones2020` ledger.
+- Read the public AIAA 2019-1372 cis-lunar paper. Element costs use PCEC and PRICE-H. The paper reports $40,000/kg, $46,000/kg, and $78,000/kg. Those numbers were not recomputed. **Decision:** `jones2019_cislunar` stays conditional. **Rationale:** the costing tools are not in the public packet.
+- **Decision:** Write the closed comparison as `research/manuscript.md`. **Rationale:** the numerical benchmark cannot be opened from the public record, and the manuscript states that limit instead of filling it.
