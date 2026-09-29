@@ -86,7 +86,7 @@ Declare the comparison set before inspecting the reconstructed numbers. The cate
 
 Current grades, from the executed modules:
 
-- Kornuta NPV, printed-revenue path: **close**. All seven signs match. The largest absolute gap versus the displayed NPV is about $3.35 million on the all-customers case.
+- Kornuta NPV, printed-revenue path: **close**. All seven signs match. The largest absolute gap versus the displayed NPV is about $3.35 million on the all-customers case. The same cash flows' rates of return round to all seven printed Table 14 rates. Start-of-year discounting flips the Moon case from negative to about +$147 million, so that timing is ruled out. The $128 million component cost does not round to the printed NPVs.
 - Jones 2020 campaign ratio: **partial**. Demand totals, Duke Table 5 mass 2,262.7 kg, and power 10.4958 kWe at 17 t/year are recovered. The ratio is null.
 - Sowers NIAC component totals: **close** where the independent arithmetic matches the printed table within rounding. Company and NASA IRRs: **unresolved**. The Mars revenue inconsistency stays unresolved in either direction.
 
@@ -118,7 +118,9 @@ Before two cases are compared on a quantity, record:
 
 If any of those differ in meaning, the comparison is non-comparable for that quantity. Similar words are not enough. In the current cases, surface sale quantity is not delivered mass, launch price to the lunar surface is not Earth-to-orbit price, a five-flight lander life is not a five-year plant life, and breakeven as a cost ratio below one is not a zero-NPV price.
 
-No common benchmark is frozen until this gate has been filled for every pair that the benchmark claims to compare.
+No common benchmark is frozen until this gate has been filled for every pair that the benchmark claims to compare. The current three-case record is [comparability-crosswalk.md](comparability-crosswalk.md). Its result is that no pair shares a native question. Kornuta and Sowers are the nearest company-side pair, and they remain blocked by cost year, the meaning of the shared $35,000/kg delivery figure, and cash-flow timing. Jones and Sowers's NASA savings ask related government questions across different ownership boundaries. Sowers Table 4.9.5 compares thermal mining with Jones et al. (2019), not with `jones2020`.
+
+Do not digitize an unpublished cash-flow chart to manufacture the missing Sowers schedule. A figure is not a reproduction target. If the schedule cannot be recovered from tables, the IRR stays unresolved.
 
 ## 9. Reconstruction record
 

@@ -78,3 +78,13 @@
 - **Decision:** Forbid harmonized comparison of Jones's cost ratio, Kornuta's NPV, and Sowers's IRR until a metric-compatibility gate says the quantities are the same question. **Rationale:** the three reconstructions do not share a product location, time structure, or decision metric.
 - Updated `paper.md` so the experiment design points at the new specification instead of author names, YAML layouts, and retired percentage grades. `rules.md` keeps the conduct rules and defers to the specification where selection is more specific.
 - The Opus reviews started in the previous entry had not returned findings used here. This roster is based on the executed modules and the evidence review.
+
+## 2026-09-29 — Audit and comparability follow-up
+
+- Incorporated the independent implementation audit and the comparability crosswalk. The Charania feasibility review had not returned.
+- **Decision:** Keep Jones's campaign ratio unresolved and the case partial. The audit's "unresolved" grade refers to that native ratio. Recovered sizing equations stay cited as partial outputs. **Rationale:** a null ratio is not a failed arithmetic check of Table 5.
+- **Decision:** Do not digitize Sowers Figures 4.9.5 or 4.9.9 to invent annual phasing. **Rationale:** the selection specification forbids figure digitization as a reproduction target, and fitting a schedule to the published IRR would be calibration.
+- **Fix:** `mars_first_operating_year` now moves delayed company demand, printed plateau revenue, and NASA Mars savings together. Historical case totals are unchanged: commercial net cash $2,155.5 million, lunar PPP $3,125.6 million, lunar/Mars $5,046.9 million.
+- **Checks added to the Kornuta module, using the existing cash flows:** rates of return round to 9%, 19%, 4%, 28%, 37%, 40%, and 56%. Start-of-year discounting makes the Moon NPV about +$147.35 million. The $128 million component cost does not round to the printed NPVs. Primary path remains end-of-year timing and $129 million.
+- Recorded the Table 6 discontinuity at 15,000 kg, the unused spare-launch rule, Sowers's comparison with Jones et al. (2019) rather than Jones 2020, the two-winner investment wording, full operating cost before Mars demand, and illustrative NASA IRRs of 25.48% and 52.26% against 27% and 54%.
+- Saved the three-case comparability record. No pair shares a native question, so no common benchmark was opened.

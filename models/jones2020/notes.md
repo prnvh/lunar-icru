@@ -185,5 +185,26 @@ added or run. It reports:
 The MREE/Duke Table 5 specific-mass ratio is about 8.34035, consistent with the
 paper's approximate 8.3 statement on p. 11. That is an intermediate arithmetic
 check, not reproduction of the economic conclusion. Native ratio absolute and
-relative errors are **null, not zero**. Reproduction remains unresolved under
-the predefined policy. No model has been tuned to a target or harmonized here.
+relative errors are **null, not zero**. The campaign ratio remains unresolved.
+Recovered sizing quantities are a partial reconstruction, not a close economic
+reproduction. No model has been tuned to a target or harmonized here.
+
+## Audit checks that do not remove the blockers
+
+Table 6 is discontinuous at the 15,000 kg branch. At 15,000 kg the retained
+coefficients give development $16,195.9 million and unit production $4,127.2
+million. At 15,001 kg they give $5,745.8 million and $763.3 million. The
+heavier branch is rejected when it predicts a negative cost, which occurs by
+60,000 kg. These magnitudes are properties of the published fit. They are not
+smoothed.
+
+The event ledger prices whole launch vehicles only. It cannot yet apply the
+published spare-launch rule of 0.1 kg per kg of system per year. Stored Isp,
+IMF, flight life, and spare-rate values are not read until a schedule exists.
+
+Page 12 cites Jones et al. [4] for delivered payload falling to as low as 10%
+of propellant produced. That citation is a lead to the 2019 cislunar paper. It
+does not supply the 2020 trajectory. Sowers's NIAC Table 4.9.5 compares thermal
+mining with Jones et al. (2019), including a stated 0.26 inert mass fraction,
+75 kg/kW nuclear specific mass, and $101,000/kg in cislunar space. That table
+is not a check of this 2020 case.

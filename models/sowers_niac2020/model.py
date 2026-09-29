@@ -111,6 +111,19 @@ def run(inputs: dict) -> dict:
     demand_multiplier = params.get("demand_multiplier", 1.0)
     if demand_multiplier < 0:
         raise ValueError("demand_multiplier must be nonnegative")
+    # One onset controls delayed demand, printed plateau revenue, and NASA Mars savings.
+    # Commercial and lunar-only cases start at operating year 1 and are left unchanged.
+    reported_full_demand_year = int(case["parameters"]["full_demand_first_operating_year"])
+    if reported_full_demand_year > 1:
+        onset = int(params["mars_first_operating_year"])
+        if onset < 1:
+            raise ValueError("mars_first_operating_year must be a positive operating year")
+        for segment in segments:
+            if int(segment["first_operating_year"]) == reported_full_demand_year:
+                segment["first_operating_year"] = onset
+        full_demand_year = onset
+    else:
+        full_demand_year = reported_full_demand_year
     for segment in segments:
         segment["surface_demand_tonnes_year"] *= demand_multiplier
     years = int(params["operating_years"])
@@ -126,7 +139,7 @@ def run(inputs: dict) -> dict:
         # Preserve the printed steady-state revenue, scaled only for explicit price changes.
         price_ratio = params["surface_price_usd_per_kg"] / case["reported"]["price_usd_per_kg"]
         plateau = params.get("annual_revenue_musd", case["reported"]["revenue_musd_year"]) * 1e6 * price_ratio * demand_multiplier
-        revenue = [plateau if y >= params["full_demand_first_operating_year"] else demand_revenue[y - 1]
+        revenue = [plateau if y >= full_demand_year else demand_revenue[y - 1]
                    for y in range(1, years + 1)]
     else:
         raise ValueError("revenue_mode must be printed_table or demand_rows")
@@ -202,6 +215,8 @@ def run(inputs: dict) -> dict:
             "reported_scale": params["reported_cost_scale"],
             "scale_from_surface_demand": max_surface / params["base_production_tonnes_year"],
             "revenue_from_demand_vs_printed_usd_year": _error(max_surface * 1000 * params["surface_price_usd_per_kg"], reported["revenue_musd_year"] * 1e6),
+            "full_demand_operating_year": full_demand_year,
+            "operations_charged_in_every_operating_year": True,
             "nasa_mars_incremental_savings_derived_usd_year": mars_saving_derived,
             "nasa_mars_incremental_savings_printed_usd_year": nasa["reported_mars_incremental_savings_musd_year"] * 1e6,
         },

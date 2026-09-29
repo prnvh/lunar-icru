@@ -1,0 +1,16 @@
+{
+  "case_id": "kornuta2019",
+  "document": "LPI Contribution 2142, 2018 report associated with the 2019 journal article",
+  "title": "Commercial Lunar Propellant Architecture: A Collaborative Study of Lunar Propellant Production",
+  "url": "https://www.lpi.usra.edu/lpi/contribution_docs/LPI-002142.pdf",
+  "record_url": "https://repository.hou.usra.edu/handle/20.500.11753/1245",
+  "journal_doi": "10.1016/j.reach.2019.100026",
+  "retrieved": "2026-09-29",
+  "sha256": "b65f7cb511e64a1dc238bc7ca8cf386a79c68159183a12199c850cdc92805c7f",
+  "locations": "Printed pages 106-109 are PDF pages 124-127 of 189.",
+  "excluded": {
+    "ntrs": "20190004974",
+    "reason": "That NASA record is Cohen et al., Lunar Flashlight, not this report."
+  },
+  "local_pdf": "Not stored in git. The grade applies to this 2018 report, not to an unchecked 2019 journal reprint."
+}

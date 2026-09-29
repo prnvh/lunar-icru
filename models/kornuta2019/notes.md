@@ -56,7 +56,7 @@ The source does not expose the missing $1M/year component. This expression is a 
 
 All figures below are millions of source USD. Difference is reconstructed minus reported. These are reconstruction calculations, not software tests or empirical validation. Historical parameter and revenue choices were retained without optimizing against target outputs.
 
-| Scenario | Customers | Reported NPV | Primary reconstruction | Difference | Absolute error (%) |
+| Scenario | Customers | Reported NPV | Primary reconstruction | Difference | Relative absolute difference (%) |
 |---|---|---:|---:|---:|---:|
 | 1 | Moon | -234 | -234.223827 | -0.223827 | 0.095653 |
 | 2 | EML1 | 1,609 | 1,609.146304 | 0.146304 | 0.009093 |
@@ -70,7 +70,9 @@ Both negative-NPV scenarios and all five positive-NPV scenarios reproduce in sig
 
 The source-supported alternative R = quantity times printed price changes annual revenue from $1,380M to $1,380.4M (scenario 4), $1,680M to $1,680.14M (5), $1,800M to $1,800.06M (6), and $2,430M to $2,430.48M (7). Its NPVs are respectively $3,639.311276M, $5,481.083820M, $6,217.940308M, and $10,091.598302M. Each rounds to the source's displayed NPV. Scenarios 1-3 have unchanged revenue. Thus all seven results are consistent with displayed NPV rounding under this alternative; it is evidence of a plausible spreadsheet precision convention, **not proof of the original workbook's internal formula precision**.
 
-Table 14's ROR values (9%, 19%, 4%, 28%, 37%, 40%, 56%) are preserved in the evidence file but not independently reconstructed by this NPV module.
+Table 14's rates of return are the internal rates of return of the same end-of-year cash flows. The module now solves that root for each scenario. On the historical printed-revenue path the roots are 8.64%, 18.62%, 4.07%, 28.34%, 36.60%, 39.81%, and 56.16%. Each rounds to the printed 9%, 19%, 4%, 28%, 37%, 40%, and 56%. This is a check of the cash-flow convention, not a recovery of the missing workbook.
+
+Discounting those same historical cash flows at the start of each year (exponents 0 through 9) gives a Moon-case NPV of +$147.35 million. That flips the published negative sign, so the reported NPVs rule out start-of-year timing. Replacing the printed $129 million annual cost with the $128 million component sum likewise fails to round to the printed NPVs, including the Moon case at −$228.08 million. The $1 million gap remains a source-aggregate inconsistency. The primary path still uses end-of-year timing and $129 million.
 
 ## Separate derived break-even price
 

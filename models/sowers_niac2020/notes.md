@@ -97,3 +97,17 @@ These differences quantify one explicit timing assumption; they do not validate 
 - **Learning curve:** inferred 90% unit learning reproduces the cost table, while the prose's description of 0.9 as an exponent is ambiguous. This inference is recorded rather than hidden.
 
 This model is suitable for inspecting the source's static cost chain and the effects of the explicit alternatives. It is not yet a validated complete historical IRR reconstruction and should not enter an intercomparison as though its original timed financial outputs had been reproduced.
+
+## Audit follow-up
+
+`mars_first_operating_year` is the single onset for delayed demand segments, the printed revenue plateau, and NASA Mars savings. An override moves all three together. The historical lunar/Mars case is unchanged: lunar revenue of $579 million in operating years 1–2 and the printed $971 million plateau from year 3. Commercial and lunar-only cases still start in year 1.
+
+Operating cost is charged in full in every operating year, including the two years before Mars demand. That choice is now explicit in the output. It was not a separately tabulated source schedule.
+
+A surface-price override changes the lunar surface term in NASA savings. It does not change the $1,100/kg Mars cislunar price. Those prices are different source quantities.
+
+Page 82 says one to two winners would each receive $400–800 million in scenario 2 or $800–1,200 million in scenario 3. The reconstruction uses Table 4.9.3's $800 million and $1,200 million. It does not multiply by two winners. Whether the table is one winner or an aggregate is unresolved.
+
+Under `illustrative_uniform_annual`, NASA IRRs are 25.48% and 52.26%, against the reported 27% and 54%. They are part of the same non-reproduction as the company IRRs. The timing weights stay labeled as an analyst scenario. They are not adjusted toward the published IRRs, and the cumulative cash charts are not digitized to invent a schedule.
+
+Table 4.9.5 compares this architecture with Jones et al. (2019), not with the 2020 Moon/Mars paper reconstructed in `models/jones2020`.

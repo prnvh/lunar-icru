@@ -20,6 +20,33 @@ SCENARIO_OVERRIDES = {
 }
 
 
+def _irr(cash: list[float]) -> tuple[float | None, str]:
+    """Unique IRR of an explicit cash-flow list. Not used to fit a schedule."""
+    nonzero = [value for value in cash if value != 0]
+    changes = sum(a * b < 0 for a, b in zip(nonzero, nonzero[1:]))
+    if changes != 1:
+        return None, "IRR not selected: cash flow does not have exactly one sign change"
+    low, high = -0.9, 1.0
+
+    def npv(rate: float) -> float:
+        return math.fsum(value / (1 + rate) ** period for period, value in enumerate(cash))
+
+    left, right = npv(low), npv(high)
+    while left * right > 0 and high < 1e6:
+        high = 2 * high + 1
+        right = npv(high)
+    if left * right > 0:
+        return None, "No IRR bracket found"
+    for _ in range(160):
+        middle = (low + high) / 2
+        center = npv(middle)
+        if left * center <= 0:
+            high = middle
+        else:
+            low, left = middle, center
+    return (low + high) / 2, "unique root of this scenario's explicit cash flows"
+
+
 def _number(value, name, minimum=0.0):
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         raise ValueError(f"{name} must be a finite number")
@@ -102,6 +129,19 @@ def run(inputs: dict) -> dict:
         original_case = not any(key != "scenario_overrides" for key in inputs) and not overrides
         source_price_quantity_revenue = original_quantity * scenario["printed_average_price_usd_per_kg"]["value"]
         source_price_quantity_npv = -parameters["initial_investment_usd"]["value"] + (source_price_quantity_revenue - parameters["annual_cost_usd"]["value"]) * source_annuity_factor
+        cash_flows = [-capital] + [annual_net_cash_flow] * years
+        ror, ror_status = _irr(cash_flows)
+        reported_ror = scenario["reported_ror"]["value"]
+        hist_rate = parameters["discount_rate"]["value"]
+        hist_years = int(parameters["mine_life_years"]["value"])
+        hist_capital = parameters["initial_investment_usd"]["value"]
+        hist_revenue = scenario["annual_revenue_usd"]["value"]
+        hist_cost = parameters["annual_cost_usd"]["value"]
+        start_factor = math.fsum((1.0 + hist_rate) ** -year for year in range(0, hist_years))
+        start_npv = -hist_capital + (hist_revenue - hist_cost) * start_factor
+        component_cost = parameters["operations_cost_usd_per_year"]["value"] + parameters["replacement_mass_kg_per_year"]["value"] * (
+            parameters["hardware_cost_usd_per_kg"]["value"] + parameters["lunar_delivery_cost_usd_per_kg"]["value"])
+        component_npv = -hist_capital + (hist_revenue - component_cost) * source_annuity_factor
         results[scenario_id] = {
             "customers": scenario["customers"],
             "annual_sale_quantity_kg_at_lunar_surface": quantity,
@@ -128,7 +168,18 @@ def run(inputs: dict) -> dict:
             "minimum_time_zero_subsidy_usd": max(0.0, -npv),
             "derived_break_even_average_surface_price_usd_per_kg": (capital / annuity_factor + annual_cost) / quantity if quantity else None,
             "break_even_price_status": "separate_derived_constant_quantity_metric_not_native_reported_result",
-            "cash_flows_usd": [-capital] + [annual_net_cash_flow] * years,
+            "rate_of_return": ror,
+            "rate_of_return_status": ror_status,
+            "reported_ror": reported_ror,
+            "ror_rounds_to_reported": ror is not None and round(ror, 2) == reported_ror,
+            "historical_timing_and_cost_diagnostics": {
+                "basis": "historical parameters only; not the primary path and not an override",
+                "start_of_year_discounting_npv_usd": start_npv,
+                "start_of_year_matches_reported_npv_sign": (start_npv >= 0) == (reported_npv >= 0),
+                "component_128m_annual_cost_npv_usd": component_npv,
+                "component_128m_rounds_to_reported_npv": round(component_npv / 1e6) == round(reported_npv / 1e6),
+            },
+            "cash_flows_usd": cash_flows,
             "discounted_cash_flows_usd": [-capital] + [annual_net_cash_flow * factor for factor in discount_factors],
             "source_provenance": copy.deepcopy(scenario),
             "overrides": copy.deepcopy(overrides),

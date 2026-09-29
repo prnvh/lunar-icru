@@ -42,7 +42,7 @@
       "printed_average_price_usd_per_kg": {"value": 7500, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported"},
       "annual_revenue_usd": {"value": 750000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": -234000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.09, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.09, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "2": {
       "customers": "EML1",
@@ -50,7 +50,7 @@
       "printed_average_price_usd_per_kg": {"value": 3750, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported"},
       "annual_revenue_usd": {"value": 1050000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": 1609000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.19, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.19, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "3": {
       "customers": "LEO",
@@ -58,7 +58,7 @@
       "printed_average_price_usd_per_kg": {"value": 500, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported"},
       "annual_revenue_usd": {"value": 630000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": -972000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.04, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.04, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "4": {
       "customers": "LEO + Moon",
@@ -66,7 +66,7 @@
       "printed_average_price_usd_per_kg": {"value": 1015, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported_rounded_average"},
       "annual_revenue_usd": {"value": 1380000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": 3639000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.28, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.28, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "5": {
       "customers": "EML1 + LEO",
@@ -74,7 +74,7 @@
       "printed_average_price_usd_per_kg": {"value": 1091, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported_rounded_average"},
       "annual_revenue_usd": {"value": 1680000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": 5481000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.37, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.37, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "6": {
       "customers": "Moon + EML1",
@@ -82,7 +82,7 @@
       "printed_average_price_usd_per_kg": {"value": 4737, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported_rounded_average"},
       "annual_revenue_usd": {"value": 1800000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": 6218000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.40, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.40, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     },
     "7": {
       "customers": "Moon + EML1 + LEO (all customers)",
@@ -90,7 +90,7 @@
       "printed_average_price_usd_per_kg": {"value": 1482, "unit": "USD/kg_at_lunar_surface", "source": "Table 14 p.109", "provenance": "reported_rounded_average"},
       "annual_revenue_usd": {"value": 2430000000, "unit": "USD/year", "source": "Table 14 p.109", "provenance": "reported"},
       "reported_npv_usd": {"value": 10092000000, "unit": "USD", "source": "Table 14 p.109", "provenance": "reported_rounded_to_million"},
-      "reported_ror": {"value": 0.56, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported_not_reconstructed"}
+      "reported_ror": {"value": 0.56, "unit": "fraction/year", "source": "Table 14 p.109", "provenance": "reported"}
     }
   },
   "unsupported_fields": ["plant_productivity_scaling", "architecture_or_destination_changes", "transport_delta_v_or_boiloff", "replacement_mass_override_without_cost_rule", "separate_operations_cost_override_without_aggregate_reconciliation", "tax_or_depreciation", "debt_equity_financing", "construction_phasing", "revenue_growth_or_ramp_up", "salvage_value", "inflation_or_currency_year_conversion"]
