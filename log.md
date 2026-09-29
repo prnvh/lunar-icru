@@ -102,3 +102,11 @@
 - **Decision:** Do not rerun that review. **Rationale:** the public paper is already the `charania2007` packet, and the required price stays unresolved.
 - **Pelech 2019:** no legal open full text was found. The case stays conditional. Shadow-library copies are not sources.
 - **Blair 2002:** the Space Resources Roundtable download `https://isruinfo.com/public/docs/LDEM_Draft4-updated.pdf` is a PDF. The former Mines draft URL returns 404. The Excel toolkit remains unrecovered, so the case stays conditional.
+
+## 2026-09-29 — Sowers IRR blocked; comparison gate set
+
+- **Decision:** Change the immediate objective from six reconstructions to a second model that can answer a decision question commensurable with Kornuta NPV. **Rationale:** Kornuta is the only operational financial baseline, and the other coded headlines are different questions or missing their solving schedules.
+- **Decision:** Adopt the comparison gate. Benchmark experiments start only when two reconstructed models can evaluate the same explicit quantity without unsupported logic. A recovered cash-flow stream may be reported as NPV at a declared discount rate. An invented stream may not. Benchmark values stay unset; the schema is `research/benchmark-schema.json`.
+- **Decision:** Keep two families. Financial cases are Kornuta, Sowers, Charania, and Blair. Campaign-cost cases are Jones and Bennett descendants. Cross-family differences are different questions.
+- **Sowers milestone:** The NIAC packet does not contain an annual cash-flow table. Three schedules that obey the stated four-year build, two-year deployment window, and five-year NASA funding window produce commercial IRRs of 8.4359%, 7.2902%, and 10.1517%, against the reported 8.84%. The back-loaded public-private schedules have no single IRR. Figures were not digitized. Mines, the grant number, and a workbook-oriented web search did not produce an `.xlsx`. Shishko 2019 names cash-flow sheets and does not publish the series.
+- **Decision:** Mark `sowers_niac2020` company IRR blocked. Keep the static cost chain as a partial reconstruction. **Rationale:** the published IRR is not identified by the tabulated totals plus the stated durations, so calculating NPV from a chosen schedule would invent the comparison.

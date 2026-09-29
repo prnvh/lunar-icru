@@ -9,7 +9,7 @@ Executed with Python 3.14 on 2026-09-29. Grades follow the selection specificati
 | `jones2020` | Campaign cost ratio | Unresolved | Returned null. No numeric source target. |
 | `jones2020` | Duke Table 5 mass and power at 17 t/year | Partial | 2,262.7 kg and 10.4958 kWe. MREE/Duke specific-mass ratio 8.340 against the printed “approximately 8.3.” |
 | `sowers_niac2020` | Development, production, deployment, operations, and the consistent revenues | Close | Independent sums match the printed cost tables within rounding. |
-| `sowers_niac2020` | Company and NASA IRR | Unresolved | No tabulated annual schedule. Illustrative timing is not a reproduction. |
+| `sowers_niac2020` | Company and NASA IRR | Blocked | No annual table. Schedules inside the stated duration windows do not identify the published IRRs. See the methods record. |
 | `charania2007` | Table 2 cost subtotals | Exact | Component rows sum to the printed DDT&E, acquisition, and transportation subtotals for all three cases. |
 | `charania2007` | Required sale price | Unresolved | The zero-NPV solver is not in the paper. Prices are stored as reported outputs only. |
 

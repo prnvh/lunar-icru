@@ -12,7 +12,7 @@ The unit is a **versioned decision case**: one source edition, one decision ques
 
 An author name is not a model. Jones 2019 cislunar, Jones 2019 lunar-surface, and Jones 2020 Moon/Mars are different cases. The Sowers NIAC Phase I report and the later Sowers journal business case are different cases until a source audit shows they implement the same calculation. A directory may carry a literature-family name, but `notes.md` must name the exact document, edition, and result being reproduced. A second edition gets its own directory.
 
-Select about four to six baselines. Prefer one strong case per decision problem over several weak cases from the same family.
+The immediate objective is not six reconstructions. It is a second independently reconstructed model that can answer a decision question commensurable with Kornuta's NPV. Until that exists, numerical benchmark values stay unset. The comparison gate and the two model families are in [the methods record](../research/methods-record.md).
 
 ## 2. What does not count as another baseline
 
@@ -56,9 +56,9 @@ Status values: **baseline** (native metric may be cited), **partial** (named rec
 
 | Case id | Status | Native metric | What may be cited now |
 |---|---|---|---|
-| `kornuta2019` | baseline for NPV | NPV of a constant 10-year cash flow, source USD, cost year unresolved | Seven scenario NPVs from the printed revenue path. The quantity-times-printed-price path is a rounding diagnostic, not a silent replacement. ROR is not reconstructed. Break-even price in the module is a derived report, not a published result. |
+| `kornuta2019` | baseline for NPV | NPV of a constant 10-year cash flow, source USD, cost year unresolved | Seven scenario NPVs from the printed revenue path. Rates of return of those same cash flows round to the printed table. The quantity-times-printed-price path is a rounding diagnostic. Break-even price in the module is derived, not a published result. |
 | `jones2020` | partial | Undiscounted cumulative ISRU/Earth cost ratio, FY2019 million USD | Phase demand, Table 5 mass and power at a stated rate, and cost-estimating relationships when their own subsystem masses are supplied. The campaign ratio is unresolved. |
-| `sowers_niac2020` | partial | Company IRR; static costs in source USD, cost year unresolved | Component development, production, deployment, operations, and stated revenues, with printed inconsistencies kept as separate branches. Calculated IRR is unresolved. Illustrative uniform timing is not a reproduction. |
+| `sowers_niac2020` | partial on the static chain; IRR blocked | Company IRR; static costs in source USD, cost year unresolved | Cost and revenue totals may be cited. The company IRR is blocked: stated durations do not identify Table 4.9.3, and no public annual cash-flow table or workbook was found. See the methods record. |
 | `charania2007` | blocked on the price solver | Required sale price, FY2006 USD | Source packet recorded from the public 17-page paper. Table 2 subtotals match the sum of their rows. The zero-NPV price is unresolved: cash flows are not tabulated, and both 21.7% and 22.7% WACC are printed for the same prices. Not a baseline. |
 | `jones2019_cislunar` | conditional | Reported cost per net delivered kilogram, FY2018 USD | Not coded. Include only if the central cost can be recomputed without the unrecovered PCEC/PRICE-H artifacts. Do not import 2020 cost-estimating relationships. |
 | `jones2019_surface` | conditional | Cumulative campaign cost and breakeven | Not coded. Distinct from both other Jones cases. Include only after its own source packet passes the gates. |

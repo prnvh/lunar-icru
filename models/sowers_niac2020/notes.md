@@ -2,7 +2,7 @@
 
 Research question: When major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what causes the remaining disagreement?
 
-This module reconstructs the report's thermal-mining **production-company** cost build-up and commercial/public-private-partnership cases. It preserves printed financial inputs, supplies explicitly named arithmetic alternatives, and leaves original IRR reproduction unresolved. It is not a modernized scenario or an adapter to a common model.
+This module reconstructs the report's thermal-mining **production-company** cost build-up and commercial/public-private-partnership cases. It preserves printed financial inputs and explicitly named arithmetic alternatives. The company IRR is blocked: the public packet does not identify an annual cash-flow table. It is not a modernized scenario or an adapter to a common model.
 
 ## Source and scope
 
@@ -96,7 +96,7 @@ These differences quantify one explicit timing assumption; they do not validate 
 - **NASA lifetime headlines:** p.87 says lunar net savings exceed $4B and lunar/Mars savings are $47B. The printed annual savings, investment amounts, ten-year life and third-operating-year Mars onset give $3.925B and $45.005B. The graph's annual phasing and other adjustments are not available numerically, so these claims remain unverified rather than calibrated. NASA capital support is treated as the total in Table 4.9.3; whether additional early PMDev matching should be added is unresolved.
 - **Learning curve:** inferred 90% unit learning reproduces the cost table, while the prose's description of 0.9 as an exponent is ambiguous. This inference is recorded rather than hidden.
 
-This model is suitable for inspecting the source's static cost chain and the effects of the explicit alternatives. It is not yet a validated complete historical IRR reconstruction and should not enter an intercomparison as though its original timed financial outputs had been reproduced.
+The company IRR is formally blocked. Pages 81–83 state a four-year build, an 18-month deployment, a ten-year life, and aggregate costs, and they do not tabulate the annual cash stream that defines IRR. Three schedules that all stay inside those windows produce different company IRRs, and one of them does not have a single IRR for the public-private cases. The demonstration is `timing_nonuniqueness.py`. It is not a reproduction and it is not calibrated to 8.84%, 15.8%, or 15.4%. Figures 4.9.5 and 4.9.9 were not digitized. No public workbook was found on 2026-09-29. NPV at a borrowed discount rate is not computed from an invented stream. The static cost chain above remains usable. The write-up is in the methods record.
 
 ## Audit follow-up
 

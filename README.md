@@ -15,7 +15,7 @@ When major lunar-propellant economic models are given the same physical and econ
 | Versioned specifications and parameter extraction | Done for the four packets above. Each case has notes and a parameter file. |
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
-| Common benchmark, cross-model experiments, disagreement attribution, modern sweeps, paper | Not started. The three executable native metrics do not ask the same question, and unresolved headlines are not filled in. |
+| Common benchmark, cross-model experiments, disagreement attribution, modern sweeps, paper | Not opened. The comparison gate requires a second model that can answer a Kornuta-commensurable question. Benchmark fields exist and their values are unset. Sowers company IRR is blocked. |
 
 ## Current state
 
@@ -36,6 +36,8 @@ Four versioned cases are implemented as separate modules. No common benchmark, a
 - [Initial literature and evidence review](research/initial-literature-review.md)
 - [Comparability crosswalk](research/comparability-crosswalk.md)
 - [Published-result validation](research/published-result-validation.md)
+- [Methods record](research/methods-record.md)
+- [Benchmark schema, values unset](research/benchmark-schema.json)
 - [Decision and activity log](log.md)
 
 The literature review remains an evidence map. The selection specification is the current roster: Kornuta NPV is a baseline, Jones 2020 and Sowers NIAC 2020 are partial, and Charania 2007 is blocked on its unpublished price solver. Pelech, Blair, and the other Jones editions stay conditional.

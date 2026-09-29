@@ -1,0 +1,27 @@
+{
+  "status": "schema_only",
+  "values": "unset",
+  "reason": "Cross-model benchmark values stay unset until at least two independently reconstructed models can evaluate the same explicit decision quantity without unsupported logic. Kornuta NPV is the only such model today.",
+  "estimand": null,
+  "fields": {
+    "customer": null,
+    "product": null,
+    "product_state": null,
+    "point_of_sale_or_delivery": null,
+    "demand_profile": null,
+    "campaign_or_operating_timing": null,
+    "cost_boundary": null,
+    "what_is_excluded_from_the_boundary": null,
+    "financing_convention": null,
+    "discount_rate": null,
+    "currency_year": null,
+    "real_or_nominal": null,
+    "replacement_rule": null,
+    "terminal_value": null
+  },
+  "families": {
+    "financial_business": ["kornuta2019", "sowers_niac2020", "charania2007", "blair2002"],
+    "program_campaign_cost": ["jones2020", "bennett_descendants"]
+  },
+  "note": "Family membership is not admission. Sowers IRR, Charania price, and Blair remain blocked or conditional. Jones is a separate track."
+}

@@ -1,6 +1,6 @@
 # Research Specification
 
-Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). That document governs if this file disagrees with it on the unit of selection, inclusion, grades, or which outputs may enter a harmonized comparison. The experiment design below remains in force.
+Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). The reproducibility record, comparison gate, and the decision that benchmark values stay unset are in [research/methods-record.md](research/methods-record.md). Those documents govern if this file disagrees with them on selection, grades, or which outputs may enter a comparison. The experiment design below remains the design for a comparison that has not yet opened.
 
 ## 1. Working title
 
