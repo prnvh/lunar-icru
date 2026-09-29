@@ -89,6 +89,7 @@ Current grades, from the executed modules:
 - Kornuta NPV, printed-revenue path: **close**. All seven signs match. The largest absolute gap versus the displayed NPV is about $3.35 million on the all-customers case. The same cash flows' rates of return round to all seven printed Table 14 rates. Start-of-year discounting flips the Moon case from negative to about +$147 million, so that timing is ruled out. The $128 million component cost does not round to the printed NPVs.
 - Jones 2020 campaign ratio: **partial**. Demand totals, Duke Table 5 mass 2,262.7 kg, and power 10.4958 kWe at 17 t/year are recovered. The ratio is null.
 - Sowers NIAC component totals: **close** where the independent arithmetic matches the printed table within rounding. Company and NASA IRRs: **unresolved**. The Mars revenue inconsistency stays unresolved in either direction.
+- Charania 2007 Table 2 subtotals: **exact** against the sum of the printed rows. Required sale price: **unresolved**.
 
 A failed or partial reproduction is reported. It is not repaired by tuning.
 
