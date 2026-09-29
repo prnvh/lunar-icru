@@ -68,6 +68,8 @@ Artifact search on 2026-09-29, aimed at workbooks rather than another narrative 
 
 **Result:** `sowers_niac2020` company IRR is blocked. The static cost and revenue chain remains a partial reconstruction. An NPV at a common discount rate will not be computed until an explicit cash-flow table is in hand. Obtaining that table requires the workbook or another primary tabulation, not a fitted schedule.
 
-## What remains publishable
+## Fork result
 
-If a second financial model is recovered, a matched benchmark can open. If it is not, the paper can still report which headlines are reproducible and which public packets are insufficient. Both outcomes answer the research question. The active order is: Sowers workbook, Charania financing artifacts, Blair workbook, then the Jones campaign ledger. Pelech waits on lawful full text.
+The public artifact search is recorded in [artifact-search.md](artifact-search.md). Sowers 2021 repeats the NIAC IRR table and does not add annual cash flows. Shishko 2019 names workbook sheets and does not publish them. Blair's report prints Version 5 statements and a toolkit primer; the Excel file is not public, so those statements cannot be rerun and do not open the gate. Charania's financing file was not found.
+
+The fork therefore takes the reproducibility branch. The findings are in [reproducibility-findings.md](reproducibility-findings.md). `py -3 -m unittest tests/test_reproductions.py` regenerates the checks. A matched benchmark still waits on a primary cash-flow or financing file. Pelech still waits on lawful full text.

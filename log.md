@@ -110,3 +110,11 @@
 - **Decision:** Keep two families. Financial cases are Kornuta, Sowers, Charania, and Blair. Campaign-cost cases are Jones and Bennett descendants. Cross-family differences are different questions.
 - **Sowers milestone:** The NIAC packet does not contain an annual cash-flow table. Three schedules that obey the stated four-year build, two-year deployment window, and five-year NASA funding window produce commercial IRRs of 8.4359%, 7.2902%, and 10.1517%, against the reported 8.84%. The back-loaded public-private schedules have no single IRR. Figures were not digitized. Mines, the grant number, and a workbook-oriented web search did not produce an `.xlsx`. Shishko 2019 names cash-flow sheets and does not publish the series.
 - **Decision:** Mark `sowers_niac2020` company IRR blocked. Keep the static cost chain as a partial reconstruction. **Rationale:** the published IRR is not identified by the tabulated totals plus the stated durations, so calculating NPV from a chosen schedule would invent the comparison.
+
+## 2026-09-29 — Public artifact search closed on the financial pair
+
+- Checked Sowers 2021 (DOI 10.1089/space.2020.0045 and the SMAD PDF). Table 9 repeats 8.84%, 15.8%, and 15.4%. No annual cash-flow table.
+- Shishko's 2019 ICEAA slides name cash-flow sheets and do not publish the workbook or the annual series.
+- Charania: no CABAM or financing workbook found beyond the SEI paper already packeted.
+- Blair: the NSS and ISRU copies are PDFs. Table 4.4 prints Version 5 statements and Appendix 3 describes the toolkit. The Excel file was not found. **Decision:** those printed lines do not open the comparison gate. **Rationale:** they are output of the missing workbook under a stack of relaxed assumptions, and they cannot be rerun for a common scenario.
+- **Decision:** Close the first fork on the reproducibility branch. **Rationale:** no second re-runnable financial model is in the public record. Findings and the search log are in `research/reproducibility-findings.md` and `research/artifact-search.md`. Regression checks are `tests/test_reproductions.py`.

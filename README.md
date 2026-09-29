@@ -15,7 +15,7 @@ When major lunar-propellant economic models are given the same physical and econ
 | Versioned specifications and parameter extraction | Done for the four packets above. Each case has notes and a parameter file. |
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
-| Common benchmark, cross-model experiments, disagreement attribution, modern sweeps, paper | Not opened. The comparison gate requires a second model that can answer a Kornuta-commensurable question. Benchmark fields exist and their values are unset. Sowers company IRR is blocked. |
+| Common benchmark and cross-model numerical experiments | Not opened. The public search did not recover a second re-runnable financial model. |
 
 ## Current state
 
@@ -30,6 +30,12 @@ Four versioned cases are implemented as separate modules. No common benchmark, a
 
 `py -3` is the interpreter on this machine; `python` may be unavailable. Downloaded papers and page images stay local and are gitignored.
 
+Regenerate the reproduction checks with:
+
+```text
+py -3 -m unittest tests/test_reproductions.py
+```
+
 - [Research specification](paper.md)
 - [Model selection and reconstruction specification](research/model-selection-and-reconstruction.md)
 - [Project rules](rules.md)
@@ -37,6 +43,8 @@ Four versioned cases are implemented as separate modules. No common benchmark, a
 - [Comparability crosswalk](research/comparability-crosswalk.md)
 - [Published-result validation](research/published-result-validation.md)
 - [Methods record](research/methods-record.md)
+- [Artifact search](research/artifact-search.md)
+- [Reproducibility findings](research/reproducibility-findings.md)
 - [Benchmark schema, values unset](research/benchmark-schema.json)
 - [Decision and activity log](log.md)
 
