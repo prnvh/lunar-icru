@@ -150,3 +150,10 @@
 - Downloaded Mendeley Data 10.17632/ghzjtxzhdf.1, `GTOPaperDataAll.ods`, SHA-256 `de63d2a3ab2d6d0b6b6cc8ec61561575a3413e84ce061d0c7c87e5fd716c934b`. The file stays out of git.
 - **Decision:** Do not count Bennett and Dempster 2020 as a second benchmark model. **Rationale:** the finance sheet is labeled as a Kornuta model. Its LEO check uses the published $630 million revenue, an outlay of $4.05 billion, and ten nets of $501 million. Dated XNPV is about −$972.87 million and XIRR is 4.06%, against Table 14's −$972 million and 4%. The GTO cases change the market, not the calculation lineage.
 - **Decision:** Do not replace the Kornuta reconstruction with this file. **Rationale:** it confirms the annuity for the cases checked. It is not the original workbook, and it does not supply a different historical schedule.
+
+## 2026-09-29 — Harry W. Jones 2021 cost table does not fully regenerate
+
+- Retrieved ICES-2021-147 from NTRS, 507,814 bytes, local only. This is Harry W. Jones, not Christopher Jones 2020.
+- Earth-supply costs in Table 1 match equation 18 and the stated $10 million per tonne launch cost, including the 1.3 container factor over ten years.
+- **Decision:** Do not admit the paper as a benchmark model. **Rationale:** the oxygen-mining plant cost does not follow equation 17 or equation 14 applied to the printed plant mass. Equation 17 gives about 26,400 for a 10.9 t plant, and equation 14 gives about 10,300, against the table's 93.
+- Cilliers, Rasera, and Hadler 2020 is a mining-rate paper, not a cost model. OSF and the Open Lunar repositories did not produce a lunar-propellant economic file. Eligible count remains one.

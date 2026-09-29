@@ -47,6 +47,18 @@ Screened for relevance first. Nothing below was coded.
 
 Eligible count remains one: Kornuta. The stopping rule is not met.
 
+## Pass of 2026-09-29, archives and cost equations
+
+| Candidate | Why it was looked at | Disposition |
+|---|---|---|
+| OSF search for lunar propellant, lunar ice, or ISRU NPV/IRR | Named archive in the search scope | No lunar-propellant economic model in the results. Terrestrial energy and mining projects are out. |
+| Sommariva et al. 2020, Bocconi repository | Possible lawful preprint | The repository lists the preprint as private. Not used. |
+| Open Lunar Foundation public repositories | Named lunar organization | Trajectory and flight-software tools. No economic model. |
+| Cilliers, Rasera, and Hadler, Planetary and Space Science 2020, DOI 10.1016/j.pss.2019.104749 | Open Imperial copy. Lunar oxygen demand. | Out. The result is a regolith mining rate, about 30 kg/h for 1,000 kg/year of oxygen, and 65 kg/h at 95% confidence. It is not a cost, price, or value. |
+| Harry W. Jones, ICES-2021-147, NTRS 20210019592 | Public paper. Life-cycle cost of lunar oxygen, hydrogen, and water from mining, Earth supply, or recycling. Oxygen and hydrogen are propellant. This is not Christopher Jones 2020. | Not admitted. The Earth-supply column of Table 1 matches equation 18: for 10, 30, 100, and 300 t/year over 10 years the container costs are 7,447, 14,239, 28,971, and 55,394 million 2021 dollars, and the launch costs are 1,300, 3,900, 13,000, and 39,000. The oxygen-mining plant costs do not. Equation 17 prints 34 times (mass in kg times 2.2) to the power 0.66. For the equation 5 plant at 10 t/year, 10.9 t, that is about 26,400, against the table's 93. Equation 14 with the paper's own coefficients gives about 10,300 for that plant. The mining headline is not regenerated. |
+
+Eligible count remains one: Kornuta. The stopping rule is not met.
+
 ## Still to search
 
-Sommariva full text, if a lawful copy appears. OSF and remaining university archives. Cilliers still has no public calculation file in these queries. Eligible count remains one.
+A lawful Sommariva full text, if one appears. Remaining dissertation archives that are not on the open web. Eligible count remains one.
