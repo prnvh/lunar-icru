@@ -19,8 +19,9 @@ Three versioned reconstructions are implemented as separate modules. Each keeps 
 `py -3` is the interpreter on this machine; `python` may be unavailable. Downloaded papers and page images stay local and are gitignored.
 
 - [Research specification](paper.md)
+- [Model selection and reconstruction specification](research/model-selection-and-reconstruction.md)
 - [Project rules](rules.md)
 - [Initial literature and evidence review](research/initial-literature-review.md)
 - [Decision and activity log](log.md)
 
-The literature review remains an evidence map. Inclusion of further cases, including Charania and DePasquale 2007, is not frozen.
+The literature review remains an evidence map. The selection specification is the current roster: Kornuta NPV is a baseline, Jones 2020 and Sowers NIAC 2020 are partial, and Charania 2007 is queued. Pelech, Blair, and the other Jones editions stay conditional.

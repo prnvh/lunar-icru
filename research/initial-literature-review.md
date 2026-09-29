@@ -70,6 +70,8 @@ For production-side scenario anchors, [Kleinhenz & Paz (2021), _A Lunar Water IS
 
 ## Recommended inclusion workflow
 
+The binding roster and grades are in [the model selection and reconstruction specification](model-selection-and-reconstruction.md). The notes below are the evidence-review priorities that specification used; they are not a second inclusion list.
+
 Apply the repository's formal rule to each **versioned model case**, and score four separate dimensions before deciding inclusion:
 
 1. **Primary-result recoverability:** Is the principal result unambiguous, with enough equations/tables to reproduce it?

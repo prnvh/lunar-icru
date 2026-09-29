@@ -1,5 +1,7 @@
 # Research Specification
 
+Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). That document governs if this file disagrees with it on the unit of selection, inclusion, grades, or which outputs may enter a harmonized comparison. The experiment design below remains in force.
+
 ## 1. Working title
 
 **Model or Assumption? A Reproducible Intercomparison of Lunar-Propellant Techno-Economic Models**
@@ -16,7 +18,9 @@ The validated models will then be evaluated across a common modern reusable-spac
 
 ## 3. Primary research question
 
-**If major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what features of their model structures explain the remaining disagreement?**
+**When major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what causes the remaining disagreement?**
+
+The same wording is used in the project rules and the selection specification. Disagreement is attributed to inputs, architecture, and model or accounting structure only after the comparison is shown to ask the same question.
 
 ## 4. Secondary research questions
 
@@ -66,36 +70,22 @@ Both results constitute valid findings.
 
 ## 8. Unit of analysis
 
-The principal unit of analysis is an individual published lunar-propellant techno-economic model.
+The principal unit of analysis is a versioned decision case: one source edition, one decision question, one native metric, and one system boundary.
 
-Candidate cases include:
+An author name is not a case. Separate editions and campaign questions stay separate. Descendant reanalyses and later critiques are not additional baselines. The target size is about four to six baselines, chosen so that each adds a distinct decision problem.
 
-- Jones
-- Kornuta
-- Pelech
-- Bennett
-- Charania / DePasquale
-- Sowers
-
-The final set should contain approximately four to six models.
+The current roster, grades, and exclusions are maintained in the selection specification, not in this section.
 
 ## 9. Model inclusion criteria
 
-A study may be included when:
+A case is included only when all four gates in the selection specification pass:
 
-1. It provides a quantitative economic evaluation of lunar-derived propellant or closely equivalent lunar-resource production.
+1. The principal published result is identified and is not a digitization of a figure.
+2. The central economic calculation can be recomputed from the obtainable source.
+3. The case is structurally distinct from baselines already included.
+4. The product, customer, location, and cost boundary can be stated.
 
-2. Its calculation structure is sufficiently documented to permit meaningful reconstruction.
-
-3. Its results have influenced later lunar-resource economic literature or represent a materially different modeling approach.
-
-4. At least one principal published result can be identified for reproduction.
-
-5. The study contains enough information to distinguish its physical architecture from its economic calculation.
-
-Models should be excluded when their central calculations cannot be reconstructed even approximately from available evidence.
-
-Incomplete reproduction may still be documented as a finding.
+A case whose central calculation cannot be reconstructed even approximately remains in the evidence map. A partial reconstruction may be documented and may contribute only the named outputs that were actually recovered.
 
 ## 10. Conceptual decomposition
 
@@ -159,6 +149,9 @@ Examples:
 - Opportunity cost
 - Lifecycle cost
 - Government program cost
+- Undiscounted cumulative cost ratio
+
+A difference at this level is a different question until the metric-compatibility gate says otherwise. It is not automatically model-form disagreement, and it is not removed by converting every output to one dollar-per-kilogram figure.
 
 ## 11. Required software architecture
 
@@ -168,21 +161,20 @@ Example structure:
 
 ```text
 /models
-    /jones
+    /jones2020
         model.py
-        original_inputs.yaml
+        original_inputs.json
+        reported_outputs.json
+        reproduction.json
+        source_manifest.json
         notes.md
-
-    /kornuta
-        model.py
-        original_inputs.yaml
-        notes.md
-
-    /pelech
-        model.py
-        original_inputs.yaml
-        notes.md
+    /kornuta2019
+        ...
+    /sowers_niac2020
+        ...
 ```
+
+Parameters live with the case, in JSON. A second edition is a new directory. Cases do not import one another.
 
 The historical models must not initially be rewritten into one common mathematical model.
 
@@ -255,33 +247,24 @@ The reconstruction should reproduce both final and intermediate published values
 
 ## 16. Reproduction metric
 
-For numerical quantities:
+For each named output, report the absolute error in source units and the relative error
 
 \[
 E = \frac{|R_{reconstructed}-R_{published}|}
 {|R_{published}|}
 \]
 
-where \(E\) is relative reproduction error.
+when the published value is not zero or small enough to make \(E\) misleading. Also report whether the sign or the inequality direction matches. Relative error is a reported number, not the grade.
 
-Suggested reporting categories:
-
-- ≤1%: very close reproduction
-- >1–5%: close reproduction
-- >5–10%: approximate reproduction
-- >10%: unresolved discrepancy
-
-The paper should report actual errors rather than relying only on categorical labels.
+Grades apply to one named output: exact, close, approximate, partial, or unresolved, as defined in the selection specification. Percentage bands are not used as pass thresholds. A matching headline with an unchecked intermediate chain is not accepted as exact or close.
 
 ## 17. Replication acceptance rule
 
-A model may proceed to the main intercomparison when:
+Native results may be displayed at any grade, with the grade visible. Unresolved headlines stay unresolved.
 
-1. Its primary published output can be reproduced within a justified tolerance, or
+A named output may enter a common-input, architecture, or model-form comparison only when its grade is exact, close, or approximate, and the metric-compatibility gate says the compared cases are answering the same question. A partial case may contribute a recovered relationship, such as a published sizing equation, only through an adapter field that does not fill a recorded blocker.
 
-2. Remaining discrepancies can be explicitly explained and bounded.
-
-Models with unresolved large discrepancies should be treated separately in later analysis.
+Do not tune equations, allocations, or unstated schedules to move a case across that threshold.
 
 ## 18. Phase III — Parameter crosswalk
 
@@ -289,14 +272,14 @@ Construct a cross-model parameter matrix.
 
 Example fields:
 
-| Concept | Jones | Kornuta | Bennett | Sowers | Common definition |
-|---|---|---|---|---|---|
-| Launch cost | ... | ... | ... | ... | $/kg to reference orbit |
-| Lifetime | ... | ... | ... | ... | operating years |
-| Demand | ... | ... | ... | ... | kg/year |
-| Discount rate | ... | ... | ... | ... | real annual rate |
+| Concept | Case A | Case B | Same quantity? | If not, why |
+|---|---|---|---|---|
+| Launch cost | ... | ... | no, until destination and burden match | surface delivery price versus Earth-to-orbit price |
+| Lifetime | ... | ... | no, until the clock is the same | flight counts versus operating years |
+| Demand | ... | ... | no, until location matches | surface sale quantity versus delivered mass |
+| Discount rate | ... | ... | only if both models discount | an undiscounted campaign has no rate to harmonize |
 
-The crosswalk must distinguish equivalent-looking quantities that actually have different meanings.
+The crosswalk records a common definition only where the meanings match. It must not assign one dollar-per-kilogram definition to metrics that answer different questions.
 
 ## 19. Phase IV — Common benchmark
 
@@ -417,11 +400,11 @@ Where the model architecture permits it, replace one rule at a time.
 Example:
 
 ```text
-Original Bennett model
+Original case
         ↓
-replace replacement rule
+replace one stated rule
         ↓
-observe Δ result
+observe the change in that case's own metric
 ```
 
 Repeat for major structural rules.
@@ -666,15 +649,15 @@ The intended contribution is:
 
 The study succeeds if it can:
 
-1. Faithfully reconstruct at least three materially different published models.
+1. Reconstruct at least three structurally different versioned cases, with a grade on each named output.
 
-2. Reproduce their important published outputs to defensible accuracy.
+2. Report unresolved headlines as unresolved rather than forcing them into the comparison.
 
-3. Run those models under at least one genuinely common benchmark.
+3. Run the outputs that pass the compatibility gate under at least one predeclared common benchmark.
 
-4. Demonstrate quantitatively how their spread changes following harmonization.
+4. Show how the spread of those comparable outputs changes after harmonization.
 
-5. Identify specific structural reasons for important remaining disagreements.
+5. Identify specific structural reasons for important remaining disagreements, including disagreements that are different questions rather than different answers.
 
 The project does not require lunar propellant to be found economically favorable.
 
@@ -698,15 +681,15 @@ All headline results must be regenerable from public code and parameter files.
 Repository should contain:
 
 ```text
-/models
-/parameters
-/benchmarks
-/tests
-/analysis
-/figures
-/data
-/docs
+/models/<case_id>/     equations, native parameters, manifests, notes
+/research/             evidence map, selection specification, later crosswalks
+/benchmarks/           only after the compatibility gate is filled
+/tests/
+/analysis/
+/figures/
 ```
+
+Parameter files stay inside each case directory so a historical default cannot be confused with a benchmark.
 
 ## 43. Required metadata for every parameter
 
