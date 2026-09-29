@@ -2,6 +2,22 @@
 
 This repository is a research project on the reproducible intercomparison of lunar-propellant techno-economic models.
 
+## Run the papers
+
+```text
+py -3 analysis/run_papers.py
+py -3 -m unittest discover -s tests -v
+py -3 analysis/plot_results.py
+```
+
+The numeric pipeline needs only Python's standard library; the optional plot needs matplotlib. Use `python` in place of `py -3` on other systems. Read [executed results](results/summary.md) and [recovery methods](research/recovery-methods.md).
+
+The new recovery phase adds two executable equation investigations and a bounded financial comparison:
+
+- **Harry W. Jones 2021:** forward calculations recover 12 of 16 Table 1 process/rate rows. Literal equations, dimensional repairs and inferred table behavior are separate branches. Some recovered behavior contains probable unit errors.
+- **Metzger 2023:** the baseline table and sector equations are now executable. The three terminal launch costs reproduce within 0.54%; the full orbital crossing-year headline remains unresolved.
+- **Sowers/Kornuta:** 60 conditional surface-offtake cases and analytic bounds across allowed Sowers spending schedules. Unknown currency years and product equivalence still prevent a strict harmonized historical benchmark.
+
 ## Research question
 
 When major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what causes the remaining disagreement?
@@ -16,11 +32,11 @@ When major lunar-propellant economic models are given the same physical and econ
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
 | Part I, historical reproducibility audit | Frozen. Kornuta NPV is executable. Sowers, Charania, and Jones are partial. Blair is outputs only. Pelech is inaccessible. Write-up: [research/manuscript.md](research/manuscript.md). |
-| Part II, benchmark-eligible models | Search closed in [research/benchmark-search.md](research/benchmark-search.md). Kornuta is the only eligible model. No second model was coded. No common benchmark was run. |
+| Part II, benchmark-eligible models | The original strict benchmark remains unrun. The search has reopened through executable candidate investigations and conditional bounds; see [recovery methods](research/recovery-methods.md). |
 
 ## Current state
 
-Four versioned cases are implemented as separate modules. No common benchmark, architecture harmonization, or modern scenario has been run. Native metrics are preserved, and a result stays unresolved when the source does not supply the missing quantity.
+Four historical cases remain in `models/`. New recovery investigations live in `experiments/`, with explicit assumptions and generated comparisons in `results/`. Native metrics are preserved; a conditional result is not labeled a reproduced historical headline. Full architecture harmonization and a validated modern model ensemble remain unresolved.
 
 | Case | Native metric | Reproduction status | Run |
 |---|---|---|---|
@@ -52,4 +68,4 @@ py -3 -m unittest tests/test_reproductions.py
 - [Benchmark schema, values unset](research/benchmark-schema.json)
 - [Decision and activity log](log.md)
 
-The literature review remains an evidence map. The selection specification is the current roster: Kornuta NPV is a baseline, Jones 2020 and Sowers NIAC 2020 are partial, and Charania 2007 is blocked on its unpublished price solver. Pelech, Blair, and the other Jones editions stay conditional.
+The literature review remains an evidence map. Kornuta NPV is the historical financial baseline; Jones 2020 and Sowers NIAC 2020 are partial, and Charania 2007 lacks its price solver. The new Harry W. Jones 2021 experiment is distinct from Christopher Jones's earlier studies. Recovery findings supersede the earlier blanket search closure without retroactively admitting unverified experiments to the historical benchmark.

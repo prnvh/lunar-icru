@@ -221,3 +221,4 @@ __marimo__/
 # parameter records, not copyrighted papers, page images, or extracted text.
 models/*/sources/
 models/*/source/
+experiments/*/sources/

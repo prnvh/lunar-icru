@@ -1,0 +1,783 @@
+{
+  "status": "experimental_partial_reconstruction",
+  "inputs": {
+    "rates_t_per_year": [
+      10,
+      30,
+      100,
+      300
+    ],
+    "years": 10,
+    "launch_musd_per_t": 10,
+    "operations_fraction_per_year": 0.1,
+    "inflation_1999_to_2021": 1.601
+  },
+  "cost_unit": "million 2021 USD",
+  "rows": [
+    {
+      "rate_t_per_year": 10,
+      "processes": {
+        "oxygen_pilot": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 9.975,
+          "power_source_value": 82.05,
+          "power_source_unit": "kW",
+          "power_kw": 82.05,
+          "reactor_mass_t": 9.058145505565696,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 38190.45750717975,
+              "launch_musd": 190.33145505565696,
+              "operations_musd": 38190.45750717975,
+              "lcc_excluding_recycling_procurement_musd": 76571.24646941516
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 48327.23006960115,
+              "launch_musd": 190.33145505565696,
+              "operations_musd": 48327.23006960115,
+              "lcc_excluding_recycling_procurement_musd": 96844.79159425796
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 14939.93799209944,
+              "launch_musd": 190.33145505565696,
+              "operations_musd": 14939.93799209944,
+              "lcc_excluding_recycling_procurement_musd": 30070.207439254536
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 18905.398565440824,
+              "launch_musd": 190.33145505565696,
+              "operations_musd": 18905.398565440824,
+              "lcc_excluding_recycling_procurement_musd": 38001.1285859373
+            },
+            "table_behavior_inference": {
+              "plant_musd": 141.23974422057708,
+              "launch_musd": 190.33145505565696,
+              "operations_musd": 141.23974422057708,
+              "lcc_musd": 472.8109434968111,
+              "inferred_reactor_mass_t": 9.058145505565696,
+              "inferred_total_installed_mass_t": 19.033145505565695
+            }
+          }
+        },
+        "oxygen_production": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 10.9,
+          "power_source_value": 57.2,
+          "power_source_unit": "kW",
+          "power_kw": 57.2,
+          "reactor_mass_t": 7.563068160475615,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 37431.60442038975,
+              "launch_musd": 184.63068160475615,
+              "operations_musd": 37431.60442038975,
+              "lcc_excluding_recycling_procurement_musd": 75047.83952238425
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 47204.14663763433,
+              "launch_musd": 184.63068160475615,
+              "operations_musd": 47204.14663763433,
+              "lcc_excluding_recycling_procurement_musd": 94592.92395687342
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 14643.078022311844,
+              "launch_musd": 184.63068160475615,
+              "operations_musd": 14643.078022311844,
+              "lcc_excluding_recycling_procurement_musd": 29470.78672622844
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 18466.053296262413,
+              "launch_musd": 184.63068160475615,
+              "operations_musd": 18466.053296262413,
+              "lcc_excluding_recycling_procurement_musd": 37116.737274129584
+            },
+            "table_behavior_inference": {
+              "plant_musd": 138.43327834205058,
+              "launch_musd": 184.63068160475615,
+              "operations_musd": 138.43327834205058,
+              "lcc_musd": 461.4972382888573,
+              "inferred_reactor_mass_t": 7.563068160475615,
+              "inferred_total_installed_mass_t": 18.463068160475615
+            }
+          }
+        },
+        "hydrogen": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 37.2,
+          "power_source_value": 1.2409999999999999,
+          "power_source_unit": "MW",
+          "power_kw": 1240.9999999999998,
+          "reactor_mass_t": 35.22782990761707,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 92260.43513398783,
+              "launch_musd": 724.2782990761708,
+              "operations_musd": 92260.43513398783,
+              "lcc_excluding_recycling_procurement_musd": 185245.14856705186
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 116769.53739509525,
+              "launch_musd": 724.2782990761708,
+              "operations_musd": 116769.53739509525,
+              "lcc_excluding_recycling_procurement_musd": 234263.3530892667
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 36091.87399147445,
+              "launch_musd": 724.2782990761708,
+              "operations_musd": 36091.87399147445,
+              "lcc_excluding_recycling_procurement_musd": 72908.02628202506
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 45679.72634841807,
+              "launch_musd": 724.2782990761708,
+              "operations_musd": 45679.72634841807,
+              "lcc_excluding_recycling_procurement_musd": 92083.73099591231
+            },
+            "table_behavior_inference": {
+              "plant_musd": 224.12789267481764,
+              "launch_musd": 383.1400179533069,
+              "operations_musd": 224.12789267481767,
+              "lcc_musd": 831.3958033029422,
+              "inferred_reactor_mass_t": 1.1140017953306898,
+              "inferred_total_installed_mass_t": 38.31400179533069
+            }
+          }
+        },
+        "recycling": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 0.604,
+          "power_source_value": 0.39,
+          "power_source_unit": "kW",
+          "power_kw": 0.39,
+          "reactor_mass_t": 0.6244997998398398,
+          "logistics_mass_t": 3.8,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 6258.430674032903,
+              "launch_musd": 50.284997998398396,
+              "operations_musd": 6258.430674032904,
+              "lcc_excluding_recycling_procurement_musd": 12567.146346064204
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 7921.402385606541,
+              "launch_musd": 50.284997998398396,
+              "operations_musd": 7921.402385606541,
+              "lcc_excluding_recycling_procurement_musd": 15893.089769211481
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 2448.2703874476156,
+              "launch_musd": 50.284997998398396,
+              "operations_musd": 2448.2703874476156,
+              "lcc_excluding_recycling_procurement_musd": 4946.82577289363
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 3098.817562716592,
+              "launch_musd": 50.284997998398396,
+              "operations_musd": 3098.817562716592,
+              "lcc_excluding_recycling_procurement_musd": 6247.920123431582
+            },
+            "table_behavior_inference": {
+              "plant_musd": 23.145550101263957,
+              "launch_musd": 50.284997998398396,
+              "operations_musd": 23.145550101263957,
+              "lcc_musd": 96.57609820092631,
+              "inferred_reactor_mass_t": 0.6244997998398398,
+              "inferred_total_installed_mass_t": 1.22849979983984
+            }
+          },
+          "unresolved_logistics_cost": {
+            "explanation": "Prose says treat similarly to Earth supply; Table 1 behavior omits container procurement and packaging launch mass.",
+            "eq18_if_applied_musd": 1081.5271465003777,
+            "additional_container_launch_if_applied_musd": 11.399999999999999
+          }
+        },
+        "earth_supply": {
+          "container_quantity_continuous": 100,
+          "container_cost_eq18_musd": 7446.721342306143,
+          "container_cost_eq14_musd": 7428.863349075079,
+          "launch_musd": 1300.0,
+          "lcc_eq18_musd": 8746.721342306144
+        }
+      }
+    },
+    {
+      "rate_t_per_year": 30,
+      "processes": {
+        "oxygen_pilot": {
+          "source_fit_in_range": true,
+          "plant_mass_t": 16.725,
+          "power_source_value": 200.55,
+          "power_source_unit": "kW",
+          "power_kw": 200.55,
+          "reactor_mass_t": 14.16156770982648,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 52568.53271217009,
+              "launch_musd": 308.86567709826477,
+              "operations_musd": 52568.53271217009,
+              "lcc_excluding_recycling_procurement_musd": 105445.93110143844
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 66487.44916473607,
+              "launch_musd": 308.86567709826477,
+              "operations_musd": 66487.44916473607,
+              "lcc_excluding_recycling_procurement_musd": 133283.7640065704
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 20564.57739234529,
+              "launch_musd": 308.86567709826477,
+              "operations_musd": 20564.577392345294,
+              "lcc_excluding_recycling_procurement_musd": 41438.02046178885
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 26009.595920323245,
+              "launch_musd": 308.86567709826477,
+              "operations_musd": 26009.59592032325,
+              "lcc_excluding_recycling_procurement_musd": 52328.05751774476
+            },
+            "table_behavior_inference": {
+              "plant_musd": 194.4141704226009,
+              "launch_musd": 308.86567709826477,
+              "operations_musd": 194.41417042260093,
+              "lcc_musd": 697.6940179434666,
+              "inferred_reactor_mass_t": 14.16156770982648,
+              "inferred_total_installed_mass_t": 30.88656770982648
+            }
+          }
+        },
+        "oxygen_production": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 15.24,
+          "power_source_value": 116.2,
+          "power_source_unit": "kW",
+          "power_kw": 116.2,
+          "reactor_mass_t": 10.779610382569492,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 46943.60168735232,
+              "launch_musd": 260.19610382569493,
+              "operations_musd": 46943.60168735232,
+              "lcc_excluding_recycling_procurement_musd": 94147.39947853034
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 59221.73418984256,
+              "launch_musd": 260.19610382569493,
+              "operations_musd": 59221.734189842566,
+              "lcc_excluding_recycling_procurement_musd": 118703.66448351082
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 18364.129264568473,
+              "launch_musd": 260.19610382569493,
+              "operations_musd": 18364.129264568473,
+              "lcc_excluding_recycling_procurement_musd": 36988.45463296265
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 23167.28037139927,
+              "launch_musd": 260.19610382569493,
+              "operations_musd": 23167.280371399273,
+              "lcc_excluding_recycling_procurement_musd": 46594.75684662424
+            },
+            "table_behavior_inference": {
+              "plant_musd": 173.61149166301044,
+              "launch_musd": 260.19610382569493,
+              "operations_musd": 173.61149166301044,
+              "lcc_musd": 607.4190871517158,
+              "inferred_reactor_mass_t": 10.779610382569492,
+              "inferred_total_installed_mass_t": 26.019610382569493
+            }
+          }
+        },
+        "hydrogen": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 90.0,
+          "power_source_value": 3.681,
+          "power_source_unit": "MW",
+          "power_kw": 3681.0,
+          "reactor_mass_t": 60.67124524847005,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 149615.96415089525,
+              "launch_musd": 1506.7124524847006,
+              "operations_musd": 149615.96415089525,
+              "lcc_excluding_recycling_procurement_musd": 300738.6407542752
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 188564.17715481395,
+              "launch_musd": 1506.7124524847006,
+              "operations_musd": 188564.17715481395,
+              "lcc_excluding_recycling_procurement_musd": 378635.0667621126
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 58529.10315678527,
+              "launch_musd": 1506.7124524847006,
+              "operations_musd": 58529.10315678528,
+              "lcc_excluding_recycling_procurement_musd": 118564.91876605526
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 73765.47174630094,
+              "launch_musd": 1506.7124524847006,
+              "operations_musd": 73765.47174630094,
+              "lcc_excluding_recycling_procurement_musd": 149037.6559450866
+            },
+            "table_behavior_inference": {
+              "plant_musd": 399.3246974569121,
+              "launch_musd": 919.1859323463834,
+              "operations_musd": 399.3246974569121,
+              "lcc_musd": 1717.8353272602076,
+              "inferred_reactor_mass_t": 1.9185932346383379,
+              "inferred_total_installed_mass_t": 91.91859323463834
+            }
+          }
+        },
+        "recycling": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 1.812,
+          "power_source_value": 1.17,
+          "power_source_unit": "kW",
+          "power_kw": 1.17,
+          "reactor_mass_t": 1.0816653826391966,
+          "logistics_mass_t": 11.399999999999999,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 11016.24967164691,
+              "launch_musd": 142.93665382639196,
+              "operations_musd": 11016.24967164691,
+              "lcc_excluding_recycling_procurement_musd": 22175.435997120214
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 13842.517973925895,
+              "launch_musd": 142.93665382639196,
+              "operations_musd": 13842.517973925897,
+              "lcc_excluding_recycling_procurement_musd": 27827.972601678182
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 4309.508126969924,
+              "launch_musd": 142.93665382639196,
+              "operations_musd": 4309.508126969924,
+              "lcc_excluding_recycling_procurement_musd": 8761.952907766241
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 5415.131781181086,
+              "launch_musd": 142.93665382639196,
+              "operations_musd": 5415.131781181087,
+              "lcc_excluding_recycling_procurement_musd": 10973.200216188565
+            },
+            "table_behavior_inference": {
+              "plant_musd": 40.74138901323486,
+              "launch_musd": 142.93665382639196,
+              "operations_musd": 40.74138901323486,
+              "lcc_musd": 224.41943185286166,
+              "inferred_reactor_mass_t": 1.0816653826391966,
+              "inferred_total_installed_mass_t": 2.8936653826391967
+            }
+          },
+          "unresolved_logistics_cost": {
+            "explanation": "Prose says treat similarly to Earth supply; Table 1 behavior omits container procurement and packaging launch mass.",
+            "eq18_if_applied_musd": 2067.9449103517068,
+            "additional_container_launch_if_applied_musd": 34.199999999999996
+          }
+        },
+        "earth_supply": {
+          "container_quantity_continuous": 300,
+          "container_cost_eq18_musd": 14238.578798931738,
+          "container_cost_eq14_musd": 14204.433242501857,
+          "launch_musd": 3900.0,
+          "lcc_eq18_musd": 18138.57879893174
+        }
+      }
+    },
+    {
+      "rate_t_per_year": 100,
+      "processes": {
+        "oxygen_pilot": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 40.35,
+          "power_source_value": 615.2999999999998,
+          "power_source_unit": "kW",
+          "power_kw": 615.2999999999998,
+          "reactor_mass_t": 24.805241381611264,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 86036.84231023802,
+              "launch_musd": 651.5524138161127,
+              "operations_musd": 86036.84231023803,
+              "lcc_excluding_recycling_procurement_musd": 172725.23703429216
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 108195.56197268821,
+              "launch_musd": 651.5524138161127,
+              "operations_musd": 108195.56197268821,
+              "lcc_excluding_recycling_procurement_musd": 217042.67635919253
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 33657.232016907445,
+              "launch_musd": 651.5524138161127,
+              "operations_musd": 33657.232016907445,
+              "lcc_excluding_recycling_procurement_musd": 67966.016447631
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 42325.62510120301,
+              "launch_musd": 651.5524138161127,
+              "operations_musd": 42325.62510120301,
+              "lcc_excluding_recycling_procurement_musd": 85302.80261622214
+            },
+            "table_behavior_inference": {
+              "plant_musd": 318.189998094671,
+              "launch_musd": 651.5524138161127,
+              "operations_musd": 318.189998094671,
+              "lcc_musd": 1287.9324100054546,
+              "inferred_reactor_mass_t": 24.805241381611264,
+              "inferred_total_installed_mass_t": 65.15524138161126
+            }
+          }
+        },
+        "oxygen_production": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 30.43,
+          "power_source_value": 322.7,
+          "power_source_unit": "kW",
+          "power_kw": 322.7,
+          "reactor_mass_t": 17.963852593472257,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 70703.25638705355,
+              "launch_musd": 483.93852593472263,
+              "operations_musd": 70703.25638705355,
+              "lcc_excluding_recycling_procurement_musd": 141890.4513000418
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 88814.87907043769,
+              "launch_musd": 483.93852593472263,
+              "operations_musd": 88814.87907043769,
+              "lcc_excluding_recycling_procurement_musd": 178113.69666681008
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 27658.801051637194,
+              "launch_musd": 483.93852593472263,
+              "operations_musd": 27658.801051637194,
+              "lcc_excluding_recycling_procurement_musd": 55801.54062920911
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 34743.98770527156,
+              "launch_musd": 483.93852593472263,
+              "operations_musd": 34743.98770527157,
+              "lcc_excluding_recycling_procurement_musd": 69971.91393647785
+            },
+            "table_behavior_inference": {
+              "plant_musd": 261.4818072234917,
+              "launch_musd": 483.93852593472263,
+              "operations_musd": 261.4818072234917,
+              "lcc_musd": 1006.9021403817061,
+              "inferred_reactor_mass_t": 17.963852593472257,
+              "inferred_total_installed_mass_t": 48.39385259347226
+            }
+          }
+        },
+        "hydrogen": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 274.8,
+          "power_source_value": 12.221,
+          "power_source_unit": "MW",
+          "power_kw": 12221.0,
+          "reactor_mass_t": 110.54863183232979,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 278061.8503911618,
+              "launch_musd": 3853.4863183232983,
+              "operations_musd": 278061.8503911618,
+              "lcc_excluding_recycling_procurement_musd": 559977.1871006469
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 344409.81564676424,
+              "launch_musd": 3853.4863183232983,
+              "operations_musd": 344409.8156467643,
+              "lcc_excluding_recycling_procurement_musd": 692673.1176118518
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 108776.56550805655,
+              "launch_musd": 3853.4863183232983,
+              "operations_musd": 108776.56550805655,
+              "lcc_excluding_recycling_procurement_musd": 221406.6173344364
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 134731.59594031356,
+              "launch_musd": 3853.4863183232983,
+              "operations_musd": 134731.59594031356,
+              "lcc_excluding_recycling_procurement_musd": 273316.6781989504
+            },
+            "table_behavior_inference": {
+              "plant_musd": 829.5725906670032,
+              "launch_musd": 2782.9585468805553,
+              "operations_musd": 829.5725906670032,
+              "lcc_musd": 4442.103728214562,
+              "inferred_reactor_mass_t": 3.4958546880555548,
+              "inferred_total_installed_mass_t": 278.29585468805556
+            }
+          }
+        },
+        "recycling": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 6.04,
+          "power_source_value": 3.9,
+          "power_source_unit": "kW",
+          "power_kw": 3.9,
+          "reactor_mass_t": 1.9748417658131499,
+          "logistics_mass_t": 38.0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 21579.85663493898,
+              "launch_musd": 460.1484176581315,
+              "operations_musd": 21579.85663493898,
+              "lcc_excluding_recycling_procurement_musd": 43619.86168753609
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 26465.59566074238,
+              "launch_musd": 460.1484176581315,
+              "operations_musd": 26465.59566074238,
+              "lcc_excluding_recycling_procurement_musd": 53391.33973914289
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 8441.944429279829,
+              "launch_musd": 460.1484176581315,
+              "operations_musd": 8441.944429279829,
+              "lcc_excluding_recycling_procurement_musd": 17344.037276217787
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 10353.223917810716,
+              "launch_musd": 460.1484176581315,
+              "operations_musd": 10353.223917810716,
+              "lcc_excluding_recycling_procurement_musd": 21166.59625327956
+            },
+            "table_behavior_inference": {
+              "plant_musd": 79.80876979183864,
+              "launch_musd": 460.1484176581315,
+              "operations_musd": 79.80876979183864,
+              "lcc_musd": 619.7659572418088,
+              "inferred_reactor_mass_t": 1.9748417658131499,
+              "inferred_total_installed_mass_t": 8.01484176581315
+            }
+          },
+          "unresolved_logistics_cost": {
+            "explanation": "Prose says treat similarly to Earth supply; Table 1 behavior omits container procurement and packaging launch mass.",
+            "eq18_if_applied_musd": 4207.6288552548995,
+            "additional_container_launch_if_applied_musd": 114.0
+          }
+        },
+        "earth_supply": {
+          "container_quantity_continuous": 1000,
+          "container_cost_eq18_musd": 28971.10784349497,
+          "container_cost_eq14_musd": 28901.6321878361,
+          "launch_musd": 13000.0,
+          "lcc_eq18_musd": 41971.107843494974
+        }
+      }
+    },
+    {
+      "rate_t_per_year": 300,
+      "processes": {
+        "oxygen_pilot": {
+          "source_fit_in_range": false,
+          "plant_mass_t": 107.85,
+          "power_source_value": 1800.3,
+          "power_source_unit": "kW",
+          "power_kw": 1800.3,
+          "reactor_mass_t": 42.429942257797144,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 149359.39964011696,
+              "launch_musd": 1502.7994225779712,
+              "operations_musd": 149359.39964011696,
+              "lcc_excluding_recycling_procurement_musd": 300221.59870281187
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 184813.2550536131,
+              "launch_musd": 1502.7994225779712,
+              "operations_musd": 184813.2550536131,
+              "lcc_excluding_recycling_procurement_musd": 371129.30952980416
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 58428.73625541258,
+              "launch_musd": 1502.7994225779712,
+              "operations_musd": 58428.73625541259,
+              "lcc_excluding_recycling_procurement_musd": 118360.27193340313
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 72298.12761734932,
+              "launch_musd": 1502.7994225779712,
+              "operations_musd": 72298.12761734932,
+              "lcc_excluding_recycling_procurement_musd": 146099.0546572766
+            },
+            "table_behavior_inference": {
+              "plant_musd": 552.3757707836611,
+              "launch_musd": 1502.7994225779712,
+              "operations_musd": 552.3757707836611,
+              "lcc_musd": 2607.5509641452936,
+              "inferred_reactor_mass_t": 42.429942257797144,
+              "inferred_total_installed_mass_t": 150.27994225779713
+            }
+          }
+        },
+        "oxygen_production": {
+          "source_fit_in_range": true,
+          "plant_mass_t": 73.83,
+          "power_source_value": 912.7,
+          "power_source_unit": "kW",
+          "power_kw": 912.7,
+          "reactor_mass_t": 30.210925176167645,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 117174.37939642493,
+              "launch_musd": 1040.4092517616764,
+              "operations_musd": 117174.37939642493,
+              "lcc_excluding_recycling_procurement_musd": 235389.16804461155
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 145242.1535454119,
+              "launch_musd": 1040.4092517616764,
+              "operations_musd": 145242.1535454119,
+              "lcc_excluding_recycling_procurement_musd": 291524.71634258545
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 45838.09874799789,
+              "launch_musd": 1040.4092517616764,
+              "operations_musd": 45838.098747997894,
+              "lcc_excluding_recycling_procurement_musd": 92716.60674775745
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 56818.08780110841,
+              "launch_musd": 1040.4092517616764,
+              "operations_musd": 56818.08780110842,
+              "lcc_excluding_recycling_procurement_musd": 114676.58485397851
+            },
+            "table_behavior_inference": {
+              "plant_musd": 433.3459312982725,
+              "launch_musd": 1040.4092517616764,
+              "operations_musd": 433.3459312982725,
+              "lcc_musd": 1907.1011143582214,
+              "inferred_reactor_mass_t": 30.210925176167645,
+              "inferred_total_installed_mass_t": 104.04092517616765
+            }
+          }
+        },
+        "hydrogen": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 802.8,
+          "power_source_value": 36.621,
+          "power_source_unit": "MW",
+          "power_kw": 36621.0,
+          "reactor_mass_t": 191.36614120580475,
+          "logistics_mass_t": 0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 519757.5484495468,
+              "launch_musd": 9941.661412058047,
+              "operations_musd": 519757.54844954686,
+              "lcc_excluding_recycling_procurement_musd": 1049456.7583111518
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 626545.322118922,
+              "launch_musd": 9941.661412058047,
+              "operations_musd": 626545.322118922,
+              "lcc_excluding_recycling_procurement_musd": 1263032.3056499022
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 203326.85313607496,
+              "launch_musd": 9941.661412058047,
+              "operations_musd": 203326.85313607496,
+              "lcc_excluding_recycling_procurement_musd": 416595.367684208
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 245101.7576821879,
+              "launch_musd": 9941.661412058047,
+              "operations_musd": 245101.75768218792,
+              "lcc_excluding_recycling_procurement_musd": 500145.17677643383
+            },
+            "table_behavior_inference": {
+              "plant_musd": 1677.5418473456507,
+              "launch_musd": 8088.515287324773,
+              "operations_musd": 1677.5418473456507,
+              "lcc_musd": 11443.598982016074,
+              "inferred_reactor_mass_t": 6.051528732477439,
+              "inferred_total_installed_mass_t": 808.8515287324774
+            }
+          }
+        },
+        "recycling": {
+          "source_fit_in_range": null,
+          "plant_mass_t": 18.12,
+          "power_source_value": 11.7,
+          "power_source_unit": "kW",
+          "power_kw": 11.7,
+          "reactor_mass_t": 3.420526275297414,
+          "logistics_mass_t": 114.0,
+          "branches": {
+            "literal_eq17_combined": {
+              "plant_musd": 41440.69695298114,
+              "launch_musd": 1355.4052627529743,
+              "operations_musd": 41440.69695298115,
+              "lcc_excluding_recycling_procurement_musd": 84236.79916871525
+            },
+            "literal_eq17_separate": {
+              "plant_musd": 49273.19242042332,
+              "launch_musd": 1355.4052627529743,
+              "operations_musd": 49273.19242042332,
+              "lcc_excluding_recycling_procurement_musd": 99901.79010359962
+            },
+            "eq14_dimensional_repair_combined": {
+              "plant_musd": 16211.417281673796,
+              "launch_musd": 1355.4052627529743,
+              "operations_musd": 16211.417281673797,
+              "lcc_excluding_recycling_procurement_musd": 33778.239826100566
+            },
+            "eq14_dimensional_repair_separate": {
+              "plant_musd": 19275.454851398827,
+              "launch_musd": 1355.4052627529743,
+              "operations_musd": 19275.454851398827,
+              "lcc_excluding_recycling_procurement_musd": 39906.31496555063
+            },
+            "table_behavior_inference": {
+              "plant_musd": 153.26010265420715,
+              "launch_musd": 1355.4052627529743,
+              "operations_musd": 153.26010265420715,
+              "lcc_musd": 1661.9254680613888,
+              "inferred_reactor_mass_t": 3.420526275297414,
+              "inferred_total_installed_mass_t": 21.540526275297417
+            }
+          },
+          "unresolved_logistics_cost": {
+            "explanation": "Prose says treat similarly to Earth supply; Table 1 behavior omits container procurement and packaging launch mass.",
+            "eq18_if_applied_musd": 8045.239274879643,
+            "additional_container_launch_if_applied_musd": 341.99999999999994
+          }
+        },
+        "earth_supply": {
+          "container_quantity_continuous": 3000,
+          "container_cost_eq18_musd": 55394.49953342887,
+          "container_cost_eq14_musd": 55261.657903907144,
+          "launch_musd": 39000.0,
+          "lcc_eq18_musd": 94394.49953342887
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "No authoritative correction or original worksheet obtained.",
+    "Both oxygen regimes are returned; no undocumented switching threshold imposed.",
+    "Combined and separate CER allocations are returned for literal/repaired equations.",
+    "Recycling procurement is separated because Table 1 appears to omit it.",
+    "The inferred-table branch encodes probable unit errors, not recommended economics."
+  ],
+  "eq14_derived_coefficient": 13.300649557180234,
+  "printed_eq17_coefficient": 34
+}

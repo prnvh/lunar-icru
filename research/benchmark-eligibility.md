@@ -1,5 +1,7 @@
 # Benchmark eligibility
 
+**Recovery-phase update, 2026-09-29:** The user requested further executable reconstruction. Candidate implementations and uncertainty bounds may now be developed in `experiments/` before admission. The seven checks below still govern claims of historical benchmark eligibility; they do not prohibit writing the code needed to perform those checks. The prior search did not prove that no other runnable calculation exists. See [recovery methods](recovery-methods.md) for the Harry W. Jones 2021, Metzger 2023 and Sowers-bound results. The earlier audit below is preserved as a dated record.
+
 This file was written before the search for additional runnable models. It governs Part II. The historical audit in Part I is frozen and is not revised to make a case eligible.
 
 The fixed question is unchanged: when major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what causes the remaining disagreement?
@@ -70,4 +72,4 @@ Part II aims at three to five runnable models. Three structurally different mode
 
 The second condition is the one that occurred. The search log records one eligible model, Kornuta. No pair was formed, and no common benchmark was run.
 
-Kornuta counts as one of the three. The search log is [benchmark-search.md](benchmark-search.md). Candidates are logged there before any of them is coded. No candidate enters `models/` until the seven reproducibility items are checked against the public file.
+Kornuta counts as one of the three. The search log is [benchmark-search.md](benchmark-search.md). Candidate code and explicitly conditional outputs belong in `experiments/`; admission to `models/` as a reproduced historical case requires a documented review of the seven items.

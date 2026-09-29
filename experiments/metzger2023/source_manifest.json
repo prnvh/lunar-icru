@@ -1,0 +1,13 @@
+{
+  "title": "Economics of In-Space Industry and Competitiveness of Lunar-Derived Rocket Propellant",
+  "author": "Philip T. Metzger",
+  "version": "arXiv:2303.09011v1",
+  "url": "https://arxiv.org/pdf/2303.09011v1",
+  "associated_journal_doi": "10.1016/j.actaastro.2023.03.014",
+  "retrieved": "2026-09-29",
+  "sha256": "9b73d728ca6f9278a8abdbb23e11ab5a810e16a7b0b5beee6b39c51475fe4572",
+  "pages": 50,
+  "visually_inspected": [13, 50],
+  "source_download_observation": "The arXiv source endpoint also returned a PDF, not a TeX/code archive.",
+  "use": "Equations 2-3,11-19; section4.13; baseline TableA-1. Dynamic choices not completely specified in the source remain conditional."
+}

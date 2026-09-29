@@ -1,0 +1,30 @@
+[
+  {
+    "ntrs_id": "20210019592",
+    "retrieval_url": "https://ntrs.nasa.gov/api/citations/20210019592/downloads/ICES-2021-147.pdf",
+    "retrieved_on": "2026-09-29",
+    "local_inspection_file": "sources/ICES-2021-147.pdf",
+    "sha256": "51c6b32d414604093c8e8ad8ff51c1c57e104cc4f36a69969b4855bb0d79141e",
+    "printed_pages_used": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "redistributed": false
+  },
+  {
+    "ntrs_id": "20160001190",
+    "retrieval_url": "https://ntrs.nasa.gov/api/citations/20160001190/downloads/20160001190.pdf",
+    "retrieved_on": "2026-09-29",
+    "local_inspection_file": "sources/ICES-2015-041.pdf",
+    "sha256": "aa00a706bff0cf7fb55231418b17802c103abcea12f9e7011e224e9e91d2ab79",
+    "printed_pages_used": [
+      4,
+      5
+    ],
+    "redistributed": false
+  }
+]

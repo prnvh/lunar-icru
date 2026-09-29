@@ -1,0 +1,31 @@
+{
+  "id": "surface_offtake_timing_bounds_v1",
+  "declared_before_execution": "2026-09-29",
+  "status": "conditional_financial_comparison_not_admitted_historical_benchmark",
+  "question": "For constant source-defined surface propellant sales, how do revenue and construction timing affect company NPV?",
+  "annual_sale_quantity_kg": 1100000,
+  "sale_price_per_kg": 500,
+  "operating_years": 10,
+  "discount_rate": 0.1,
+  "valuation_date": "commissioning, with operating receipts at ends of years 1 through 10",
+  "sowers_cost_windows_relative_to_commissioning": {
+    "development": [-5, -2],
+    "production": [-5, -2],
+    "transportation": [-1, 0]
+  },
+  "cost_multiplier_sowers": 1,
+  "sensitivity_rates": [0, 0.05, 0.1, 0.15, 0.217],
+  "sensitivity_prices": [300, 500, 750, 1000],
+  "sensitivity_relative_cost_multipliers": [0.8, 1, 1.2],
+  "provenance": {
+    "quantity_and_price": "Sowers NIAC2020 Table4.9.3 commercial baseline, 1100t/year and500 source dollars/kg. Adopted for a conditional offtake exercise before viewing its comparative result.",
+    "years": "Both source financial cases use10 operating years",
+    "rate": "Kornuta source uses10%; supplied explicitly to Sowers because its native metric is IRR",
+    "windows": "Annual-grid interpretation of Sowers four-year build and following deployment window, consistent with the existing timing_nonuniqueness.py. Shift original periods0..15 by5 to place commissioning at0. Endpoints bound all nonnegative allocations within these windows; endpoints are not claims about actual milestones.",
+    "currency": "Both source cost years remain unknown. Unit cost multiplier is a conditional same-unit-of-account assumption, not a verified inflation conversion.0.8/1.2 are analyst stress multipliers, not estimated confidence bounds.",
+    "product_boundary": "Producer surface offtake only; product equivalence across the full physical supply chains remains unverified. No orbital-delivery comparison or claim of Earth-versus-lunar competitiveness.",
+    "costs": "Keep source-native aggregate capital and recurring costs fixed. No inferred capacity or equipment scaling. Kornuta's aggregate cash-flow model already holds the same plant costs across its customer scenarios.",
+    "sensitivity_values": "Predeclared analyst stress cases;21.7% is also a cited historical hurdle rate. No probability distribution.",
+    "excluded": "Taxes, terminal value, subsidies, construction operating expenses not separately supplied, and new physical architecture are not invented. Source cost boundaries remain different."
+  }
+}

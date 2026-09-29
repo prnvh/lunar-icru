@@ -1,0 +1,38 @@
+{
+  "source": "ICES-2021-147, NTRS 20210019592",
+  "page_numbering": "printed PDF page numbers, identical to one-based PDF pages",
+  "inputs": {
+    "rates_t_per_year": {"units": "t/year", "status": "reported", "source": "p8 Table1"},
+    "years": {"units": "year", "status": "reported", "source": "p7 section VIII.C; p8 discussion"},
+    "launch_musd_per_t": {"units": "million 2021 USD/t delivered to lunar surface", "status": "reported", "source": "p6 section VII.C"},
+    "operations_fraction_per_year": {"units": "1/year", "status": "reported", "source": "p6 section VII.D"},
+    "inflation_1999_to_2021": {"units": "2021 USD/1999 USD", "status": "reported", "source": "p6 section VIII.A"}
+  },
+  "equation_constants": {
+    "oxygen_pilot_mass": {"value": [4.05, 6.6], "units": ["t/(t/month)", "t"], "source": "p3 Eq2", "status": "reported"},
+    "oxygen_pilot_power": {"value": [71.1, 22.8], "units": ["kW/(t/month)", "kW"], "source": "p3 Eq4", "status": "reported"},
+    "oxygen_production_mass": {"value": [0.217, 8.73], "units": ["t/(t/year)", "t"], "source": "p3 Eq5", "status": "reported"},
+    "oxygen_production_power": {"value": [2.95, 27.7], "units": ["kW/(t/year)", "kW"], "source": "p4 Eq7", "status": "reported"},
+    "hydrogen_mass": {"value": [2.64, 10.8], "units": ["t/(t/year)", "t"], "source": "p4 Eq8", "status": "reported"},
+    "hydrogen_power": {"value": [0.122, 0.021], "units": ["MW/(t/year)", "MW"], "source": "p4 Eq9", "status": "reported"},
+    "recycling_mass": {"value": 0.0604, "units": "t/(t/year)", "source": "p5 Eq11", "status": "reported"},
+    "recycling_logistics": {"value": 0.038, "units": "t/t", "source": "p5 Eq12", "status": "reported"},
+    "recycling_power": {"value": 0.039, "units": "kW/(t/year)", "source": "p5 Eq13", "status": "reported"},
+    "reactor_mass": {"value": [1000, 0.5], "units": ["kg/kW^0.5", "exponent"], "source": "p6 Eq15", "status": "reported"},
+    "AMCM_coefficients": {"value": [0.000565, 0.59, 0.66, 80.6, 3.81e-55, 1900, -0.36, 1.57], "units": "empirical coefficients with M in pounds and output million 1999 USD", "source": "p5 Eq14", "status": "reported"},
+    "AMCM_parameters": {"value": {"Q_installed_plant": 1, "S": 2.39, "IOC": 2040, "B": 1, "D_plant": 0, "D_container": -1.5}, "units": "dimensionless except IOC year", "source": "pp5-7", "status": "reported"},
+    "lb_per_kg": {"value": 2.2, "units": "lb/kg", "source": "p6 Eq17", "status": "reported"},
+    "Eq17_coefficient": {"value": 34, "units": "million 2021 USD/lb^0.66", "source": "p6 Eq17", "status": "reported_inconsistent_with_Eq14"},
+    "Eq18_coefficient": {"value": 492, "units": "million 2021 USD", "source": "p7 Eq18", "status": "reported"},
+    "container_dry_mass": {"value": 300, "units": "kg", "source": "p7 section VIII.C", "status": "reported"},
+    "container_payload": {"value": 1000, "units": "kg", "source": "p7 section VIII.C", "status": "reported"},
+    "resupply_mass_multiplier": {"value": 1.3, "units": "t/t", "source": "p4 Eq10", "status": "reported"}
+  },
+  "interpretations": {
+    "table_behavior_cer_mass_argument": {"value": "total_installed_t / 2.2", "status": "inferred_not_author_validated", "evidence": "forward matches at100/300 for all processes, at30 for H2/recycling"},
+    "table_behavior_hydrogen_power_argument": {"value": "MW numerical value passed to kW reactor equation", "status": "inferred_not_author_validated", "evidence": "forward launch matches at30/100/300"},
+    "table_behavior_recycling_logistics_cost": {"value": "launch logistics mass only", "status": "inferred_not_author_validated", "evidence": "forward matches at30/100/300"},
+    "oxygen_regime_switch": {"value": null, "status": "unresolved", "evidence": "paper gives12..60 and144..1500 t/year fit domains without a gap/below-range rule"},
+    "plant_and_reactor_cer_allocation": {"value": null, "status": "unresolved", "evidence": "both combined and separate branches returned for literal and Eq14 repair"}
+  }
+}

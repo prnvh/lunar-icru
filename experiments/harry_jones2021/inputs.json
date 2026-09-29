@@ -1,0 +1,7 @@
+{
+  "rates_t_per_year": [10, 30, 100, 300],
+  "years": 10,
+  "launch_musd_per_t": 10,
+  "operations_fraction_per_year": 0.1,
+  "inflation_1999_to_2021": 1.601
+}

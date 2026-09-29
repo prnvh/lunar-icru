@@ -1,0 +1,238 @@
+[
+  {
+    "rate_t_per_year": 10,
+    "process": "oxygen_pilot",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 48.23974422057708,
+      "launch": 89.33145505565696,
+      "operations": 48.23974422057708,
+      "lcc": 185.8109434968111
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 10,
+    "process": "oxygen_production",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 45.433278342050585,
+      "launch": 83.63068160475615,
+      "operations": 45.433278342050585,
+      "lcc": 174.49723828885732
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 10,
+    "process": "hydrogen",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 1.1278926748176445,
+      "launch": 2.140017953306881,
+      "operations": 1.127892674817673,
+      "lcc": 3.3958033029422268
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 10,
+    "process": "recycling",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -10.854449898736043,
+      "launch": -9.715002001601604,
+      "operations": -10.854449898736043,
+      "lcc": -31.42390179907369
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 10,
+    "process": "earth_supply",
+    "branch": "literal_eq18",
+    "error_musd": {
+      "containers": -0.27865769385698513,
+      "launch": 0.0,
+      "lcc": -0.27865769385607564
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 30,
+    "process": "oxygen_pilot",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 9.414170422600904,
+      "launch": 21.86567709826477,
+      "operations": 9.414170422600932,
+      "lcc": 39.69401794346663
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 30,
+    "process": "oxygen_production",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -11.38850833698956,
+      "launch": -26.803896174305066,
+      "operations": -11.38850833698956,
+      "lcc": -50.58091284828424
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 30,
+    "process": "hydrogen",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 0.32469745691207663,
+      "launch": 0.18593234638342437,
+      "operations": 0.32469745691207663,
+      "lcc": -0.16467273979242236
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 30,
+    "process": "recycling",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -0.2586109867651416,
+      "launch": -0.06334617360803918,
+      "operations": -0.2586109867651416,
+      "lcc": 0.4194318528616634
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 30,
+    "process": "earth_supply",
+    "branch": "literal_eq18",
+    "error_musd": {
+      "containers": -0.4212010682622349,
+      "launch": 0.0,
+      "lcc": -0.4212010682604159
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 100,
+    "process": "oxygen_pilot",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 57.18999809467101,
+      "launch": 167.55241381611268,
+      "operations": 57.18999809467101,
+      "lcc": 280.9324100054546
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 100,
+    "process": "oxygen_production",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 0.4818072234917281,
+      "launch": -0.06147406527736621,
+      "operations": 0.4818072234917281,
+      "lcc": -0.09785961829390999
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 100,
+    "process": "hydrogen",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -0.4274093329968309,
+      "launch": -0.04145311944466812,
+      "operations": -0.4274093329968309,
+      "lcc": 0.10372821456167003
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 100,
+    "process": "recycling",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -0.1912302081613575,
+      "launch": 0.14841765813150687,
+      "operations": -0.1912302081613575,
+      "lcc": -0.23404275819120812
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 100,
+    "process": "earth_supply",
+    "branch": "literal_eq18",
+    "error_musd": {
+      "containers": 0.10784349497043877,
+      "launch": 0.0,
+      "lcc": 0.10784349497407675
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 300,
+    "process": "oxygen_pilot",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 119.3757707836611,
+      "launch": 462.7994225779712,
+      "operations": 119.3757707836611,
+      "lcc": 700.5509641452936
+    },
+    "all_cells_within_half_musd": false
+  },
+  {
+    "rate_t_per_year": 300,
+    "process": "oxygen_production",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 0.3459312982724896,
+      "launch": 0.4092517616763871,
+      "operations": 0.3459312982724896,
+      "lcc": 0.10111435822136627
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 300,
+    "process": "hydrogen",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": -0.4581526543493055,
+      "launch": -0.4847126752265467,
+      "operations": -0.4581526543493055,
+      "lcc": -0.40101798392606725
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 300,
+    "process": "recycling",
+    "branch": "table_behavior_inference",
+    "error_musd": {
+      "plant": 0.2601026542071452,
+      "launch": 0.4052627529742949,
+      "operations": 0.2601026542071452,
+      "lcc": -0.07453193861124419
+    },
+    "all_cells_within_half_musd": true
+  },
+  {
+    "rate_t_per_year": 300,
+    "process": "earth_supply",
+    "branch": "literal_eq18",
+    "error_musd": {
+      "containers": 0.4995334288687445,
+      "launch": 0.0,
+      "lcc": 0.4995334288687445
+    },
+    "all_cells_within_half_musd": true
+  }
+]

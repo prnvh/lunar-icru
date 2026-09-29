@@ -1,5 +1,7 @@
 # Benchmark-model search
 
+**Current status, recovery phase:** Reopened at the user's request. The earlier search closure below is historical and does not establish that other papers cannot be run. Harry W. Jones 2021 now has a forward reconstruction of 12/16 table rows, Metzger's table and sector equations are executable with declared ambiguities, and Sowers's aggregate costs support conditional NPV bounds. These investigations are in `experiments/`; they do not automatically pass the strict full-headline or common-service benchmark gates. See [recovery methods](recovery-methods.md).
+
 Eligibility rules are frozen in [benchmark-eligibility.md](benchmark-eligibility.md). This log starts after that freeze. A repository, paper, or spreadsheet is not eligible because it was found. It is eligible only after the seven reproducibility items and, for any pair, the comparability gate.
 
 ## What is in scope
