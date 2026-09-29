@@ -35,6 +35,18 @@ Screened for relevance first. Nothing below was coded.
 | Blair, ICEAA 2020, "Cost and Market Modeling for Lunar Mining and Drilling" | Slides name NAFCOM, SOCM, and financial statements | Same Blair lineage as the 2002 report. The slides do not include the workbook. Not a new model. |
 | Shishko, ICEAA 2019 | Already in the Part I artifact search | Workbook named, not published. Does not newly qualify Sowers. |
 
+## Pass of 2026-09-29, later the same day
+
+| Candidate | Why it was looked at | Disposition |
+|---|---|---|
+| Metzger, Acta Astronautica 2023, DOI 10.1016/j.actaastro.2023.03.014, arXiv:2303.09011 | Sector cost-ratio model with equations. Table 1 states years until lunar propellant is cheaper: for the optimistic, moderate, and pessimistic markets, lunar surface, low lunar orbit, and EML1 are year 1; GEO is year 2; DRO is year 3; GTO is years 6, 7, and 7; LEO is years 19, 21, and 23. | Not admitted. Those years are a headline, but they come from a 30-year calculation whose baseline inputs are Table A-1. The appendix says several of those inputs were estimated or taken approximately from other papers' figures. The supplementary discussion is not a calculation file. The extracted parameter table is not clean enough to code. Filling the gaps would invent the model. |
+| Bennett and Dempster, Planetary and Space Science 2020, DOI 10.1016/j.pss.2020.104843 | The paper says it reconstructed the Kornuta economic model and applied it to a GTO impulse market. A dataset note describes a spreadsheet with the finance model, flight plan, and sensitivity cases. | Not a second lineage. It is a Kornuta descendant until the file shows a different calculation. The file itself has not been retrieved in this pass, so it is not admitted and it is not used to change the Kornuta reconstruction. Obtaining that spreadsheet is the next inspection, because it may show yearly cash flows for the Kornuta-family model. |
+| Sommariva, Gori, Chizzolini, and Pianorsi, Acta Astronautica 2020, DOI 10.1016/j.actaastro.2020.01.042, and Sommariva et al. 2023, DOI 10.1016/j.actaastro.2023.01.004 | Lunar mining and on-orbit refueling economics, including a Monte Carlo case built on Colorado School of Mines data. | Not admitted. The 2023 university record has no attached file. The papers were not in hand. They may reuse the Mines cost case, which would make them the Sowers or Blair lineage rather than a new one. |
+| `open-energy-transition/pypsa-moon` | Public lunar energy-system model with transport costs and ISRU loads. | Out. The decision is a power system for a settlement, not lunar-propellant cost or value. |
+| Sercel, Lunar-Polar Propellant Mining Outpost; Kuhns et al., Earth and Space 2021 | Named lunar-propellant concepts. | No public economic workbook found. The public Sercel material that was seen is a thermal-physics model. |
+
+Eligible count remains one: Kornuta. The stopping rule is not met.
+
 ## Still to search
 
-Dissertations with attached workbooks, OSF records, and university or agency archives not covered by the queries above. Sommariva and Cilliers were queried and did not return a public calculation file in this pass. That absence is not yet a completed search of those authors.
+The Bennett spreadsheet, once a stable download URL is confirmed. Sommariva full text, if a lawful copy appears. OSF and remaining university archives. Cilliers still has no public calculation file in these queries.

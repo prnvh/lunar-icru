@@ -137,3 +137,10 @@
 - Screened public repositories and papers for a second runnable lunar-propellant model. Relevance first. A GitHub link was not treated as eligibility.
 - **Not admitted:** Metzger arXiv:2303.09011 has sector equations and no located code or spreadsheet. The equation completeness check was not run. The bootstrapping reproduction repository is a different question and is out. Imperial/ESA says its Excel model will not be published. `selene-isru` states it is not a cost model. `lunar-horizon-optimizer` has no identified published baseline. Steinert 2024 and Zenodo 22715084 were left out of the financial benchmark on the metrics described in their public pages. Blair 2020 slides and Shishko 2019 stay on the Blair and Sowers lineages.
 - **Decision:** Do not code any of these in this pass. **Rationale:** none has yet passed the seven reproducibility items. Kornuta remains the only eligible model. The stopping rule is not met, and the search is not closed.
+
+## 2026-09-29 — Metzger headline is numeric; the parameter table is not a license to code
+
+- Metzger 2023 Table 1 gives years to absolute advantage. LEO is year 19, 21, or 23 as the market is cut by factors of ten. GTO is years 6, 7, and 7. **Decision:** Do not admit or code the model from the text extract. **Rationale:** Table A-1 is the input set, the appendix marks some of those inputs as estimated or approximated from figures, and there is no calculation file. A garbled table is not a baseline.
+- Bennett and Dempster 2020 say they reconstructed Kornuta. A dataset description says the finance spreadsheet was archived. **Decision:** Treat it as Kornuta lineage, not as model two. **Rationale:** the paper says the economic model is Kornuta's. The file was not retrieved in this pass. It is the next file to inspect because it may contain yearly cash flows.
+- Sommariva 2020 and 2023 are relevant and have no attached file on the record that was checked. `pypsa-moon` is a lunar power model and is out. Sercel and Kuhns did not yield a public economic workbook.
+- Eligible count remains one. The search stays open.
