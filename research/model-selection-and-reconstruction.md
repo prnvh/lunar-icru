@@ -62,8 +62,8 @@ Status values: **baseline** (native metric may be cited), **partial** (named rec
 | `charania2007` | blocked on the price solver | Required sale price, FY2006 USD | Source packet recorded from the public 17-page paper. Table 2 subtotals match the sum of their rows. The zero-NPV price is unresolved: cash flows are not tabulated, and both 21.7% and 22.7% WACC are printed for the same prices. Not a baseline. |
 | `jones2019_cislunar` | conditional | Reported cost per net delivered kilogram, FY2018 USD | Not coded. Include only if the central cost can be recomputed without the unrecovered PCEC/PRICE-H artifacts. Do not import 2020 cost-estimating relationships. |
 | `jones2019_surface` | conditional | Cumulative campaign cost and breakeven | Not coded. Distinct from both other Jones cases. Include only after its own source packet passes the gates. |
-| `pelech2019` | conditional | Opportunity cost versus direct Earth launch | Not coded. No open full text was available in the evidence review. |
-| `blair2002` | conditional | Investor NPV/IRR and related pro-forma results | Not coded. The report is public; the Excel toolkit has not been shown to be public. |
+| `pelech2019` | conditional | Opportunity cost versus direct Earth launch | Not coded. A 2026-09-29 search did not find a legal open full text. The DOI remains the citation. |
+| `blair2002` | conditional | Investor NPV/IRR and related pro-forma results | Not coded. The ISRU Info copy is a PDF (`LDEM_Draft4-updated.pdf`), not the Excel toolkit. The old Mines draft URL returns 404. |
 | `sowers2021` | conditional | Journal business case; confirm before equating with the NIAC report | Not a second copy of `sowers_niac2020`. |
 | Bennett 2020 and 2022 | not a baseline | Descendant metrics | Use only as labeled variants of a parent. |
 | Metzger 2023 | not a baseline | Analytical critique | Comparator. |

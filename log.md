@@ -95,3 +95,10 @@
 - **Decision:** Change `charania2007` from queued to blocked for the required price. **Rationale:** Table 2's component rows sum exactly to the printed subtotals, but the zero-NPV price depends on untabulated cash flows. Page 6 states the headline prices at 22.7% WACC and Table 4 states 21.7% for the same prices. Beta and the market premium are not numeric. Cash-flow figures were not digitized.
 - **Check:** Case 2 DDT&E is 2.25 times Case 1. Case 1A's price is 3.66 times its inflation-only cost, against the paper's “approximately four times.” Probabilistic means are 13.5% and 14.2% above the 1A and 2A deterministic prices, against “approximately 14%.”
 - Wrote the published-result validation record for the four coded cases. Common benchmark, cross-model experiments, modern sweeps, and the paper remain unstarted because no pair of native headlines asks the same question.
+
+## 2026-09-29 — Timed-out source review
+
+- The delegated Charania feasibility review timed out and returned no findings.
+- **Decision:** Do not rerun that review. **Rationale:** the public paper is already the `charania2007` packet, and the required price stays unresolved.
+- **Pelech 2019:** no legal open full text was found. The case stays conditional. Shadow-library copies are not sources.
+- **Blair 2002:** the Space Resources Roundtable download `https://isruinfo.com/public/docs/LDEM_Draft4-updated.pdf` is a PDF. The former Mines draft URL returns 404. The Excel toolkit remains unrecovered, so the case stays conditional.
