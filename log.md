@@ -157,3 +157,8 @@
 - Earth-supply costs in Table 1 match equation 18 and the stated $10 million per tonne launch cost, including the 1.3 container factor over ten years.
 - **Decision:** Do not admit the paper as a benchmark model. **Rationale:** the oxygen-mining plant cost does not follow equation 17 or equation 14 applied to the printed plant mass. Equation 17 gives about 26,400 for a 10.9 t plant, and equation 14 gives about 10,300, against the table's 93.
 - Cilliers, Rasera, and Hadler 2020 is a mining-rate paper, not a cost model. OSF and the Open Lunar repositories did not produce a lunar-propellant economic file. Eligible count remains one.
+
+## 2026-09-29 — ROXY pilot-plant IRR is not regenerable from the printed cash-flow rules
+
+- Read the open Aerospace 2026 ROXY pilot-plant paper. Reference results are 19.9% IRR for oxygen only and 47.4% with metals.
+- **Decision:** Do not admit it. **Rationale:** the annual cost ingredients are printed, but the development schedule is not, the cash flows are figures, and the authors say the datasets are confidential. Using only the printed annual amounts, neither a single upfront development payment nor a uniform five-year payment reproduces those IRRs. Pelech’s 2023 propellant-payback results depend on an untabulated demand curve. The 2026 lunar-mining framework does not compute a project value. Eligible count remains one.

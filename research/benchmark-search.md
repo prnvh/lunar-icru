@@ -59,6 +59,18 @@ Eligible count remains one: Kornuta. The stopping rule is not met.
 
 Eligible count remains one: Kornuta. The stopping rule is not met.
 
+## Pass of 2026-09-29, open economic papers
+
+| Candidate | Why it was looked at | Disposition |
+|---|---|---|
+| Birch, Seidel, and coauthors, Aerospace 2026, 13, 86, “Economic Analysis of a ROXY Pilot Plant” | Open paper. Lunar oxygen and metal plant. Reference case IRR 47.4% with metals and 19.9% for oxygen only. | Not admitted. The plant mass, production, consumables, power, labor, regolith rule, transport prices, and the rounded 200 M€ development cost are printed. The yearly cash flows are Figures 5 and 6. The data statement says the datasets are confidential. A uniform or single-year development spend, using only the printed annual amounts, does not regenerate 19.9% or 47.4%. The development schedule and the 4% carrying-cost treatment are not stated. The mass-reduced development costs in Table 5 are not the Table 3 cost equation either. |
+| Pelech, PhD thesis, UNSW, 2023, DOI 10.26190/unsworks/25059 | Open thesis. Lunar water project appraisal by a propellant payback ratio. | Not admitted. Equation 7.16 is PPR = mined product divided by the forgone Earth-launch quantity. The reported lunar results are a cumulative PPR of 0.08 over 40 years for strip mining and 0.33 over 22 years for sublimation. Those results use the demand curve in Figure 7.7 and a mine schedule that is not tabulated. The comet cases are out of scope. |
+| “A framework for the economic evaluation of lunar mining projects,” Space and Planetary Resources, 2026 | Open DCF discussion of lunar mining. | Out. The paper states that it does not estimate a project NPV. |
+| ISRULib (Technical University of Munich); Space Resources LEIA | Public lunar oxygen process models. | Out. Both estimate mass, power, or energy. Neither states a cost, price, or investment result. |
+| Paulson, Balchanos, and Mavris, AIAA 2026-2788 | Lunar water ISRU versus Earth resupply, with a stated 30-year payback. | Not admitted from the abstract. The simulation is described as custom. The full calculation was not in hand. |
+
+Eligible count remains one: Kornuta. The stopping rule is not met.
+
 ## Still to search
 
-A lawful Sommariva full text, if one appears. Remaining dissertation archives that are not on the open web. Eligible count remains one.
+A lawful Sommariva full text, if one appears. Johnson, ICES-2025-284, if a lawful full text appears; the habitation breakeven numbers in secondary write-ups are not a model. Eligible count remains one.
