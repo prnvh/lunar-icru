@@ -1,0 +1,70 @@
+{
+  "model_id": "charania2007",
+  "currency": "FY2006 USD",
+  "native_metric": "required sale price at zero NPV",
+  "central_calculation": "unresolved",
+  "wacc": {
+    "table_and_figure_rate": 0.217,
+    "prose_headline_rate": 0.227,
+    "debt_to_equity_ratio_as_stated": 3,
+    "tax_rate": 0.30,
+    "nominal_interest_rate": 0.075,
+    "inflation_rate": 0.021,
+    "risk_free_rate": 0.04,
+    "equity_beta": null,
+    "equity_market_premium": null,
+    "provenance": "Page 6 states 21.7% from these financing inputs and then states the three headline prices at 22.7%. Table 4 and the cash-flow figure captions use 21.7% with the same prices. Beta and the market premium are not numeric, so neither rate is recomputed."
+  },
+  "operations": {
+    "mission_operations_musd_per_year": 35,
+    "operating_years": 10,
+    "operating_window": "2022-2031",
+    "source": "Table 2; page 6 and the architecture timeline"
+  },
+  "ltv_delivery": {
+    "propellant_consumed_mt": 25,
+    "propellant_delivered_to_llo_mt": 21,
+    "source": "Page 7: the lunar transfer vehicle uses 25 MT to deliver 21 MT for sale in LLO"
+  },
+  "cost_lines_fy2006_musd": {
+    "source": "Table 2, page 12, read from word positions. The section-header figures are printed subtotals. Null is a printed dash. The facility row labeled mass is still printed in the $M column.",
+    "ddte": {
+      "printed_subtotal": {"case_1": 957, "case_2": 2157, "case_3": 2557},
+      "rows": [
+        {"name": "nuclear_power_plant", "case_1": 200, "case_2": 200, "case_3": 200},
+        {"name": "excavation_processing_storage_facility", "case_1": 595, "case_2": 595, "case_3": 595},
+        {"name": "excavation_processing_storage_labeled_mass", "case_1": 162, "case_2": 162, "case_3": 162},
+        {"name": "lunar_tanker", "case_1": null, "case_2": 1200, "case_3": 1200},
+        {"name": "orbital_tanker", "case_1": null, "case_2": null, "case_3": 400}
+      ]
+    },
+    "acquisition": {
+      "printed_subtotal": {"case_1": 319, "case_2": 1019, "case_3": 1044},
+      "rows": [
+        {"name": "nuclear_power_plant", "case_1": 67, "case_2": 67, "case_3": 67},
+        {"name": "excavation_processing_storage_facility", "case_1": 198, "case_2": 198, "case_3": 198},
+        {"name": "excavation_processing_storage_labeled_mass", "case_1": 54, "case_2": 54, "case_3": 54},
+        {"name": "lunar_tanker", "case_1": null, "case_2": 700, "case_3": 700},
+        {"name": "orbital_tanker", "case_1": null, "case_2": null, "case_3": 25}
+      ]
+    },
+    "transportation_to_lunar_surface": {
+      "printed_subtotal": {"case_1": 1445, "case_2": 2220, "case_3": 2240},
+      "rows": [
+        {"name": "cargo_launch_vehicle", "case_1": 560, "case_2": 1120, "case_3": 1120},
+        {"name": "earth_departure_stage", "case_1": 215, "case_2": 430, "case_3": 430},
+        {"name": "lunar_surface_access_module", "case_1": 670, "case_2": 670, "case_3": 670},
+        {"name": "falcon_v_or_similar_otv_launch", "case_1": null, "case_2": null, "case_3": 20}
+      ]
+    }
+  },
+  "triangular_uncertainty": {
+    "ddte": {"minimum_factor": -0.25, "maximum_factor": 0.75},
+    "acquisition": {"minimum_factor": -0.25, "maximum_factor": 0.75},
+    "transportation": {"minimum_factor": -0.10, "maximum_factor": 0.25},
+    "operations": {"minimum_factor": -0.10, "maximum_factor": 0.50},
+    "distribution": "triangular",
+    "monte_carlo_runs": 1000,
+    "source": "Table 2 and page 6. The draws and workbook are not published."
+  }
+}

@@ -88,3 +88,10 @@
 - **Checks added to the Kornuta module, using the existing cash flows:** rates of return round to 9%, 19%, 4%, 28%, 37%, 40%, and 56%. Start-of-year discounting makes the Moon NPV about +$147.35 million. The $128 million component cost does not round to the printed NPVs. Primary path remains end-of-year timing and $129 million.
 - Recorded the Table 6 discontinuity at 15,000 kg, the unused spare-launch rule, Sowers's comparison with Jones et al. (2019) rather than Jones 2020, the two-winner investment wording, full operating cost before Mars demand, and illustrative NASA IRRs of 25.48% and 52.26% against 27% and 54%.
 - Saved the three-case comparability record. No pair shares a native question, so no common benchmark was opened.
+
+## 2026-09-29 — Charania packet and validation record
+
+- Retrieved IAC-07-A5.1.03 from the SEI archive: 17 pages, SHA-256 `bc411652c5646059b01d5b8ab6e4c5bbf126c8b574317500dce28c8accb32bdb`. The PDF stays out of git. Tables 2–4 were read from page word positions.
+- **Decision:** Change `charania2007` from queued to blocked for the required price. **Rationale:** Table 2's component rows sum exactly to the printed subtotals, but the zero-NPV price depends on untabulated cash flows. Page 6 states the headline prices at 22.7% WACC and Table 4 states 21.7% for the same prices. Beta and the market premium are not numeric. Cash-flow figures were not digitized.
+- **Check:** Case 2 DDT&E is 2.25 times Case 1. Case 1A's price is 3.66 times its inflation-only cost, against the paper's “approximately four times.” Probabilistic means are 13.5% and 14.2% above the 1A and 2A deterministic prices, against “approximately 14%.”
+- Wrote the published-result validation record for the four coded cases. Common benchmark, cross-model experiments, modern sweeps, and the paper remain unstarted because no pair of native headlines asks the same question.

@@ -45,7 +45,7 @@ The target set is one baseline for each row that passes the gates. Do not add a 
 | Government campaign cost ratio | Is cumulative ISRU architecture cost below cumulative Earth-delivery cost? | Jones 2020, and only for outputs its sources support | Published plant-sizing and cost-estimating relationships. The 2019 papers are separate cases, not backfill for 2020. |
 | Delivered campaign cost | What is architecture cost per net kilogram delivered? | Jones 2019 cislunar, if the published costs can be recomputed without the missing cost-model artifacts | Different metric and campaign from Jones 2020. |
 | Commercial mining-company value | Does the mine have positive NPV at the stated discount rate? | Kornuta family, 2018 report economic section | Constant cash-flow NPV is documented and has been reconstructed. |
-| Required customer price | What price must be charged for the financed venture to clear its hurdle? | Charania and DePasquale 2007 | Surface, LLO, and GEO prices are a different decision from unfinanced cost or NPV. |
+| Required customer price | What price must be charged for the financed venture to clear its hurdle? | Charania and DePasquale 2007, if a cash-flow schedule is obtained | The public paper states the prices and the cost stack. It does not tabulate the NPV calculation, so this row is not yet filled. |
 | Thermal-mining production company | What are the company's cost, revenue, and return under commercial and public-private cases? | Sowers NIAC 2020 for the static cost and revenue chain | Distinct architecture and PPP boundary. The journal case is not automatically the same model. |
 | Opportunity cost | What is given up relative to launching the same resource from Earth? | Pelech, Roesler, and Saydam 2019, if the full text is obtained | The metric is not NPV, IRR, or price. |
 | Early private-investment pro forma | What investor return does a lunar ice venture show under the toolkit's finance? | Blair et al. 2002, if the report's equations suffice | Historical precursor. The announced Excel toolkit is not yet shown to be public. |
@@ -59,7 +59,7 @@ Status values: **baseline** (native metric may be cited), **partial** (named rec
 | `kornuta2019` | baseline for NPV | NPV of a constant 10-year cash flow, source USD, cost year unresolved | Seven scenario NPVs from the printed revenue path. The quantity-times-printed-price path is a rounding diagnostic, not a silent replacement. ROR is not reconstructed. Break-even price in the module is a derived report, not a published result. |
 | `jones2020` | partial | Undiscounted cumulative ISRU/Earth cost ratio, FY2019 million USD | Phase demand, Table 5 mass and power at a stated rate, and cost-estimating relationships when their own subsystem masses are supplied. The campaign ratio is unresolved. |
 | `sowers_niac2020` | partial | Company IRR; static costs in source USD, cost year unresolved | Component development, production, deployment, operations, and stated revenues, with printed inconsistencies kept as separate branches. Calculated IRR is unresolved. Illustrative uniform timing is not a reproduction. |
-| `charania2007` | queued | Required sale price, FY2006 USD | Nothing until a reconstruction record exists. The public paper is the source. Do not assume CABAM, StageSizer, or ProbWorks are recoverable. Preserve the WACC inconsistency rather than picking 21.7% or 22.7% without a log entry. |
+| `charania2007` | blocked on the price solver | Required sale price, FY2006 USD | Source packet recorded from the public 17-page paper. Table 2 subtotals match the sum of their rows. The zero-NPV price is unresolved: cash flows are not tabulated, and both 21.7% and 22.7% WACC are printed for the same prices. Not a baseline. |
 | `jones2019_cislunar` | conditional | Reported cost per net delivered kilogram, FY2018 USD | Not coded. Include only if the central cost can be recomputed without the unrecovered PCEC/PRICE-H artifacts. Do not import 2020 cost-estimating relationships. |
 | `jones2019_surface` | conditional | Cumulative campaign cost and breakeven | Not coded. Distinct from both other Jones cases. Include only after its own source packet passes the gates. |
 | `pelech2019` | conditional | Opportunity cost versus direct Earth launch | Not coded. No open full text was available in the evidence review. |
@@ -154,7 +154,7 @@ Provenance of every number is one of: directly reported, derived from reported v
 ## 11. Order of work
 
 1. Keep the three existing modules inside the grades in section 6. Do not invent Jones's campaign ledger or Sowers's annual phasing.
-2. Reconstruct Charania and DePasquale 2007 from the public paper, limited to the required-price calculation the paper documents.
+2. `charania2007` is recorded and blocked. Do not invent its cash-flow schedule. A later workbook, if obtained, is a new reconstruction, not a silent fill of this one.
 3. Decide `jones2019_cislunar`, `pelech2019`, and `blair2002` by applying section 3 to their source packets. Absence of a workbook or full text keeps the case conditional.
 4. Write the metric-compatibility gate for every pair that a future benchmark would compare.
 5. Only then freeze a common benchmark, before looking at comparative results.

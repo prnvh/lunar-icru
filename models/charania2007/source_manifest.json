@@ -1,0 +1,13 @@
+{
+  "case_id": "charania2007",
+  "title": "Economic Analysis of a Lunar In-Situ Resource Utilization (ISRU) Propellant Services Market",
+  "authors": "A.C. Charania and D. DePasquale",
+  "venue": "IAC-07-A5.1.03",
+  "url": "https://www.sei.aero/archive/IAC-07-A5.1.03.pdf",
+  "catalog": "https://dl.iafastro.directory/event/IAC-2007/paper/7805/",
+  "retrieved": "2026-09-29",
+  "pages": 17,
+  "sha256": "bc411652c5646059b01d5b8ab6e4c5bbf126c8b574317500dce28c8accb32bdb",
+  "local_pdf": "Inspection copy only. Not stored in git.",
+  "tables_checked_visually": ["Table 2 page 12", "Table 3 page 13", "Table 4 page 13"]
+}

@@ -1,0 +1,24 @@
+{
+  "source": "Table 4 page 13, except probabilistic means from page 7 prose. These are reported outputs, not calculated prices.",
+  "table_wacc": 0.217,
+  "cases": {
+    "1A": {"propellant_price_usd_per_kg": 26845, "inflation_only_cost_usd_per_kg": 7327, "demand_mt_per_year": 49.4, "point_of_sale": "lunar surface"},
+    "1B": {"propellant_price_usd_per_kg": 25571, "inflation_only_cost_usd_per_kg": 6979, "oxygen_price_usd_per_kg": 3196, "oxygen_inflation_only_cost_usd_per_kg": 872, "propellant_demand_mt_per_year": 49.4, "oxygen_demand_mt_per_year": 19.7},
+    "2A": {"propellant_price_usd_per_kg": 133947, "inflation_only_cost_usd_per_kg": null, "demand_mt_per_year": 21.0, "point_of_sale": "LLO"},
+    "2B": {"propellant_price_usd_per_kg": 126243, "inflation_only_cost_usd_per_kg": 31056, "oxygen_price_usd_per_kg": 7188, "oxygen_inflation_only_cost_usd_per_kg": 1768},
+    "2C": {"propellant_price_usd_per_kg": 119019, "inflation_only_cost_usd_per_kg": 29279, "oxygen_price_usd_per_kg": 6777, "oxygen_inflation_only_cost_usd_per_kg": 1667, "surface_propellant_price_usd_per_kg": 54216, "surface_propellant_inflation_only_cost_usd_per_kg": 13337},
+    "3A": {"propellant_price_usd_per_kg": 7053265, "inflation_only_cost_usd_per_kg": null, "demand_mt_per_year": 0.45, "point_of_sale": "GEO"},
+    "3B": {"propellant_price_usd_per_kg": 4632347, "oxygen_price_usd_per_kg": 21294, "inflation_only_cost_usd_per_kg": null},
+    "3C": {"propellant_price_usd_per_kg": 1663560, "oxygen_price_usd_per_kg": 7647, "surface_propellant_price_usd_per_kg": 61175, "inflation_only_cost_usd_per_kg": null}
+  },
+  "probabilistic_means_page_7": {
+    "1A_usd_per_kg": 30470,
+    "2A_usd_per_kg": 152906,
+    "stated_relation": "approximately 14% above the deterministic prices"
+  },
+  "prose_claims": {
+    "price_versus_inflation_only_cost": "approximately four times",
+    "case_2_development_versus_case_1": "more than twice",
+    "headline_prices_also_stated_at_wacc": 0.227
+  }
+}
