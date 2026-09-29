@@ -162,3 +162,9 @@
 
 - Read the open Aerospace 2026 ROXY pilot-plant paper. Reference results are 19.9% IRR for oxygen only and 47.4% with metals.
 - **Decision:** Do not admit it. **Rationale:** the annual cost ingredients are printed, but the development schedule is not, the cash flows are figures, and the authors say the datasets are confidential. Using only the printed annual amounts, neither a single upfront development payment nor a uniform five-year payment reproduces those IRRs. Pelech’s 2023 propellant-payback results depend on an untabulated demand curve. The 2026 lunar-mining framework does not compute a project value. Eligible count remains one.
+
+## 2026-09-29 — The runnable-model search stops at Kornuta
+
+- Johnson, ICES-2025-284, is public through the Texas Tech repository. **Decision:** Do not admit it. **Rationale:** the paper says the calculation is an Excel file, that file is not released, and the customer is an early habitat.
+- **Decision:** Close the Part II search without a common benchmark. **Rationale:** the logged search found one model that can be rerun and changed, Kornuta. Three runnable lunar-propellant models were not found. Inventing a second model would break the eligibility rules.
+- The manuscript states that result. Benchmark values stay null.

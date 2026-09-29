@@ -1,6 +1,6 @@
 # Research Specification
 
-Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). The reproducibility record and the comparison gate are in [research/methods-record.md](research/methods-record.md). Part I of the study is the frozen historical audit. Part II admits only models that pass [research/benchmark-eligibility.md](research/benchmark-eligibility.md). Those documents govern if this file disagrees with them on selection, grades, or which outputs may enter a comparison. The experiment design below is the design for Part II. It has not yet been run. The Part I write-up is [research/manuscript.md](research/manuscript.md).
+Model selection, reproduction grades, and the reconstruction procedure are specified in [research/model-selection-and-reconstruction.md](research/model-selection-and-reconstruction.md). The reproducibility record and the comparison gate are in [research/methods-record.md](research/methods-record.md). Part I of the study is the frozen historical audit. Part II admits only models that pass [research/benchmark-eligibility.md](research/benchmark-eligibility.md). The search closed with one eligible model, so the comparison steps below were not run. Those documents govern if this file disagrees with them on selection, grades, or which outputs may enter a comparison. The experiment design below is the design for Part II. The Part I and Part II write-up is [research/manuscript.md](research/manuscript.md).
 
 ## 1. Working title
 
@@ -665,6 +665,8 @@ The study succeeds if it can:
 5. Identify specific structural reasons for important remaining disagreements, including disagreements that are different questions rather than different answers.
 
 The project does not require lunar propellant to be found economically favorable.
+
+The stopping rule in [research/benchmark-eligibility.md](research/benchmark-eligibility.md) is the one that was met. The search found one rerunnable model. Items 3 and 4 were not run, because a common benchmark needs two models. That shortfall is the Part II result. It is recorded in [research/manuscript.md](research/manuscript.md).
 
 ## 41. Strong-result criterion
 

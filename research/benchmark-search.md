@@ -16,7 +16,7 @@ Mars-only ISRU, asteroid mining, and generic launch economics, unless the public
 
 Stop when three independent models pass and can be paired, or when this log shows that fewer than three publicly rerunnable lunar-propellant models exist. Kornuta counts as one.
 
-The search is not finished. One model, Kornuta, is eligible. No second model has been admitted.
+The search is closed. One model, Kornuta, is eligible. No second model was admitted. The coverage statement is at the end of this file.
 
 ## Pass of 2026-09-29
 
@@ -29,7 +29,7 @@ Screened for relevance first. Nothing below was coded.
 | Imperial College / ESA lunar ISRU value-chain model | Cash-flow NPV and IRR for lunar water, oxygen, and propellant | Not eligible now. The project page says the Excel model is internal and will not be published. A Python port is described as planned. |
 | `ethene/lunar-horizon-optimizer` | Repository text mentions NPV, IRR, and an ISRU scenario | Not admitted. No published lunar-propellant baseline was identified. A repository is not a model-selection criterion. |
 | `dogum/selene-isru` | Lunar industrial-chain simulator with public TypeScript and Python | Out. The repository states it is not a cost model. |
-| Steinert et al., Frontiers in Space Technologies, 2024, DOI 10.3389/frspt.2024.1352213, with a public repository | Lunar oxygen plant and delivery to a depot | Not admitted. The published result is a location comparison in mass cost, not a rerun financial headline. Left for a later look only if the repository's calculation is an economic model rather than a map. |
+| Steinert et al., Frontiers in Space Technologies, 2024, DOI 10.3389/frspt.2024.1352213, with a public repository | Lunar oxygen plant and delivery to a depot | Not admitted. The published result is a location comparison in mass cost. The repository supports that map. It is not a financial headline. |
 | Zenodo record 22715084, cislunar logistics sustainability, 2026 | Public campaign simulator and CSV inputs | Not admitted. The metric is campaign sustainability, not lunar-propellant cost or value. No lunar-production cost module was identified in the record description. |
 | `nickgollins/Space-Mission-Optimization-with-Discrete-Uncertainties-` | Open campaign scheduler | Out. Launch-schedule optimization, not a lunar-propellant business model. |
 | Blair, ICEAA 2020, "Cost and Market Modeling for Lunar Mining and Drilling" | Slides name NAFCOM, SOCM, and financial statements | Same Blair lineage as the 2002 report. The slides do not include the workbook. Not a new model. |
@@ -71,6 +71,17 @@ Eligible count remains one: Kornuta. The stopping rule is not met.
 
 Eligible count remains one: Kornuta. The stopping rule is not met.
 
-## Still to search
+## Pass of 2026-09-29, habitation breakeven and search close
 
-A lawful Sommariva full text, if one appears. Johnson, ICES-2025-284, if a lawful full text appears; the habitation breakeven numbers in secondary write-ups are not a model. Eligible count remains one.
+| Candidate | Why it was looked at | Disposition |
+|---|---|---|
+| Johnson, ICES-2025-284, open copy in the Texas Tech repository | Life-cycle comparison of lunar oxygen and water against Earth resupply and regenerative life support. | Not admitted. The paper says the calculation is an Excel model, and that file is not released. The stated results are ranges of mission-days taken from figures: equivalent-system-mass crossings of about 40 to 81 days, and cost crossings from as early as 24 days for regenerative systems to 49–103 days for the pilot plants. The customer is an early habitat, not a propellant buyer. |
+| MIT SpaceNet | Open interplanetary logistics simulator. | Out. It does not publish a lunar-propellant cost, price, or investment result. |
+
+## Coverage and stop
+
+The search covered the classes named at the top of this file: the historical financial and campaign-cost papers; later open lunar oxygen and propellant economic papers; OSF; the Zenodo campaign record already logged; GitHub queries for a lunar-propellant cash-flow model; NTRS; and university copies that were public (UNSW, Texas Tech, Mendeley).
+
+These public files were not available and were not reconstructed from secondary descriptions: the Sommariva preprint, marked private; the Imperial/ESA Excel model, which the project page says will not be published; the ROXY cash-flow dataset, which the paper says is confidential; and the Pelech 2019 journal text.
+
+Eligible count is one: Kornuta. That is fewer than three publicly rerunnable lunar-propellant models. The stopping rule is met. A later public calculation file for a named case is a new log entry. It does not reopen this result by itself.

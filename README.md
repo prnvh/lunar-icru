@@ -16,7 +16,7 @@ When major lunar-propellant economic models are given the same physical and econ
 | Model reconstruction | Kornuta NPV is a baseline. Jones 2020 and Sowers NIAC are partial. Charania's cost subtotals check, and its required price does not. |
 | Published-result validation | Recorded in [research/published-result-validation.md](research/published-result-validation.md). |
 | Part I, historical reproducibility audit | Frozen. Kornuta NPV is executable. Sowers, Charania, and Jones are partial. Blair is outputs only. Pelech is inaccessible. Write-up: [research/manuscript.md](research/manuscript.md). |
-| Part II, benchmark-eligible models | Rules fixed in [research/benchmark-eligibility.md](research/benchmark-eligibility.md). First search pass logged in [research/benchmark-search.md](research/benchmark-search.md). Kornuta is the only eligible model so far. Nothing new has been coded. |
+| Part II, benchmark-eligible models | Search closed in [research/benchmark-search.md](research/benchmark-search.md). Kornuta is the only eligible model. No second model was coded. No common benchmark was run. |
 
 ## Current state
 

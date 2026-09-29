@@ -155,7 +155,7 @@ Provenance of every number is one of: directly reported, derived from reported v
 ## 11. Order of work
 
 1. Part I is frozen. Do not invent Jones's campaign ledger, Sowers's annual phasing, or Charania's debt schedule. A later primary file can reopen a historical case. A fitted schedule cannot.
-2. Screen new candidates in [benchmark-search.md](benchmark-search.md) under the Part II rules. Relevance and an independent lineage come before the reproducibility gate. A public repository is not itself a selection criterion.
+2. The Part II search is closed in [benchmark-search.md](benchmark-search.md). One model is eligible. Code a later candidate only after the seven reproducibility items pass against a public file.
 3. Code a candidate only after the seven reproducibility items pass against the public file.
 4. Fill the metric-compatibility gate for every pair that a benchmark would compare.
 5. Freeze a common benchmark before looking at comparative results.

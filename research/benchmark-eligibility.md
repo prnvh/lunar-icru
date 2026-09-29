@@ -68,4 +68,6 @@ Part II aims at three to five runnable models. Three structurally different mode
 - at least three independent models have passed the reproducibility gate and can be paired under the comparability gate, or
 - a documented search, covering the sources listed in the search log, finds fewer than three publicly rerunnable lunar-propellant models.
 
+The second condition is the one that occurred. The search log records one eligible model, Kornuta. No pair was formed, and no common benchmark was run.
+
 Kornuta counts as one of the three. The search log is [benchmark-search.md](benchmark-search.md). Candidates are logged there before any of them is coded. No candidate enters `models/` until the seven reproducibility items are checked against the public file.
