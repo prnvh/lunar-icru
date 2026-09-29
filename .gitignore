@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local primary-source inspection copies. Commit manifests and derived
+# parameter records, not copyrighted papers, page images, or extracted text.
+models/*/sources/
+models/*/source/

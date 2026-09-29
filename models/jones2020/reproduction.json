@@ -1,0 +1,68 @@
+{
+  "model_id": "jones2020",
+  "reconstruction_status": "partial_unresolved",
+  "cost_basis": "FY2019 million USD, undiscounted campaign totals",
+  "native_metric": "cumulative ISRU architecture cost / cumulative Earth-delivery architecture cost",
+  "campaign_duration_years": 24.0,
+  "isru_design_lifetime_months": 36.0,
+  "selected_isru_model": "Duke",
+  "selected_launch_vehicle": null,
+  "selected_imf": 0.25,
+  "override_keys": [],
+  "MREE_to_Duke_specific_mass_ratio": 8.340345604808416,
+  "phases": [
+    {
+      "phase": "pre",
+      "duration_years": 10.0,
+      "surface_demand_tpy": 17.0,
+      "cislunar_demand_tpy": 0.0,
+      "surface_demand_total_t": 170.0,
+      "cislunar_demand_total_t": 0.0,
+      "demand_only_sizing": {
+        "gross_propellant_production_tpy": 17.0,
+        "table5_linear_mass_kg": 2262.7,
+        "required_power_kwe": 10.4958,
+        "diagnostic_power_mass_continuous_kg": 1826.2692,
+        "diagnostic_power_unit_ceiling": 1,
+        "diagnostic_power_mass_if_whole_units_kg": 6960,
+        "power_mass_added_to_table5_mass": false,
+        "plant_count_from_supplied_capacity": null,
+        "equal_plant_rate_tpy": null
+      },
+      "sizing_scope": "customer demand only; logistics/spares delivery propellant unresolved"
+    },
+    {
+      "phase": "post",
+      "duration_years": 14.0,
+      "surface_demand_tpy": 0.0,
+      "cislunar_demand_tpy": 59.0,
+      "surface_demand_total_t": 0.0,
+      "cislunar_demand_total_t": 826.0,
+      "demand_only_sizing": null,
+      "sizing_scope": "customer demand only; logistics/spares delivery propellant unresolved"
+    }
+  ],
+  "lander_cost": null,
+  "plant_cost": null,
+  "cost_events": null,
+  "cumulative_cost_history": null,
+  "isru_total_cost_FY2019_MUSD": null,
+  "earth_total_cost_FY2019_MUSD": null,
+  "cumulative_cost_ratio": null,
+  "breakeven_at_campaign_end": null,
+  "first_breakeven_time_year": null,
+  "blockers": [
+    "Cislunar delivery burn/return/refuel calculation is not specified; gross production unknown.",
+    "Lander inert mass cannot be derived from IMF without the missing sizing/trajectory convention.",
+    "Structures, tanks, thermal, and ECLS masses are missing; Table 7 cannot cost a full plant.",
+    "Front-end loader/hauler count and its production-rate scaling are unresolved.",
+    "Table 5 mass boundary versus discrete 40-kWe power units is not fully specified.",
+    "Native launch, deployment, expansion, spare-delivery and replacement event ledger is unavailable."
+  ],
+  "reported_output_comparison": {
+    "status": "unresolved",
+    "absolute_error": null,
+    "relative_error": null,
+    "reason": "No source numeric cost-ratio target has been digitized and native logistics are incomplete."
+  }
+}

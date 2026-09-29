@@ -1,0 +1,26 @@
+{
+  "title": "Thermal Mining of Ices on Cold Solar System Bodies: NIAC Phase I Final Report",
+  "author": "George Sowers, Colorado School of Mines",
+  "version": "February 2020 cover; released 11 March 2020",
+  "url": "https://space.mines.edu/wp-content/uploads/sites/134/2020/03/Thermal-Mining-NIAC-Phase-I-final-report.pdf",
+  "release_record": "https://space.mines.edu/thermal-mining-niac-phase-i-final-report/",
+  "retrieved": "2026-09-29",
+  "sha256": "c4f182c8e21be267c214e592c64475e2deac11f9440e90020b9002c5f712336c",
+  "page_count": 135,
+  "local_inspection_copy": "source/Thermal-Mining-NIAC-Phase-I-final-report.pdf",
+  "redistribution": "Original PDF and rendered images are local inspection aids, not intended for commit. Preserve only this manifest and source-derived reconstruction artifacts in version control.",
+  "page_pointers": {
+    "70": "Table 4.8.5 deployed subsystem masses",
+    "72": "Table 4.8.6 development factors; learning-curve terminology",
+    "73": "Table 4.8.7 production unit factors, counts and totals",
+    "74": "Tables 4.8.8-4.8.9 launch capacities, prices and shared-cost allocation",
+    "75": "Tables 4.8.10-4.8.11 nonrecurring summary and recurring cost factor",
+    "81": "Business-case scope, durations, ten-year life and third-operating-year Mars start",
+    "82": "Table 4.9.2 demand and price; PPP funding and five-year full-scale POP",
+    "83": "Figure 4.9.4 roadmap; printed cost scale factors",
+    "84": "Table 4.9.3 printed cases/results; Figure 4.9.5 cumulative company cash",
+    "85-86": "Price/cost/funding sensitivities and government-savings arithmetic",
+    "87": "Figure 4.9.9 NASA cash and published government IRRs/savings"
+  },
+  "visual_inspection": "Pages 83, 84 and 87 rendered and inspected; inconsistent scenario labels and $971M revenue are visible in the original page image."
+}

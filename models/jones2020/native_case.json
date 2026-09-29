@@ -1,0 +1,76 @@
+{
+  "case_id": "jones2020_duke_10yr_lunar_14yr_mars_life3_imf025",
+  "input_file": "original_inputs.json",
+  "case_type": "selected point in published canonical parameter space; not a unique paper baseline",
+  "overrides": {},
+  "reported_output_file": "reported_outputs.json",
+  "reproduction_status": "partial_unresolved",
+  "selection_provenance": {
+    "selected_isru_model": {
+      "value": "Duke",
+      "units": "category",
+      "source": {
+        "id": "Jones2020",
+        "page": 8,
+        "location": "Table 5"
+      },
+      "status": "assumed",
+      "note": "Selects one of two reported model families; MREE is separately available."
+    },
+    "selected_launch_vehicle": {
+      "value": null,
+      "units": "category",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 3"
+      },
+      "status": "unresolved",
+      "note": "Paper gives SLS and nominal commercial options but figure-specific assignment is not explicitly recovered."
+    },
+    "pre_transition_years": {
+      "value": 10,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1; Figures 7(c,d), 8(c,d)"
+      },
+      "status": "assumed",
+      "note": "Selects one reported duration; the canonical study sweeps 5-15 years, not one unique baseline."
+    },
+    "post_transition_years": {
+      "value": 14,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "isru_lifetime_years": {
+      "value": 3,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 2; Figure 6(d)"
+      },
+      "status": "assumed",
+      "note": "Selects the reported 3-year branch in a 1-5 year sweep."
+    },
+    "lander_imf": {
+      "value": 0.25,
+      "units": "dimensionless",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 4"
+      },
+      "status": "assumed",
+      "note": "Interior sample within reported 0.20-0.30 sweep. Not sufficient to infer inert mass."
+    }
+  }
+}

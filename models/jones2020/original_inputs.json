@@ -1,0 +1,554 @@
+{
+  "model_id": "jones2020",
+  "research_question": "When major lunar-propellant economic models are given the same physical and economic assumptions, do they converge on the same conclusion? If not, what causes the remaining disagreement?",
+  "source_id": "Jones2020",
+  "native_metric": "cumulative ISRU cost / cumulative Earth propellant-delivery cost",
+  "cost_year": 2019,
+  "parameters": {
+    "pre_transition_years": {
+      "value": 10,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1; Figures 7(c,d), 8(c,d)"
+      },
+      "status": "assumed",
+      "note": "Selects one reported duration; the canonical study sweeps 5-15 years, not one unique baseline."
+    },
+    "post_transition_years": {
+      "value": 14,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "pre_surface_demand_tpy": {
+      "value": 17,
+      "units": "t/yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "post_surface_demand_tpy": {
+      "value": 0,
+      "units": "t/yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "pre_cislunar_demand_tpy": {
+      "value": 0,
+      "units": "t/yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "post_cislunar_demand_tpy": {
+      "value": 59,
+      "units": "t/yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 1"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "selected_isru_model": {
+      "value": "Duke",
+      "units": "category",
+      "source": {
+        "id": "Jones2020",
+        "page": 8,
+        "location": "Table 5"
+      },
+      "status": "assumed",
+      "note": "Selects one of two reported model families; MREE is separately available."
+    },
+    "selected_launch_vehicle": {
+      "value": null,
+      "units": "category",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 3"
+      },
+      "status": "unresolved",
+      "note": "Paper gives SLS and nominal commercial options but figure-specific assignment is not explicitly recovered."
+    },
+    "lander_imf": {
+      "value": 0.25,
+      "units": "dimensionless",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 4"
+      },
+      "status": "assumed",
+      "note": "Interior sample within reported 0.20-0.30 sweep. Not sufficient to infer inert mass."
+    },
+    "isru_lifetime_years": {
+      "value": 3,
+      "units": "yr",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 2; Figure 6(d)"
+      },
+      "status": "assumed",
+      "note": "Selects the reported 3-year branch in a 1-5 year sweep."
+    },
+    "lander_specific_impulse_s": {
+      "value": 450,
+      "units": "s",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 4"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "vehicle_flights_before_replacement": {
+      "value": 5,
+      "units": "flights",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 2"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "spares_fraction_per_year": {
+      "value": 0.1,
+      "units": "kg/(kg yr)",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 2"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "propellant_loss_fraction": {
+      "value": 0,
+      "units": "fraction",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Table 2"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "isru_models": {
+      "value": {
+        "MREE": {
+          "specific_mass_t_per_tpy": 1.1101,
+          "specific_power_kwe_per_tpy": 5.6976
+        },
+        "Duke": {
+          "specific_mass_t_per_tpy": 0.1331,
+          "specific_power_kwe_per_tpy": 0.6174
+        }
+      },
+      "units": {
+        "specific_mass_t_per_tpy": "t/(t/yr)",
+        "specific_power_kwe_per_tpy": "kWe/(t/yr)"
+      },
+      "source": {
+        "id": "Jones2020",
+        "page": 8,
+        "location": "Table 5"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "launch_vehicles": {
+      "value": {
+        "SLS": {
+          "payload_to_tli_t": 40.0,
+          "cost_FY2019_MUSD": 1000.0
+        },
+        "commercial": {
+          "payload_to_tli_t": 15.0,
+          "cost_FY2019_MUSD": 200.0
+        }
+      },
+      "units": {
+        "payload_to_tli_t": "t",
+        "cost_FY2019_MUSD": "FY2019 million USD/launch"
+      },
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Table 3"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "nuclear_specific_mass_kg_per_kwe": {
+      "value": 174,
+      "units": "kg/kWe",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Section V.D"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "nuclear_unit_power_kwe": {
+      "value": 40,
+      "units": "kWe",
+      "source": {
+        "id": "Jones2020",
+        "page": 7,
+        "location": "Section V.D"
+      },
+      "status": "reported",
+      "note": ""
+    },
+    "lander_cer_threshold_kg": {
+      "value": 15000,
+      "units": "kg",
+      "source": {
+        "id": "Jones2020",
+        "page": 8,
+        "location": "Table 6"
+      },
+      "status": "derived",
+      "note": "15 t converted to kg."
+    },
+    "lander_cer": {
+      "value": {
+        "gt_threshold": {
+          "development": [
+            0,
+            -3.13e-06,
+            0.168,
+            3930.0
+          ],
+          "production": [
+            0,
+            -9.9e-07,
+            0.0508,
+            224.0
+          ]
+        },
+        "le_threshold": {
+          "development": [
+            9.61e-10,
+            2.45e-05,
+            0.23,
+            3990.0
+          ],
+          "production": [
+            3.16e-10,
+            7.81e-06,
+            0.0707,
+            243.0
+          ]
+        }
+      },
+      "units": [
+        "FY2019 MUSD/kg^3",
+        "FY2019 MUSD/kg^2",
+        "FY2019 MUSD/kg",
+        "FY2019 MUSD"
+      ],
+      "source": {
+        "id": "Jones2020",
+        "page": 8,
+        "location": "Equation 1 and Table 6"
+      },
+      "status": "reported",
+      "note": "Coefficients in [a,b,c,d] order; <= threshold branch includes exactly 15000 kg. No smoothing."
+    },
+    "plant_cer": {
+      "value": {
+        "structures": {
+          "development": [
+            0.0628,
+            0,
+            81.48
+          ],
+          "production": [
+            0.0211,
+            0,
+            24.933
+          ]
+        },
+        "tanks": {
+          "development": [
+            0.0355,
+            0,
+            35.984
+          ],
+          "production": [
+            0.0264,
+            0,
+            22.351
+          ]
+        },
+        "thermal": {
+          "development": [
+            0.0409,
+            0.0439,
+            6.9816
+          ],
+          "production": [
+            0.0165,
+            0.0089,
+            2.23236
+          ]
+        },
+        "ecls": {
+          "development": [
+            0.0559,
+            0,
+            346.2
+          ],
+          "production": [
+            0.0218,
+            0,
+            26.7675
+          ]
+        },
+        "excavation": {
+          "development_fixed": 473.73,
+          "production_per_unit": 32.27
+        },
+        "nuclear": {
+          "development_fixed": 1726,
+          "production_per_unit": 265
+        }
+      },
+      "units": {
+        "linear_coefficients": [
+          "FY2019 MUSD/kg",
+          "FY2019 MUSD/month",
+          "FY2019 MUSD"
+        ],
+        "development_fixed": "FY2019 MUSD",
+        "production_per_unit": "FY2019 MUSD/unit"
+      },
+      "source": {
+        "id": "Jones2020",
+        "page": 10,
+        "location": "Table 7"
+      },
+      "status": "reported",
+      "note": "Four subsystem lists are [mass slope, lifetime slope, intercept]. Zero slope means term absent in published equation."
+    },
+    "kg_per_tonne": {
+      "value": 1000,
+      "units": "kg/t",
+      "source": {
+        "id": "Jones2020",
+        "page": null,
+        "location": "SI unit conversion"
+      },
+      "status": "derived",
+      "note": ""
+    },
+    "months_per_year": {
+      "value": 12,
+      "units": "month/yr",
+      "source": {
+        "id": "Jones2020",
+        "page": null,
+        "location": "calendar unit conversion"
+      },
+      "status": "derived",
+      "note": ""
+    },
+    "included_annual_operations_cost": {
+      "value": false,
+      "units": "boolean",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Section V.A"
+      },
+      "status": "reported",
+      "note": "Excluded by source; not an estimate of zero real-world operations cost."
+    },
+    "included_spare_fabrication_cost": {
+      "value": false,
+      "units": "boolean",
+      "source": {
+        "id": "Jones2020",
+        "page": 6,
+        "location": "Section V.A"
+      },
+      "status": "reported",
+      "note": "Excluded; source includes launch cost of spares mass."
+    },
+    "lander_inert_mass_kg": {
+      "value": null,
+      "units": "kg",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "IMF definition, trajectory and gross-mass/payload relationships are not fully specified."
+    },
+    "lander_surface_payload_capacity_kg": {
+      "value": null,
+      "units": "kg",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Cannot infer surface payload from TLI payload alone."
+    },
+    "gross_production_per_cislunar_delivery": {
+      "value": null,
+      "units": "t produced/t delivered",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Needs ascent, return, refueling and payload-use conventions."
+    },
+    "plant_subsystem_masses_kg": {
+      "value": null,
+      "units": "kg by subsystem",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Table 5 total does not allocate structures/tanks/thermal/ECLS masses."
+    },
+    "excavation_unit_count_per_plant": {
+      "value": null,
+      "units": "units/plant",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Loader/hauler count and scaling not provided."
+    },
+    "nuclear_unit_count_per_plant": {
+      "value": null,
+      "units": "units/plant",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Requires individual plant partition and confirmation of rounding boundary."
+    },
+    "table5_mass_includes_power": {
+      "value": null,
+      "units": "boolean",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Do not add diagnostic nuclear mass to Table 5 mass without resolving this."
+    },
+    "native_cost_events": {
+      "value": null,
+      "units": "event ledger",
+      "source": {
+        "id": "Jones2020",
+        "page": [
+          7,
+          8,
+          9,
+          10,
+          12
+        ],
+        "location": "Sections V and VI.A"
+      },
+      "status": "unresolved",
+      "note": "Exact deployment/replacement/transition schedule and development-charge reuse not provided."
+    },
+    "event_ledger_complete": {
+      "value": false,
+      "units": "boolean",
+      "source": {
+        "id": "Jones2020",
+        "page": null,
+        "location": "implementation contract"
+      },
+      "status": "assumed",
+      "note": "Only caller-supplied complete event schedules can enable conditional native economics."
+    }
+  }
+}

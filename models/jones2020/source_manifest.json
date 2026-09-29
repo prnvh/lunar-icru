@@ -1,0 +1,40 @@
+{
+  "id": "Jones2020",
+  "authors": [
+    "Christopher A. Jones",
+    "Alejandro R. Pensado",
+    "Matteo A. Clark",
+    "Melanie L. Grande",
+    "Marie L. Ivanco",
+    "Emily L. Judd",
+    "Jordan J. Klovstad",
+    "David M. Reeves"
+  ],
+  "title": "Cost Breakeven Analysis of Lunar In-Situ Propellant Production for Human Missions to the Moon and Mars",
+  "venue": "ASCEND 2020",
+  "doi": "10.2514/6.2020-4041",
+  "ntrs_id": "20205007564",
+  "url": "https://ntrs.nasa.gov/api/citations/20205007564/downloads/ISRU-Paper3-Final.pdf",
+  "record_url": "https://ntrs.nasa.gov/citations/20205007564",
+  "retrieved_date": "2026-09-29",
+  "sha256": "7c63d3d93bb60b47da3a4270187014b9383b56a6d5899b431d5eccf672b62bea",
+  "local_inspection_only": [
+    "sources/ISRU-Paper3-Final.pdf",
+    "sources/extracted.txt",
+    "sources/page08.png",
+    "sources/page10.png"
+  ],
+  "page_number_convention": "printed page = 1-based PDF page",
+  "source_map": {
+    "metric": "pp.2-3,11",
+    "campaign": "pp.5-6; Table1",
+    "exclusions": "p.6; Table2 and SectionV.A",
+    "launch_and_lander": "p.7; Tables3-4",
+    "linear_sizing": "pp.7-8; Table5",
+    "lander_cer": "p.8; Equation1/Table6",
+    "subsystem_cer": "pp.8-10; Table7",
+    "campaign_state_and_transition": "p.12; SectionVI.A",
+    "reported_figures": "pp.11,13,14; Figures6-8"
+  },
+  "distribution_note": "Source packet is a local inspection aid. Do not stage or distribute the PDF, extracted text, or rendered images with model code."
+}

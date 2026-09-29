@@ -1,0 +1,146 @@
+{
+  "model_id": "sowers_niac2020",
+  "case": "commercial",
+  "variant": "reported_table",
+  "timing": null,
+  "source": {
+    "title": "Thermal Mining of Ices on Cold Solar System Bodies: NIAC Phase I Final Report",
+    "author": "George Sowers, Colorado School of Mines",
+    "cover_date": "February 2020",
+    "release_date": "2020-03-11",
+    "url": "https://space.mines.edu/wp-content/uploads/sites/134/2020/03/Thermal-Mining-NIAC-Phase-I-final-report.pdf",
+    "retrieved": "2026-09-29",
+    "sha256": "c4f182c8e21be267c214e592c64475e2deac11f9440e90020b9002c5f712336c",
+    "page_convention": "Printed page number equals one-based PDF page number; PDF contains 135 pages.",
+    "currency_year": null,
+    "real_or_nominal": "Not identified in the reconstructed source section; retain unadjusted printed dollars."
+  },
+  "parameters": {
+    "operating_years": 10,
+    "plant_mass_kg": 26200,
+    "operations_usd_per_kg_year": 3000,
+    "base_production_tonnes_year": 1100,
+    "surface_price_usd_per_kg": 500,
+    "learning_curve_ratio": 0.9,
+    "nonrecurring_cost_multiplier": 1.0,
+    "cost_mode": "reported_table",
+    "revenue_mode": "printed_table",
+    "nasa_savings_mode": "printed",
+    "mars_first_operating_year": 3,
+    "demand_multiplier": 1.0
+  },
+  "parameter_provenance": {
+    "operating_years": {"status": "reported", "source": "p.81 ground rules: ten-year operational life"},
+    "plant_mass_kg": {"status": "reported", "source": "p.70 Table 4.8.5; p.75 Table 4.8.11"},
+    "operations_usd_per_kg_year": {"status": "reported_assumption", "source": "p.75 section 4.8.4"},
+    "base_production_tonnes_year": {"status": "reported", "source": "pp.82-84 Tables 4.9.2 and 4.9.3"},
+    "surface_price_usd_per_kg": {"status": "reported_assumption", "source": "pp.82-84 Tables 4.9.2 and 4.9.3"},
+    "learning_curve_ratio": {"status": "reported_but_terminology_ambiguous", "source": "p.72 calls 0.9 an exponent; Table 4.8.7 values support 90% unit learning, exponent log2(0.9)"},
+    "nonrecurring_cost_multiplier": {"status": "baseline_identity", "source": "p.85 sensitivity applies a cost factor to every non-recurring element; baseline factor one"},
+    "cost_mode": {"status": "reconstruction_choice", "source": "Default uses Table 4.9.3 directly; alternatives reconstruct component costs and scale."},
+    "revenue_mode": {"status": "reconstruction_choice", "source": "Default preserves Table 4.9.3 revenue even where inconsistent with Table 4.9.2 demand."},
+    "nasa_savings_mode": {"status": "reconstruction_choice", "source": "Default preserves rounded $5185M incremental Mars saving on p.86."},
+    "mars_first_operating_year": {"status": "reported", "source": "p.81 last paragraph: Mars demand begins in third operating year"},
+    "demand_multiplier": {"status": "baseline_identity", "source": "Default one preserves Table 4.9.2; override is a controlled demand experiment, not a new historical input."},
+    "annual_revenue_musd": {"status": "optional_override", "source": "Overrides the full-demand Table 4.9.3 revenue at source price before price/demand multipliers."},
+    "discount_rate": {"status": "optional_analyst_input", "source": "Not specified for the native IRR calculation; NPV only exists when a caller supplies both rate and cash-flow timing."}
+  },
+  "development_subsystems_source": "Reported inputs: p.72 Table 4.8.6; dollar entries converted from printed $k where necessary.",
+  "development_subsystems": [
+    {"name":"Capture tent","unit_mass_kg":2000,"cost_usd_per_kg":50000},
+    {"name":"Cold traps","unit_mass_kg":300,"cost_usd_per_kg":20000},
+    {"name":"Ice haulers","unit_mass_kg":500,"cost_usd_per_kg":0},
+    {"name":"Secondary optics","unit_mass_kg":1200,"cost_usd_per_kg":50000},
+    {"name":"General purpose vehicle","unit_mass_kg":1000,"cost_usd_per_kg":100000},
+    {"name":"Purification and electrolysis","unit_mass_kg":5000,"cost_usd_per_kg":50000},
+    {"name":"Liquification","unit_mass_kg":1000,"cost_usd_per_kg":50000},
+    {"name":"Solar energy","unit_mass_kg":2500,"cost_usd_per_kg":70000},
+    {"name":"Power","unit_mass_kg":4000,"cost_usd_per_kg":30000},
+    {"name":"Communication","unit_mass_kg":100,"cost_usd_per_kg":20000},
+    {"name":"Ground system","unit_mass_kg":0,"cost_usd_per_kg":0,"fixed_cost_usd":20000000}
+  ],
+  "production_subsystems_source": "Reported inputs: p.73 Table 4.8.7; totals multiplied by 1000 from printed $k.",
+  "production_subsystems": [
+    {"name":"Capture tent","unit_mass_kg":2000,"cost_usd_per_kg":20000,"units":1,"reported_total_usd":40000000},
+    {"name":"Cold traps","unit_mass_kg":300,"cost_usd_per_kg":10000,"units":3,"reported_total_usd":8239000},
+    {"name":"Ice hauler bases including GPV base","unit_mass_kg":500,"cost_usd_per_kg":30000,"units":4,"reported_total_usd":53343000},
+    {"name":"Secondary optics","unit_mass_kg":1200,"cost_usd_per_kg":20000,"units":1,"reported_total_usd":24000000},
+    {"name":"GPV without base","unit_mass_kg":500,"cost_usd_per_kg":30000,"units":1,"reported_total_usd":15000000},
+    {"name":"Purification and electrolysis","unit_mass_kg":5000,"cost_usd_per_kg":20000,"units":1,"reported_total_usd":100000000},
+    {"name":"Liquification","unit_mass_kg":1000,"cost_usd_per_kg":20000,"units":3,"reported_total_usd":54924000},
+    {"name":"Solar energy","unit_mass_kg":2500,"cost_usd_per_kg":30000,"units":3,"reported_total_usd":205965000},
+    {"name":"Power","unit_mass_kg":4000,"cost_usd_per_kg":20000,"units":1,"reported_total_usd":80000000},
+    {"name":"Communication","unit_mass_kg":100,"cost_usd_per_kg":20000,"units":1,"reported_total_usd":2000000},
+    {"name":"Ground system","unit_mass_kg":0,"cost_usd_per_kg":0,"fixed_first_unit_cost_usd":30000000,"units":1,"reported_total_usd":30000000}
+  ],
+  "launch": {
+    "source": "p.74 section 4.8.4, Tables 4.8.8-4.8.9; reported assumptions and inferred allocation arithmetic",
+    "single_capacity_kg":4000,"dual_capacity_kg":12000,"surface_cost_usd_per_kg":35000,
+    "dual_launch_premium_fraction":0.1,"fully_charged_single_launches":3,
+    "fully_charged_dual_launches":2,"shared_dual_mining_payload_kg":1000
+  },
+  "cases": {
+    "commercial": {
+      "prose_scenario_label":1,"printed_scenario_label":1,
+      "source":"pp.81-84; case parameters and outputs from Table 4.9.3; scale from p.83",
+      "parameters":{"reported_cost_scale":1.0,"extra_dual_launches":0,"nasa_investment_musd":0,"has_nasa_lunar":false,"has_nasa_mars":false,"full_demand_first_operating_year":1},
+      "demand_segments":[{"name":"Commercial LEO","point_of_sale":"LEO","pos_demand_tonnes_year":210,"pos_price_usd_per_kg":3000,"surface_demand_tonnes_year":1100,"first_operating_year":1,"source":"p.82 Table 4.9.2"}],
+      "reported":{"production_tonnes_year":1100,"development_musd":883.0,"production_musd":613.5,"transportation_musd":1062,"operations_musd_year":78.6,"nasa_investment_musd":0,"price_usd_per_kg":500,"revenue_musd_year":550,"irr_percent":8.84}
+    },
+    "ppp_lunar": {
+      "prose_scenario_label":2,"printed_scenario_label":3,
+      "source":"pp.81-84; case parameters and outputs from Table 4.9.3; scale from p.83",
+      "parameters":{"reported_cost_scale":1.052,"extra_dual_launches":0,"nasa_investment_musd":800,"has_nasa_lunar":true,"has_nasa_mars":false,"full_demand_first_operating_year":1},
+      "demand_segments":[
+        {"name":"Commercial LEO","point_of_sale":"LEO","pos_demand_tonnes_year":140,"pos_price_usd_per_kg":3000,"surface_demand_tonnes_year":733,"first_operating_year":1,"source":"p.82 Table 4.9.2"},
+        {"name":"Gateway","point_of_sale":"Approximately GTO","pos_demand_tonnes_year":140,"pos_price_usd_per_kg":1700,"surface_demand_tonnes_year":420,"first_operating_year":1,"source":"p.82 Table 4.9.2"},
+        {"name":"Landers","point_of_sale":"Lunar surface","pos_demand_tonnes_year":5,"pos_price_usd_per_kg":500,"surface_demand_tonnes_year":5,"first_operating_year":1,"source":"p.82 Table 4.9.2"}
+      ],
+      "reported":{"production_tonnes_year":1158,"development_musd":929.6,"production_musd":645.8,"transportation_musd":1062,"operations_musd_year":82.7,"nasa_investment_musd":800,"price_usd_per_kg":500,"revenue_musd_year":579,"irr_percent":15.8,"nasa_irr_percent":27}
+    },
+    "ppp_lunar_mars": {
+      "prose_scenario_label":3,"printed_scenario_label":4,
+      "source":"pp.81-84; case parameters and outputs from Table 4.9.3; scale from p.83; Mars demand starts operating year 3 per p.81",
+      "parameters":{"reported_cost_scale":1.625,"extra_dual_launches":1,"nasa_investment_musd":1200,"has_nasa_lunar":true,"has_nasa_mars":true,"full_demand_first_operating_year":3},
+      "demand_segments":[
+        {"name":"Commercial LEO","point_of_sale":"LEO","pos_demand_tonnes_year":140,"pos_price_usd_per_kg":3000,"surface_demand_tonnes_year":733,"first_operating_year":1,"source":"p.82 Table 4.9.2"},
+        {"name":"Gateway","point_of_sale":"Approximately GTO","pos_demand_tonnes_year":140,"pos_price_usd_per_kg":1700,"surface_demand_tonnes_year":420,"first_operating_year":1,"source":"p.82 Table 4.9.2"},
+        {"name":"Landers","point_of_sale":"Lunar surface","pos_demand_tonnes_year":5,"pos_price_usd_per_kg":500,"surface_demand_tonnes_year":5,"first_operating_year":1,"source":"p.82 Table 4.9.2"},
+        {"name":"Mars propellant","point_of_sale":"EML2","pos_demand_tonnes_year":47,"pos_price_usd_per_kg":1100,"surface_demand_tonnes_year":94,"first_operating_year":3,"source":"p.82 Table 4.9.2; onset p.81"},
+        {"name":"Mars hardware transport propellant","point_of_sale":"Approximately GTO","pos_demand_tonnes_year":210,"pos_price_usd_per_kg":1700,"surface_demand_tonnes_year":630,"first_operating_year":3,"source":"p.82 Table 4.9.2; this demand is propulsion for hardware delivery, not the 75t hardware itself"}
+      ],
+      "reported":{"production_tonnes_year":1882,"development_musd":1435.1,"production_musd":997.0,"transportation_musd":1370,"operations_musd_year":127.7,"nasa_investment_musd":1200,"price_usd_per_kg":500,"revenue_musd_year":971,"irr_percent":15.4,"nasa_irr_percent":54,"approximate_nasa_lifetime_net_savings_musd":47000}
+    }
+  },
+  "nasa_savings": {
+    "source":"pp.85-87: government savings calculation; reported inputs, unadjusted dollars",
+    "surface_propellant_tonnes_year":5,"earth_surface_propellant_usd_per_kg":35000,
+    "avoided_gateway_missions_year":2,"gateway_mission_cost_musd":150,
+    "mars_hardware_tonnes_year":75,"mars_propellant_tonnes_year":47,
+    "sls_cislunar_usd_per_kg":46000,"lunar_fueled_hardware_delivery_usd_per_kg":5000,
+    "lunar_propellant_cislunar_usd_per_kg":1100,"reported_mars_incremental_savings_musd_year":5185
+  },
+  "variants": {
+    "reported_table":{"description":"Preserve printed Table 4.9.3 costs and plateau revenue, including $971M Mars revenue. This is the default historical reporting branch.","overrides":{"cost_mode":"reported_table","revenue_mode":"printed_table"}},
+    "demand_revenue":{"description":"Keep printed Table 4.9.3 costs, derive revenue from Table 4.9.2 surface demand and price. Mars plateau is $941M. Explicit alternative, not a correction to the archived source.","overrides":{"cost_mode":"reported_table","revenue_mode":"demand_rows"}},
+    "prose_scaled_costs":{"description":"Reconstruct section 4.8 costs and apply p.83 printed factors 1/1.052/1.625; derive revenue from demand. Fractional launch allocation retained before rounding.","overrides":{"cost_mode":"prose_scale","revenue_mode":"demand_rows"}},
+    "demand_ratio_scaled_costs":{"description":"Replace inconsistent printed scales with production/base-production ratios, using the stated proportional scaling rule; retain additional discrete Mars launch. Explicit alternative.","overrides":{"cost_mode":"demand_ratio_scale","revenue_mode":"demand_rows"}}
+  },
+  "timing_alternatives": {
+    "illustrative_uniform_annual": {
+      "provenance":"Analyst timing scenario only, not recovered source cash flows. Four equal annual development/build installments (p.81 duration); two equal deployment-year installments approximating 18 months; five equal public-investment installments (p.82 five-year POP). Operations in figure-style years 7-16; exact phasing is not published. No tuning to the IRRs.",
+      "first_operation_period":6,
+      "development_weights":[0.25,0.25,0.25,0.25],
+      "production_weights":[0.25,0.25,0.25,0.25],
+      "transportation_weights":[0,0,0,0,0.5,0.5],
+      "nasa_investment_weights":[0.2,0.2,0.2,0.2,0.2]
+    }
+  },
+  "unresolved": [
+    "Annual or milestone phasing of development, build, deployment and NASA payments is not tabulated.",
+    "Partial initial and final production years cannot be uniquely inferred from the plotted cash-flow curves.",
+    "No explicit tax, depreciation, working-capital, debt, terminal-value or replacement cash-flow schedules are supplied in section 4.9; none are fabricated.",
+    "Currency year and real/nominal treatment are not identified here.",
+    "NASA net-savings headlines do not exactly follow the printed annual figures, ten-year life and third-year Mars onset."
+  ]
+}

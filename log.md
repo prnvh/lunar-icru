@@ -50,3 +50,23 @@
 - Set a predeclared functional unit, common service/destination, system boundary, cost year, and currency convention before running harmonized scenarios.
 - Freeze an evidence-backed benchmark version and distinguish reported measurements, engineering extrapolations, program targets, and analyst stress cases.
 - If implementation reveals material gaps or ambiguities, add the resolution, rationale, source location, and affected model version here before changing an input or equation.
+
+## 2026-09-29 — Model reconstruction and controlled comparison
+
+- Continued from the evidence review into independent Jones 2020, Kornuta 2019, and Sowers NIAC 2020 implementations, using separate model directories and source-specific parameter files. The user explicitly asked for Astra agents and autonomous continuation; each workstream is constrained to one model and to source-supported inputs.
+- **Decision:** Keep an action/decision/evidence log with concise rationales, not verbatim hidden reasoning. **Rationale:** the repository can audit what changed and why while preserving private chain-of-thought.
+- **Decision:** Keep downloaded primary-source PDFs and rendered page images as local inspection material; commit source manifests, citations, source-derived parameter records and model code instead. **Rationale:** retain source traceability without redistributing complete copyrighted papers or screenshots.
+- **Source correction:** Removed the NTRS identifier 20190004974 from the Kornuta citation after retrieval showed that it identifies Cohen et al.'s _Lunar Flashlight_. The model uses the matching USRA repository PDF and DOI instead. **Rationale:** only a verified matching source can support parameter extraction.
+- **Reconstruction boundary:** Jones 2020's published plant total mass does not uniquely provide the subsystem allocations needed by its published cost-estimating relationships. Do not synthesize the missing campaign cost from assumed allocation. Return identifiable physical and cost intermediates and expose the unresolved native total.
+- **Reconstruction boundary:** Sowers NIAC report's source case labels and arithmetic do not reconcile, and annual cash flows/IRR timing are not tabulated. Keep each printed result distinct and do not calibrate invented annual phasing to force an IRR match.
+- The controlled experiment will be frozen only after confirming shared meaning and source support for each adapter field. Native metrics remain primary; a model pair that cannot answer the same product/customer/boundary question will be marked non-comparable for that metric rather than force-converted.
+
+## 2026-09-29 — Reconstruction checkpoint
+
+- Re-ran the three implementations with Python 3.14 via `py -3`. Outputs match the reconstruction notes.
+  - Jones 2020 returns `partial_unresolved`. The campaign ratio is null. The selected Duke case at 17 t/year gives Table 5 mass 2,262.7 kg and power 10.4958 kWe. Integrated customer demand is 170 t on the surface and 826 t cislunar. The MREE/Duke specific-mass ratio is 8.340.
+  - Kornuta's seven scenarios keep the published NPV signs. Using printed Table 14 revenue, the largest absolute gap versus the displayed NPV is about $3.35 million on the all-customers case.
+  - Sowers commercial, lunar PPP, and lunar/Mars PPP cases return the static reconstruction. Timed cash flow and calculated IRR stay null.
+- **Decision:** Commit the specification, rules, model code, parameter records, manifests, and notes, and exclude local PDFs, page images, and extracted full text. **Rationale:** the checkpoint is reproducible from the parameter records; the inspection copies are copyrighted sources and are not needed in git.
+- **Decision:** Do not start a common-input experiment in this checkpoint. **Rationale:** Jones's campaign ledger, Sowers's cash-flow timing, and Kornuta's cost year are still unresolved, so converting the three native metrics into one dollar-per-kilogram headline would compare different questions.
+- Started three parallel Opus 5.5 reviews: an implementation audit, a comparability crosswalk, and a Charania 2007 reconstruction-feasibility brief that also checks Pelech full text and the Blair toolkit. Their findings are not part of this checkpoint.

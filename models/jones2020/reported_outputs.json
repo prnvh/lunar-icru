@@ -1,0 +1,79 @@
+{
+  "source_id": "Jones2020",
+  "numeric_targets": [],
+  "qualitative_targets": [
+    {
+      "id": "canonical_1year_no_breakeven",
+      "statement": "Neither MREE nor Duke reaches campaign-end breakeven in the canonical one-year ISRU lifetime case.",
+      "scope": {
+        "isru_models": [
+          "MREE",
+          "Duke"
+        ],
+        "lifetime_years": 1,
+        "pre_transition_years_range": [
+          5,
+          15
+        ],
+        "imf_range": [
+          0.2,
+          0.3
+        ]
+      },
+      "source": {
+        "page": [
+          11,
+          12
+        ],
+        "location": "Figure 6(a,b) and Section VI.A"
+      },
+      "status": "reported"
+    },
+    {
+      "id": "duke_mass_efficiency",
+      "value": 8.3,
+      "units": "MREE mass / Duke mass, approximately",
+      "source": {
+        "page": 11,
+        "location": "Section VI.A"
+      },
+      "status": "reported"
+    },
+    {
+      "id": "duke_more_breakeven_cases",
+      "statement": "Duke gives a broader range of breakeven cases than MREE; longer ISRU lifetime improves breakeven.",
+      "source": {
+        "page": [
+          11,
+          12
+        ],
+        "location": "Section VI.A"
+      },
+      "status": "reported"
+    }
+  ],
+  "figure_targets": [
+    {
+      "figure": 6,
+      "page": 11,
+      "metric": "campaign-end cumulative cost ratio",
+      "digitized_values": null,
+      "status": "unresolved"
+    },
+    {
+      "figure": 7,
+      "page": 13,
+      "metric": "Duke cumulative cost ratio time history",
+      "digitized_values": null,
+      "status": "unresolved"
+    }
+  ],
+  "tolerance_policy": {
+    "declared_before_comparison": true,
+    "exact": "only for exact algebra/fully specified numeric target; abs error <= 1e-9 * max(1, abs(target))",
+    "close": "relative error <= 0.01 for a numeric target with adequate published precision",
+    "approximate": "relative error <= 0.05 with documented reconstruction differences",
+    "unresolved": "missing native inputs, incomplete logistics, or no numeric target; never classify from qualitative agreement alone"
+  },
+  "notes": "No graphical values guessed and no calibration against reported outputs."
+}
