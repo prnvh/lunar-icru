@@ -1,6 +1,6 @@
 # Do the published lunar-propellant models answer the same question?
 
-**Current result:** Sections 1–7 record the first audit. Sections 8–10 record the recovery. Do not cite sections 1–7 as evidence that only one paper can be run. The executable claims are in [recovery-methods.md](recovery-methods.md) and [results/summary.md](../results/summary.md).
+**Current result:** The full paper is [final-manuscript.md](final-manuscript.md). Sections 1–7 below record the first audit. Sections 8–10 record the recovery. Do not cite sections 1–7 as evidence that only one paper can be run. The executable claims are in [recovery-methods.md](recovery-methods.md) and [results/summary.md](../results/summary.md).
 
 ## Abstract
 

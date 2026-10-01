@@ -2,6 +2,18 @@
 
 This repository is a research project on the reproducible intercomparison of lunar-propellant techno-economic models.
 
+## Revised paper
+
+The revised paper is a seven-page LaTeX article, including references, using the Elsevier `elsarticle` two-column layout. It contains three tables and two quantitative figures:
+
+- [LaTeX-built PDF](research/final-manuscript.pdf)
+- [Standalone LaTeX source](research/final-manuscript.tex)
+- [Editable article template](research/journal-manuscript.tex)
+- [Case-level audit supplement](research/supplement-audit-tables.md)
+- [Dated search supplement](research/supplement-search-record.md)
+
+Regenerate the numeric results with the commands below, then run `py -3 analysis/build_journal_paper.py` and `tectonic --keep-logs --outdir research research/final-manuscript.tex`. Edit the article template to revise the text. The builder inserts tables and native TikZ plots from `results/kornuta_reproduction.csv`, `results/surface_offtake_bounds.json`, and `results/surface_offtake_sensitivity.csv`, producing a self-contained LaTeX source. `analysis/build_latex_paper.py` and `research/build_manuscript_tex.py` are compatibility entry points for the same builder. Earlier Markdown drafts and the ReportLab preview builder are retained as superseded work and do not control the final paper.
+
 ## Run the papers
 
 ```text

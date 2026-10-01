@@ -78,11 +78,11 @@ Declare the comparison set before inspecting the reconstructed numbers. The cate
 
 | Grade | Meaning |
 |---|---|
-| Exact | Intermediates that the source reports, and the named headline, match within the source's own rounding. |
-| Close | The calculation chain is the published one, and the gap is explained by displayed rounding or a stated timing convention that was not fitted to the target. |
-| Approximate | The structure and the direction of the result match, and a material numerical gap is explained and bounded. |
-| Partial | Some named equations or tables reproduce, and the native headline stays unresolved because a required input is missing. |
-| Unresolved | The central calculation cannot be recomputed from the available source. |
+| Exact | Every independently reconstructable intermediate in the declared comparison set, and the named headline, round to the printed digits. |
+| Close | The published calculation chain is the one executed. Every such quantity is within 1 percent of the printed value, or within half a unit of the last displayed digit, and the residual comes from a rounding or timing convention declared before the comparison. That convention is not chosen to shrink the error. |
+| Approximate | The structure and the direction match, the error exceeds the close threshold, and the gap is stated and bounded. |
+| Partial | At least one named equation or table meets the exact or close rule, and the native headline stays unresolved because a required input is missing. |
+| Unresolved | The central calculation cannot be recomputed. An interval that contains a printed headline is not a reproduction of that headline. |
 
 Current grades, from the executed modules:
 

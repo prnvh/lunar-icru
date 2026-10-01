@@ -1,0 +1,373 @@
+% Editable article source. Numeric tables and plots are inserted by
+% analysis/build_latex_paper.py to produce standalone final-manuscript.tex.
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{booktabs,array,tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\biboptions{numbers,sort&compress}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\urlstyle{same}
+\journal{}
+\makeatletter
+\def\ps@pprintTitle{\let\@oddhead\@empty\let\@evenhead\@empty
+\def\@oddfoot{\hfil\thepage\hfil}\let\@evenfoot\@oddfoot}
+\makeatother
+\hypersetup{pdftitle={Reproducibility of lunar-propellant economic assessments: a reconstruction and cash-flow analysis},pdfauthor={Pranav Harikumar; Biswa Ranjan Panda; Adwik Shankdharan}}
+\begin{document}
+\begin{frontmatter}
+\title{Reproducibility of lunar-propellant economic assessments: a reconstruction and cash-flow analysis}
+\author{Pranav Harikumar}
+\author{Biswa Ranjan Panda}
+\author{Adwik Shankdharan}
+\address{Independent researchers, Toram Labs}
+\begin{abstract}
+Economic assessments of lunar propellant report investment returns, sale prices and campaign costs that cannot be compared directly. This study reconstructs published calculations to determine which results can be reproduced before imposing common assumptions. Five historical cases are examined, together with three related equation and cash-flow investigations. The commercial model described in the 2018 Kornuta report reproduces seven net present values with a maximum relative discrepancy of 0.096\%; all seven internal rates of return agree at the reported precision. The other cases permit checks of subsystem equations, cost totals or accounting statements, but their principal economic results remain dependent on unspecified schedules or ambiguous calculation conventions. For a conditional surface-sales case at 1,100 tonnes/year and 500 account units/kg, allowable Sowers expenditure schedules produce an NPV interval of $[-681.78,23.78]$ million account units. Thus timing alone changes the investment decision within this specified calculation. Differences in product boundaries and unresolved currency years prevent interpreting that interval as a harmonized comparison with Kornuta. The examined evidence supports partial reconstruction and timing bounds, but does not yet support a controlled convergence test across independent lunar-propellant economic models.
+\end{abstract}
+\begin{keyword}
+Lunar propellant \sep In-situ resource utilization \sep Techno-economic assessment \sep Reproducibility \sep Discounted cash flow
+\end{keyword}
+\end{frontmatter}
+
+\section{Introduction}
+The economic case for lunar propellant depends on more than the mass of material that can be produced on the Moon. Production equipment must be developed, transported and operated; output must reach a customer; and the resulting expenditure and revenue must be evaluated over a specified period. The literature assigns these activities to different system boundaries and reports different measures of economic performance. Kornuta et al.\ \cite{kornuta2018,kornuta2019} evaluate the finances of a commercial mining company. Jones et al.\ \cite{jones2020} compare the cumulative costs of supplying exploration campaigns. Sowers \cite{sowers2020,sowers2021} reports company returns under commercial and public--private arrangements. Charania and DePasquale \cite{charania2007} solve for a sale price consistent with zero net present value, while Blair et al.\ \cite{blair2002} present a project accounting model. Agreement among these quantities is neither necessary nor sufficient for agreement about a common supply decision.
+
+The technical scope also varies. A life-cycle comparison of oxygen, hydrogen and water supply \cite{jones2021} does not impose the same customer requirements as an analysis of delivered rocket propellant. Metzger \cite{metzger2023} examines sector-level competitiveness, including transportation and production scaling, whereas the ROXY pilot-plant analysis of Birch et al.\ \cite{birch2026} addresses early oxygen demand associated with habitation. These studies can inform lunar-resource economics without constituting interchangeable estimates of one price or return. A comparison must establish whether the product, delivery location, demand, asset boundary and economic metric refer to the same decision.
+
+The motivating question is whether major lunar-propellant economic models converge when supplied with the same physical and economic assumptions, and what explains any residual disagreement. Three types of difference are distinguished: numerical inputs; physical architecture, including production and transportation systems; and model or accounting conventions, including financing, replacement and valuation. Their effects may interact. For example, changing demand can alter both equipment scale and the allocation of infrastructure costs. A numerical decomposition of disagreement therefore requires executable models and a specified sequence of controlled substitutions.
+
+Historical reconstruction is a prerequisite to that experiment. An apparently successful harmonization may otherwise introduce a new cash-flow schedule, substitute a cost relationship or change the delivery boundary without identifying the intervention. Conversely, failure to recover an original workbook does not necessarily make every published calculation unusable. Explicit equations can be implemented independently, and aggregate expenditure together with a timing window may constrain an economic result even when it does not determine a unique value.
+
+We reconstruct the available calculations for five historical cases and examine three related equation and cash-flow investigations. A conditional surface-sales calculation then quantifies the effect of missing expenditure timing. The resulting comparison distinguishes recoverable economic outputs from quantities that remain dependent on undocumented assumptions.
+
+\section{Methods}
+\subsection{Study selection and source versions}
+The historical sample comprises the Kornuta, Jones, Sowers, Charania and Blair cases listed in Table~\ref{tab:scope}. They were selected for their influence in the project literature review and for differences in the economic decisions represented. The unit of analysis is a particular document version and calculation, rather than an author name. The 2018 Kornuta report \cite{kornuta2018}, for example, supplies the financial baseline; the associated 2019 article \cite{kornuta2019} is not treated as a second model. The Sowers NIAC report and subsequent journal business case are likewise one lineage. Christopher A. Jones's campaign analysis \cite{jones2020} is distinct from Harry W. Jones's life-cycle analysis \cite{jones2021}.
+
+A subsequent search, recorded on 29 September 2026, sought additional models that could reproduce a principal economic output and then respond to changed inputs. Sources included NASA NTRS, the USRA archive, publisher sites, university repositories, and public code and data repositories. The search target was at least three independent models suitable for a common comparison, or a documented search yielding fewer than three. The full queries and candidate dispositions are retained in Supplement S2. Scopus, Web of Science and IEEE Xplore were not searched, and search hit counts were not retained. Accordingly, this is a reconstruction study with a documented search record, not an exhaustive systematic review.
+
+Admission to the proposed intercomparison required an identifiable source version, an explicit boundary and economic metric, recoverable equations and baseline parameters, reproduction of the principal output, and inputs that could be changed within the same calculation. These requirements concern the economic output itself. A reproducible plant-mass equation does not establish that a campaign-cost calculation has also been reconstructed. Related applications of an existing financial model were recorded as descendants. In particular, the public finance calculation associated with Bennett and Dempster \cite{bennett2020} was assessed as part of the Kornuta lineage.
+
+\begin{table*}[t]
+\caption{Scope of the reconstruction. The final three cases are related diagnostic investigations. A reproduced intermediate quantity does not imply reproduction of the principal economic output.}
+\label{tab:scope}
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{27mm}>{\raggedright\arraybackslash}p{29mm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Source & Native economic quantity & Independently recovered calculation & Limitation for intercomparison \\
+\midrule
+Kornuta, 2018/2019 & Company NPV and IRR & Seven constant-cash-flow cases; changeable inputs & Source currency year unresolved; no independent compatible partner \\
+C.A. Jones, 2020 & Campaign-cost ratio & Plant sizing and subsystem cost equations & Incomplete campaign event ledger and lander conventions \\
+Sowers, 2020/2021 & Company IRR & Static costs, revenue and undiscounted totals & Annual cash-flow schedule not uniquely specified \\
+Charania, 2007 & Zero-NPV sale price & Capital-cost subtotals & Capital and debt timing; conflicting discount rates \\
+Blair, 2002 & Project NPV and return & Accounting identities and discounted income row & Workbook and project-return calculation not recovered \\
+H.W. Jones, 2021 & Life-cycle cost & Twelve of sixteen rows on an inferred branch & Equation and unit conflicts; branch not author-confirmed \\
+Metzger, 2023 & Competitiveness crossing year & Three terminal launch-cost values & Inconsistent crossing-year targets and replacement term \\
+Birch/ROXY, 2026 & Project IRR & Intervals under development-timing assumptions & Nonpublic cash flows; early life-support customer \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Reconstruction and numerical comparison}
+Equations and historical inputs were recorded separately. Where the source specified a forward calculation, its outputs were compared with the printed intermediate and final values. Published targets were not used to fit missing coefficients. A missing parameter was retained as unresolved unless it could be derived from stated quantities; experimental assumptions were identified separately from the historical reconstruction. Currency years were preserved when known, and no inflation conversion was imposed where the source year was unresolved.
+
+For a printed value $y$ and reconstructed value $\widehat y$, we report the difference $\Delta=\widehat y-y$ and, where $y\ne0$, the relative discrepancy
+\begin{equation}
+\epsilon=100\frac{|\widehat y-y|}{|y|}.
+\label{eq:error}
+\end{equation}
+Agreement in sign is checked separately because a small absolute discrepancy can still change an investment decision near zero. Comparisons with rounded tables are limited by their displayed precision.
+
+The reconstruction grades were defined before the comparisons. An exact result rounds to the printed digits for the named output and its reconstructable intermediates. A close result follows the published calculation chain and agrees within 1\% or half a unit of the final displayed digit, under a documented convention that was not selected to minimize the discrepancy. A partial reconstruction reproduces at least one equation or table but leaves the principal economic output unresolved. The protocol also allows an approximate grade for a structurally consistent result with a larger, bounded discrepancy; no case is assigned that grade here. Agreement obtained on an inferred computational branch is reported as a diagnostic result rather than as reproduction of the stated historical model.
+
+Intermediate checks distinguish agreement in a final number from compensating differences in its components. Investment, recurring cost and timing are checked separately in the commercial baseline; plant sizing and campaign events are distinguished in the campaign model. Supplement S1 records the comparison quantities, source versions and unresolved inputs. Input and code hashes accompany the generated outputs.
+
+\subsection{Economic comparability}
+Reproducibility and comparability are evaluated separately. Before comparing two models, we require a common decision-maker, economic metric, product, delivery location and included cost boundary, together with compatible valuation dates, horizons and financing conventions. A transformation is admissible only when supported by the recovered calculation. For example, a known cash-flow series can be discounted at a common rate. An annual series inferred solely from a reported IRR cannot be treated as recovered data.
+
+The distinction matters even for quantities with identical units. A price paid at the lunar surface excludes some activities needed to deliver the same product to orbit. A cost ratio for a government campaign may include development expenditure that a supplier's operating account does not bear. Neither difference is removed by expressing both outputs in dollars per kilogram. The comparison must first identify who pays each cost and where the product changes ownership. Unresolved currency years remain a further obstacle to interpreting nominally similar monetary values as common purchasing power.
+
+\subsection{Bounds for unspecified expenditure timing}
+Where a source provides a nonnegative cost total $C_j$ and an admissible time window $[a_j,b_j]$, we bound its discounted value instead of selecting one expenditure date. With valuation at $t=0$ and discount rate $r\ge0$,
+\begin{equation}
+\frac{C_j}{(1+r)^{b_j}}\le
+\mathrm{PV}_j\le
+\frac{C_j}{(1+r)^{a_j}}.
+\label{eq:pvbound}
+\end{equation}
+The same bound holds when the cost is divided among multiple dates inside the window: present value is linear in the allocated expenditures, so its extrema place the full amount at an endpoint. Negative times denote expenditure before the valuation date and therefore accumulate forward to that date.
+
+Let $B(r)$ be the present value of specified net operating receipts, excluding these uncertain capital expenditures. If each cost can be allocated independently, the corresponding NPV interval is
+\begin{align}
+V_{\min}&=B(r)-\sum_j\frac{C_j}{(1+r)^{a_j}},\nonumber\\
+V_{\max}&=B(r)-\sum_j\frac{C_j}{(1+r)^{b_j}}.
+\label{eq:npvbound}
+\end{align}
+These extrema are exact for the stated allocation class. Procurement dependencies can prevent some endpoint allocations from occurring together; in that case Eq.~\eqref{eq:npvbound} is an outer bound. The interval does not describe a probability distribution or identify the original schedule. It is also conditional on the listed cash flows being complete.
+
+For constant annual sales quantity $q$, price $p$, operating cost $O$ and $T$ operating years, all measured per annual period,
+\begin{align}
+A_T(r)&=\sum_{t=1}^{T}(1+r)^{-t},\label{eq:annuity}\\
+B(r)&=(pq-O)A_T(r).\label{eq:receipts}
+\end{align}
+For a known capital present value $K$, the associated break-even sale price is
+\begin{equation}
+p^*=\frac{O}{q}+\frac{K}{qA_T(r)}.
+\label{eq:price}
+\end{equation}
+This expression applies to the specified constant-flow calculation. It is not substituted for historical models containing additional financing rules, taxes, changing production or other cash flows.
+
+\section{Results}
+\subsection{Reproduction of the Kornuta financial case}
+The commercial case in the 2018 report describes a mining company selling at the lunar surface over ten operating years. Revenue is constant within each customer scenario, recurring cost is \$129 million per year, and the discount rate is 10\%. The reconstruction uses the report's description rather than a recovered original workbook. From the stated hardware mass $M=30{,}000$~kg, hardware factor $c_h=100{,}000$~USD/kg and delivery factor $c_d=35{,}000$~USD/kg, initial investment is
+\begin{equation}
+I=M(c_h+c_d)=4.05\times10^9\ \mathrm{USD}.
+\end{equation}
+With annual cash receipts $R$ and annual operating expenditure $O$, end-of-year valuation gives
+\begin{equation}
+V=-I+(R-O)A_{10}(0.10),
+\label{eq:kornuta}
+\end{equation}
+where $A_{10}(0.10)=6.144567$. The IRR is the discount rate that makes this same series' NPV equal to zero.
+
+Table~\ref{tab:kornuta} compares the seven printed-revenue cases with the report's Table~14. All NPV signs agree. The largest relative discrepancy is 0.0957\%, for the Moon case, and the largest absolute difference is \$3.35 million, for all customers. Three reconstructed values differ by more than half the displayed million, so the printed-revenue calculation is close rather than exact. The seven IRRs round to the reported integer percentages. The result therefore reproduces both the scale and the direction of the published financial outcomes without adjusting inputs to the reported NPV.
+
+\begin{table*}[t]
+\caption{Reproduction of the Kornuta report's financial scenarios. Revenue and NPV are in millions of source dollars (currency year unresolved). Scenario names indicate customer markets; the mining company's sale boundary is the lunar surface. EML1: Earth--Moon Lagrange point 1; LEO: low Earth orbit.}
+\label{tab:kornuta}\centering\small
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+Scenario & Annual revenue & Printed NPV & Reconstructed NPV & $\Delta$ NPV & $\epsilon$ (\%) & IRR (\%) & Printed IRR (\%) \\
+\midrule
+Moon & 750 & -234 & -234.22 & -0.22 & 0.0957 & 8.64 & 9 \\
+EML1 & 1,050 & 1,609 & 1,609.15 & +0.15 & 0.0091 & 18.62 & 19 \\
+LEO & 630 & -972 & -971.57 & +0.43 & 0.0440 & 4.07 & 4 \\
+LEO + Moon & 1,380 & 3,639 & 3,636.85 & -2.15 & 0.0590 & 28.34 & 28 \\
+EML1 + LEO & 1,680 & 5,481 & 5,480.22 & -0.78 & 0.0142 & 36.60 & 37 \\
+Moon + EML1 & 1,800 & 6,218 & 6,217.57 & -0.43 & 0.0069 & 39.81 & 40 \\
+All customers & 2,430 & 10,092 & 10,088.65 & -3.35 & 0.0332 & 56.16 & 56 \\
+\bottomrule\end{tabular}\end{table*}
+
+The timing convention is economically consequential. Moving the identical operating receipts from the end to the beginning of each year changes the Moon case from approximately $-234.22$ to $+147.35$ million source dollars. That alternative reverses the reported sign and is rejected for the historical reconstruction. It demonstrates, however, that cash-flow convention is part of the model being compared, not merely a presentation choice.
+
+A second discrepancy concerns the recurring-cost total. The printed components sum to \$128 million/year, whereas the reported aggregate is \$129 million/year. Using the component sum gives a Moon NPV of approximately $-228$ million and does not recover the printed $-234$ million. A separate revenue diagnostic, multiplying reported quantity by average price, rounds all seven NPVs to the displayed millions. This is consistent with an effect of intermediate source precision, but it does not justify replacing the declared printed-revenue path after observing the comparison. Both checks are retained in the supplementary calculation record.
+
+The reconstructed model permits changes to investment, annual revenue, recurring cost, discount rate and operating life. It does not expose a general physical scaling law for a different plant or transport architecture. Its success should therefore be interpreted at the level of the report's commercial cash-flow calculation. The public finance sheet associated with Bennett and Dempster \cite{bennett2020} provides a further check within that lineage, not an independent economic model for the proposed comparison.
+
+\subsection{Historical calculations that remain incomplete}
+\subsubsection{Campaign cost: Jones et al.}
+At a production rate of 17 tonnes/year, the implemented Duke-plant equations give a mass of 2,262.7~kg and an electrical requirement of 10.4958~kWe. These quantities can be obtained independently from the published sizing relationships \cite{jones2020}. Assigning the plant mass among the four reported subsystem cost relationships places development cost between \$552.6 and \$614.3 million in FY2019 dollars. Thus the unknown allocation can be bounded without inventing individual subsystem masses.
+
+The campaign-cost ratio remains unresolved. It requires an event ledger for development, production, launch and replacement, together with conventions for lander sizing, loader count and reactor count. The subsystem cost interval does not determine those events. This distinction prevents an apparently modest uncertainty in plant cost from being mistaken for a bound on the entire campaign. No new campaign ratio is reported from the partial implementation.
+
+\subsubsection{Investment return: Sowers}
+The static company accounts in the NIAC report reproduce undiscounted net cash of \$2,155.5 million, \$3,125.6 million and \$5,046.9 million for the three reported branches. The associated company IRRs are printed as 8.84\%, 15.8\% and 15.4\% \cite{sowers2020,sowers2021}. These rates cannot be inferred uniquely from aggregate totals and development durations. The commercial timing calculations already examined in the reconstruction produce rates of approximately 8.44\%, 7.29\% and 10.15\% under different schedules within the interpreted windows.
+
+Selecting a schedule because its IRR is close to 8.84\% would turn the reported output into a calibration target. We instead retain the annual timing ambiguity and apply the bounds in Section~\ref{sec:conditional}. Public--private schedules may also contain more than one change of cash-flow sign, in which case multiple IRR roots are possible and must be checked explicitly. More than one sign change alone does not establish that multiple roots exist. The Mars branch contains a separate revenue discrepancy: \$971 million is printed, whereas quantity and price imply \$941 million. Both values remain identified in the reconstruction rather than being silently reconciled.
+
+\subsubsection{Required sale price: Charania and DePasquale}
+The component rows in Table~2 of Ref.~\cite{charania2007} reproduce capital subtotals of \$2.721 billion, \$5.396 billion and \$5.841 billion in FY2006 dollars. The reported zero-NPV sale prices are \$26,845/kg, \$133,947/kg and \$7,053,265/kg. Recovering those prices also requires a capital expenditure schedule and financing treatment. The paper provides cash-flow plots rather than a tabulated annual schedule and uses weighted average costs of capital of both 21.7\% and 22.7\%.
+
+Using the chart's labelled pre-operation window and the stated operating years, the 21.7\% calculation gives price intervals of \$14,612--67,611/kg for surface sale, \$66,526--313,768/kg for low lunar orbit, and \$3,354,152--15,843,653/kg for geostationary orbit. Each contains the corresponding printed price. Containment establishes compatibility with the timing class; it does not recover the authors' schedule or debt calculation. The chart values were not digitized. The printed inflation-only surface cost of \$7,327/kg also lies below the \$7,457--8,610/kg interval obtained by inflating the same cost stack at the stated 2.1\% to the examined endpoint years.
+
+\subsubsection{Accounting statements: Blair et al.}
+The annual statements in Ref.~\cite{blair2002} permit checks even though the economic toolkit was not recovered. Assets equal liabilities, equity and retained earnings within one million dollars, and cumulative net income equals ending retained earnings. Discounting the net-income row at 10\%, with the first year undiscounted, produces 4,155.6 and 4,134.4 million against printed project NPVs of 4,156 and 4,134 million.
+
+The reported project returns of 12.8\% and 12.6\% are not the IRRs of that income row. Net income and project cash flow need not be identical, and the available statement does not identify the transformation used for the reported returns. The agreement in NPV is therefore an accounting check, not a recovered investment model that can be evaluated at a different price or demand.
+
+\subsection{Equation and timing diagnostics in related studies}
+\subsubsection{Life-cycle cost: Harry W. Jones}
+The life-cycle analysis in Ref.~\cite{jones2021} compares Earth supply, recycling and regolith processing. Its printed short cost equation and longer cost relationship do not yield a unique common numerical interpretation. The implementation consequently retains a literal reading, a dimensionally consistent reading of the longer relationship, and an inferred branch that reproduces much of the published table.
+
+The inferred branch uses a reversed mass conversion in the cost relationship, passes hydrogen power numerals expressed in megawatts into a kilowatt reactor relationship, and omits procurement of recycling containers. It reproduces twelve of sixteen process-and-rate rows within the displayed \$0.5 million precision, including all cost cells at 100 and 300 tonnes/year. The 100-tonne oxygen point lies outside the stated production-fit domain; the 300-tonne point lies inside it. The 10-tonne column and the 30-tonne oxygen row remain discrepant.
+
+At 300 tonnes/year, inferred oxygen life-cycle cost is approximately \$1,907.10 million in 2021 dollars, matching the printed \$1,907 million. Consistent-unit implementations of the longer equation give approximately \$92,717 million when plant and reactor are costed together and \$114,677 million when they are costed separately. The magnitude of the difference shows that agreement with a table does not select a physically justified interpretation. The matching branch is a computational diagnosis, not an author-confirmed correction or a preferred cost estimate.
+
+\subsubsection{Sector equations: Metzger}
+The implemented launch-cost equation in Ref.~\cite{metzger2023} gives 30.0178, 119.6332 and 437.3721 against printed terminal values of 30, 119 and 436 at market fractions of 1, 0.1 and 0.01. Relative discrepancies are 0.059\%, 0.532\% and 0.315\%, respectively. These three intermediate outputs satisfy the close criterion.
+
+The full competitiveness trajectory remains conditional on initial experience, scaling choices and the interpretation of a replacement-cost term. The optimistic low-Earth-orbit crossing is also described as year~15 in the text and year~19 in the table. Those targets must remain distinct. Reproduction of the launch-cost relationship therefore does not establish reproduction of a unique orbital crossing year.
+
+\subsubsection{Pilot-plant returns: Birch et al.}
+The ROXY study \cite{birch2026} is a related cash-flow investigation, with early habitation demand rather than the same bulk propellant customer assumed in the commercial cases. Its nonpublic cash-flow data prevent direct reconstruction of the annual series. Moving the stated EUR~200 million development cost within the five-year development window produces oxygen-only IRRs of 19.8--24.6\% when transport is paid in the delay year. The oxygen-and-metals interval is 41.1--64.3\%. These intervals contain the reported 19.9\% and 47.4\%, respectively.
+
+Paying transport in the first operating year instead raises the oxygen lower bound to 22.7\%, excluding the reported 19.9\%. This result identifies a timing condition required for agreement within the implemented calculation. It does not identify the original schedule. The calculation also leaves an explicitly named 4\% interest treatment unapplied because the payment timing is not specified. Summing the printed annual oxygen ingredients gives approximately EUR~2.57 billion undiscounted net cash, compared with EUR~2.4 billion in the table. Neither discrepancy is removed by adjusting a coefficient.
+
+\subsection{Conditional surface-sales comparison}\label{sec:conditional}
+The conditional calculation fixes annual surface sales at $q=1.1\times10^6$~kg, price at 500 account units/kg, operating life at ten years and discount rate at 10\%. Commissioning is the valuation date; operating receipts occur at the ends of years 1--10. Historical capital totals and cost boundaries are retained. No equipment scaling, additional subsidy or new production architecture is introduced.
+
+For Sowers, the annual-grid interpretation places development and production expenditure in years $[-5,-2]$ and transportation expenditure in years $[-1,0]$, relative to commissioning. Table~\ref{tab:timing} states the costs and endpoint values. It makes explicit which expenditures are allowed to move and which assumptions define the interval. The costs may be distributed arbitrarily and nonnegatively within these windows, with no procurement dependencies imposed.
+
+\begin{table}[t]
+\caption{Sowers expenditure windows relative to commissioning ($t=0$), and capital values accumulated to commissioning at 10\%. Monetary values are million common account units. Earlier payment increases capital value at commissioning.}
+\label{tab:timing}\centering\footnotesize
+\begin{tabular}{@{}lrrr@{}}\toprule
+Expenditure & Years & Latest payment & Earliest payment \\
+\midrule
+Development & $[-5,-2]$ & 1,068.43 & 1,422.08 \\
+Production & $[-5,-2]$ & 742.34 & 988.05 \\
+Transportation & $[-1,0]$ & 1,062.00 & 1,168.20 \\
+\bottomrule\end{tabular}\end{table}
+
+The Kornuta calculation at the specified surface revenue gives an NPV of $-1,463.14$ million account units. The Sowers allocation class gives $[-681.78,+23.78]$ million. The corresponding break-even surface price is 716.47 account units/kg for Kornuta and $[496.48,600.87]$ account units/kg for Sowers. Thus at a price of 500, the Sowers decision changes with expenditure timing, whereas the modified Kornuta case remains negative.
+
+Figure~\ref{fig:price} shows the same calculation across the stored price sweep at 10\% discounting and a unit relative-cost multiplier. The linear interpolation between evaluated prices is exact for this fixed-quantity cash-flow model: changing price changes discounted sales but not the capital totals. The width of the Sowers band is independent of price under these assumptions. It represents uncertainty about timing, not uncertainty in production or a statistical confidence interval.
+
+\begin{figure}[t]\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+\draw[black!15,line width=.3pt] (0.0000,0.0000)--(6.4000,0.0000);
+\node[anchor=east] at (-0.1200,0.0000) {-3};
+\draw[black!15,line width=.3pt] (0.0000,0.6429)--(6.4000,0.6429);
+\node[anchor=east] at (-0.1200,0.6429) {-2};
+\draw[black!15,line width=.3pt] (0.0000,1.2857)--(6.4000,1.2857);
+\node[anchor=east] at (-0.1200,1.2857) {-1};
+\draw[black!15,line width=.3pt] (0.0000,1.9286)--(6.4000,1.9286);
+\node[anchor=east] at (-0.1200,1.9286) {0};
+\draw[black!15,line width=.3pt] (0.0000,2.5714)--(6.4000,2.5714);
+\node[anchor=east] at (-0.1200,2.5714) {1};
+\draw[black!15,line width=.3pt] (0.0000,3.2143)--(6.4000,3.2143);
+\node[anchor=east] at (-0.1200,3.2143) {2};
+\draw[black!15,line width=.3pt] (0.0000,3.8571)--(6.4000,3.8571);
+\node[anchor=east] at (-0.1200,3.8571) {3};
+\draw[black!15,line width=.3pt] (0.0000,4.5000)--(6.4000,4.5000);
+\node[anchor=east] at (-0.1200,4.5000) {4};
+\draw[line width=.5pt] (0,4.5)--(0,0)--(6.4,0);
+\draw[black!65,densely dashed] (0.0000,1.9286)--(6.4000,1.9286);
+\draw (0.0000,0.0000)--(0.0000,-0.0800);
+\node[anchor=north] at (0.0000,-0.1000) {300};
+\draw (1.8286,0.0000)--(1.8286,-0.0800);
+\node[anchor=north] at (1.8286,-0.1000) {500};
+\draw (4.1143,0.0000)--(4.1143,-0.0800);
+\node[anchor=north] at (4.1143,-0.1000) {750};
+\draw (6.4000,0.0000)--(6.4000,-0.0800);
+\node[anchor=north] at (6.4000,-0.1000) {1000};
+\node[rotate=90] at (-.9,2.25) {NPV (billion account units)};
+\fill[black!17] (0.0000,0.6213)--(1.8286,1.4903)--(4.1143,2.5766)--(6.4000,3.6628)--(6.4000,4.1164)--(4.1143,3.0301)--(1.8286,1.9439)--(0.0000,1.0748)--cycle;
+\draw[black!65,line width=.55pt] (0.0000,0.6213)--(1.8286,1.4903)--(4.1143,2.5766)--(6.4000,3.6628);
+\draw[black!65,line width=.55pt] (0.0000,1.0748)--(1.8286,1.9439)--(4.1143,3.0301)--(6.4000,4.1164);
+\draw[line width=.8pt] (0.0000,0.1190)--(1.8286,0.9880)--(4.1143,2.0743)--(6.4000,3.1605);
+\fill (0.0000,0.1190) circle (1.3pt);
+\fill (1.8286,0.9880) circle (1.3pt);
+\fill (4.1143,2.0743) circle (1.3pt);
+\fill (6.4000,3.1605) circle (1.3pt);
+\node at (3.2,-.62) {Surface sale price (account units/kg)};
+\draw[line width=.8pt] (.3,4.18)--(.95,4.18);\node[anchor=west] at (1.02,4.18) {Kornuta, modified case};
+\fill[black!17] (.3,3.70) rectangle (.95,3.88);\node[anchor=west] at (1.02,3.79) {Sowers, timing interval};
+\end{tikzpicture}
+\caption{Conditional NPV versus surface sale price at 1,100 tonnes/year, ten operating years and 10\% discounting. Points are stored Kornuta scenario outputs; the grey band spans Sowers expenditure allocations. Straight segments are exact for this fixed-quantity calculation. Common account units do not imply verified currency or physical equivalence.}\label{fig:price}\end{figure}
+
+Figure~\ref{fig:rates} shows the effect of discounting at the fixed price of 500. At zero discounting, all expenditure allocations have the same present value and the interval collapses to the undiscounted total. At positive rates, expenditure before commissioning is accumulated forward, while later operating receipts are discounted. Both effects reduce NPV as the rate increases for these specified cash flows. The complete stored sensitivity calculation contains sixty combinations of discount rate, price and relative Sowers cost multiplier. Multipliers of 0.8, 1 and 1.2 are analyst stress assumptions, not estimates of inflation or confidence bounds.
+
+\begin{figure}[t]\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+\draw[black!15,line width=.3pt] (0.0000,0.0000)--(6.4000,0.0000);
+\node[anchor=east] at (-0.1200,0.0000) {-4};
+\draw[black!15,line width=.3pt] (0.0000,0.6429)--(6.4000,0.6429);
+\node[anchor=east] at (-0.1200,0.6429) {-3};
+\draw[black!15,line width=.3pt] (0.0000,1.2857)--(6.4000,1.2857);
+\node[anchor=east] at (-0.1200,1.2857) {-2};
+\draw[black!15,line width=.3pt] (0.0000,1.9286)--(6.4000,1.9286);
+\node[anchor=east] at (-0.1200,1.9286) {-1};
+\draw[black!15,line width=.3pt] (0.0000,2.5714)--(6.4000,2.5714);
+\node[anchor=east] at (-0.1200,2.5714) {0};
+\draw[black!15,line width=.3pt] (0.0000,3.2143)--(6.4000,3.2143);
+\node[anchor=east] at (-0.1200,3.2143) {1};
+\draw[black!15,line width=.3pt] (0.0000,3.8571)--(6.4000,3.8571);
+\node[anchor=east] at (-0.1200,3.8571) {2};
+\draw[black!15,line width=.3pt] (0.0000,4.5000)--(6.4000,4.5000);
+\node[anchor=east] at (-0.1200,4.5000) {3};
+\draw[line width=.5pt] (0,4.5)--(0,0)--(6.4,0);
+\draw[black!65,densely dashed] (0.0000,2.5714)--(6.4000,2.5714);
+\draw (0.3000,0.0000)--(0.3000,-0.0800);
+\node[anchor=north] at (0.3000,-0.1000) {0};
+\draw (1.6364,0.0000)--(1.6364,-0.0800);
+\node[anchor=north] at (1.6364,-0.1000) {5};
+\draw (2.9728,0.0000)--(2.9728,-0.0800);
+\node[anchor=north] at (2.9728,-0.1000) {10};
+\draw (4.3092,0.0000)--(4.3092,-0.0800);
+\node[anchor=north] at (4.3092,-0.1000) {15};
+\draw (6.1000,0.0000)--(6.1000,-0.0800);
+\node[anchor=north] at (6.1000,-0.1000) {21.7};
+\node[rotate=90] at (-.9,2.25) {NPV (billion account units)};
+\draw[line width=1.3pt,black!65] (0.3700,3.9571)--(0.3700,3.9571);
+\draw[black!65] (0.2600,3.9571)--(0.4800,3.9571);
+\draw[black!65] (0.2600,3.9571)--(0.4800,3.9571);
+\fill (0.2300,2.6743) circle (1.7pt);
+\draw[line width=1.3pt,black!65] (1.7064,2.9668)--(1.7064,3.1681);
+\draw[black!65] (1.5964,2.9668)--(1.8164,2.9668);
+\draw[black!65] (1.5964,3.1681)--(1.8164,3.1681);
+\fill (1.5664,2.0577) circle (1.7pt);
+\draw[line width=1.3pt,black!65] (3.0428,2.1331)--(3.0428,2.5867);
+\draw[black!65] (2.9328,2.1331)--(3.1528,2.1331);
+\draw[black!65] (2.9328,2.5867)--(3.1528,2.5867);
+\fill (2.9028,1.6308) circle (1.7pt);
+\draw[line width=1.3pt,black!65] (4.3792,1.3722)--(4.3792,2.1373);
+\draw[black!65] (4.2692,1.3722)--(4.4892,1.3722);
+\draw[black!65] (4.2692,2.1373)--(4.4892,2.1373);
+\fill (4.2392,1.3262) circle (1.7pt);
+\draw[line width=1.3pt,black!65] (6.1700,0.3728)--(6.1700,1.6644);
+\draw[black!65] (6.0600,0.3728)--(6.2800,0.3728);
+\draw[black!65] (6.0600,1.6644)--(6.2800,1.6644);
+\fill (6.0300,1.0401) circle (1.7pt);
+\node at (3.2,-.62) {Discount rate (\%)};
+\fill (2.65,4.15) circle (1.7pt);\node[anchor=west] at (2.85,4.15) {Kornuta, modified case};
+\draw[black!65,line width=1.3pt] (2.65,3.6)--(2.65,3.85);\node[anchor=west] at (2.85,3.73) {Sowers, timing interval};
+\end{tikzpicture}
+\caption{Conditional NPV at the five stored discount rates, for a surface price of 500 account units/kg and unit relative-cost multiplier. Vertical intervals describe expenditure timing, not statistical error bars. Symbols are displaced slightly horizontally for visibility. The interval collapses at zero discounting.}\label{fig:rates}\end{figure}
+
+Although the two calculations share sales quantity, price, life and valuation convention, they are not fully harmonized physical models. The source currency years are unresolved, so a common unit of account is an explicit assumption rather than a verified currency conversion. Product equivalence, plant designs, construction operating costs and infrastructure boundaries also remain unaligned. The difference between the curves cannot therefore be attributed solely to accounting or interpreted as evidence that one historical study is more competitive. Neither calculation includes a harmonized Earth-supply alternative.
+
+\section{Discussion}
+\subsection{Implications for model intercomparison}
+The reconstruction yields one independently changeable historical financial calculation under the stated requirements. It also recovers useful quantities from every other historical case, but none supplies a second compatible principal output for the intended controlled comparison. This is a narrower result than a finding that published models disagree after harmonization. No such experiment has yet been supported by the examined evidence.
+
+The unresolved cases require different evidence. Sowers needs annual expenditure allocation, Charania needs the financing schedule, Jones needs a mission event ledger, and Blair needs the transformation from accounts to project cash flow. A common reporting template could expose these differences before attempting harmonization.
+
+The conditional Sowers interval quantifies one of these limitations. At the stated price, obtaining the annual expenditure schedule could resolve the sign of NPV within the specified cost model. By contrast, improving the precision of a static subtotal would not resolve that sign if the schedule remained unknown. This observation identifies decision-relevant information for this particular scenario. It does not rank timing above productivity, reliability or launch cost across the lunar-propellant literature.
+
+The equation investigations require a different qualification. The H.W. Jones table match depends on an inferred arithmetic branch, whereas the Metzger match concerns an intermediate relationship. In each case, the reproduced output and implemented interpretation must be specified before extending the claim to a complete economic result.
+
+\subsection{Scope of the conclusions}
+The search is not exhaustive, and additional public calculations could change the eligible set. The Kornuta reconstruction follows the report's constant-flow description rather than a recovered original workbook; its grade applies to that description at the stated precision.
+
+The timing analysis assigns no probabilities to expenditure dates and does not represent empirical uncertainty in demand, productivity, hardware life or transport. Its extrema are sharp only for the independent-allocation class. Procurement constraints may exclude endpoint combinations, and additional cash flows would change the class. The ROXY result also depends on transport timing and unresolved interest payments.
+
+Chart curves were not digitized to infer annual amounts, and unresolved currency years were not assigned assumed dates. Author clarification or documented digitization may therefore permit further reconstruction. The present grades describe the recoverable calculation, not the quality of the underlying engineering design.
+
+Reproduction also leaves forecast validity untested. Commercial revenue, infrastructure performance and asset life remain uncertain even when equations are fully recoverable. No unconditional conclusion about lunar-propellant competitiveness follows from this audit.
+
+\subsection{Information required for a common benchmark}
+A useful next release from the unresolved cases would contain a machine-readable annual cash-flow table, source currency year, real or nominal convention, valuation date and financing treatment. Campaign studies additionally require the development, deployment, launch and replacement event ledger. Cost and product boundaries must identify the responsible actor and the point of delivery. Intermediate mass, power, transport and cost outputs would allow a reconstructed implementation to be checked beyond its final scalar result.
+
+Once a second independent compatible model is available, a pairwise test can be made; the original search target remains at least three. Native historical calculations should first be retained, followed by common exogenous assumptions, defensible architecture substitutions and accounting changes. The comparison should report effects in that order and test interactions where the structures permit. It should not infer the contribution of each difference from the spread of unlike published prices or returns.
+
+\section{Conclusions}
+The commercial financial case in the 2018 Kornuta report can be reproduced from its public description: seven NPVs agree within 0.096\%, and seven IRRs match the reported rounded values. The remaining historical cases provide independently checkable equations, subtotals or statements, but not a second compatible principal economic calculation with changeable inputs. Related equation and timing investigations extend what can be computed without resolving those historical outputs.
+
+For the conditional surface-sales case, missing expenditure timing produces a Sowers NPV interval that crosses zero. The interval measures the consequences of specified timing uncertainty; it does not recover the historical schedule or establish a harmonized comparison with Kornuta. On the evidence examined, the question of convergence under common physical and economic assumptions remains unanswered. Annual schedules, campaign event records and explicit valuation and product boundaries are the immediate requirements for testing it.
+
+\section*{Data and code availability}
+The accompanying repository contains model inputs, independent implementations, published comparison targets, generated results and input/code hashes. The calculations are regenerated with \texttt{python analysis/run\_papers.py}; the numerical pipeline uses the Python standard library. Seventeen existing tests cover historical reconstructions, dimensional identities and interval bounds. Supplement S1 records the case-level comparisons and Supplement S2 the dated search record. Local source-document copies are not required to run the calculations.
+
+\begin{thebibliography}{12}
+\bibitem{kornuta2018} D. Kornuta et al., Commercial Lunar Propellant Architecture: A Collaborative Study of Lunar Propellant Production, LPI Contribution 2142, Lunar and Planetary Institute, 2018. \url{https://repository.hou.usra.edu/handle/20.500.11753/1245}.
+\bibitem{kornuta2019} D. Kornuta et al., Commercial lunar propellant architecture: a collaborative study of lunar propellant production, REACH 13 (2019) 100026. \url{https://doi.org/10.1016/j.reach.2019.100026}.
+\bibitem{jones2020} C.A. Jones, A.R. Pensado, M.A. Clark, M.L. Grande, M.L. Ivanco, E.L. Judd, J.J. Klovstad, D.M. Reeves, Cost breakeven analysis of lunar in-situ propellant production for human missions to the Moon and Mars, ASCEND 2020, AIAA 2020-4041. \url{https://doi.org/10.2514/6.2020-4041}.
+\bibitem{sowers2020} G.F. Sowers, Thermal Mining of Ices on Cold Solar System Bodies, NIAC Phase I Final Report, Colorado School of Mines, 2020. \url{https://space.mines.edu/wp-content/uploads/sites/134/2020/03/Thermal-Mining-NIAC-Phase-I-final-report.pdf}.
+\bibitem{sowers2021} G.F. Sowers, The business case for lunar ice mining, New Space 9 (2021) 77--94. \url{https://doi.org/10.1089/space.2020.0045}.
+\bibitem{charania2007} A.C. Charania, D. DePasquale, Economic analysis of a lunar in-situ resource utilization (ISRU) propellant services market, 58th International Astronautical Congress, 2007, IAC-07-A5.1.03. \url{https://www.sei.aero/archive/IAC-07-A5.1.03.pdf}.
+\bibitem{blair2002} B.R. Blair, J. Diaz, M.B. Duke, E. Lamassoure, R. Easter, M. Oderman, M. Vaucher, Space Resource Economic Analysis Toolkit: The Case for Commercial Lunar Ice Mining, Final report to the NASA Exploration Team, 20 December 2002. \url{https://nss.org/wp-content/uploads/2017/07/2002-Case-For-Commercial-Lunar-Ice-Mining.pdf}.
+\bibitem{jones2021} H.W. Jones, Should oxygen, hydrogen, and water on the Moon be provided by Earth supply, life support recycling, or regolith mining?, 50th International Conference on Environmental Systems, 2021, ICES-2021-147. \url{https://ntrs.nasa.gov/citations/20210019592}.
+\bibitem{metzger2023} P.T. Metzger, Economics of in-space industry and competitiveness of lunar-derived rocket propellant, Acta Astronautica 207 (2023) 425--444. \url{https://doi.org/10.1016/j.actaastro.2023.03.014}.
+\bibitem{birch2026} T.F. Birch, A. Seidel, J.E. Johnson, G. Poehle, U. Pal, Economic analysis of a ROXY pilot plant supporting early lunar mission architectures, Aerospace 13 (2026) 86. \url{https://doi.org/10.3390/aerospace13010086}.
+\bibitem{bennett2020} N.J. Bennett, A.G. Dempster, Geosynchronous transfer orbits as a market for impulse delivered by lunar sourced propellant, Planetary and Space Science 193 (2020) 104843. \url{https://doi.org/10.1016/j.pss.2020.104843}.
+\end{thebibliography}
+\end{document}

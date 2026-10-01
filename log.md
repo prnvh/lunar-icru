@@ -192,3 +192,19 @@
 - Blair Table 4.4 was read from word positions. The balance sheet closes. Net-income present value at 10 percent matches the printed project net present values. The printed project rates of return do not match that row. The workbook remains absent.
 - Jones 2020 ratio stays null. The Table 7 mass split moves development cost only from about 553 to 614 million FY2019 dollars.
 - ROXY development timing gives a sharp internal-rate interval. The printed 19.9 percent oxygen rate is inside it only for transport in the delay year. The undiscounted ingredients do not equal the table's 2.4 billion euro total. No coefficient was fitted.
+
+## 2026-09-29 — Final manuscript
+
+- Wrote `research/final-manuscript.md` from the checked reconstructions and bounds. The short audit in `research/manuscript.md` stays as the working record. Unresolved headlines stay unresolved, and the common benchmark stays empty.
+
+## 2026-09-29 — Search appendix, grade thresholds, and audit tables
+
+- **Decision:** State numerical grade rules and attach the search record to the paper. **Rationale:** the empty-benchmark claim depends on which candidates were screened, and “close” needs a threshold a reviewer can apply.
+- Exact means the reconstruction rounds to the printed digits. Close means within 1 percent, or within half a unit of the last displayed digit, from a rounding or timing convention fixed beforehand. An interval that contains a headline is not a reproduction of that headline.
+- The manuscript now works Kornuta’s seven scenarios in full, separates Harry Jones’s literal equation from the inferred branch in one table, and lists each screened candidate with an exclusion reason. Supplement S1 holds the other input and output audits. Hit counts were not retained, and that limit is stated.
+- The submitted draft was adopted as `research/final-manuscript.md`. The search appendix, the 1 percent close rule, the seven-scenario Kornuta table, and the literal/inferred/printed Jones table were written into that draft. Supplement S1 remains the case-by-case audit.
+- The conclusion now says the audited public record, not the current literature, does not support a controlled convergence test. References are numbered in Acta Astronautica order with complete author lists. Appendix exclusions are stated as failures of public reconstruction. Supplement S1 now gives each case a source, an input list, a comparison set, and a grade.
+
+## 2026-09-29 — Compiled manuscript
+
+- Wrote `research/final-manuscript.tex` from the adopted draft plus Supplement S1 and compiled `research/final-manuscript.pdf` (22 pages). The markdown manuscript is unchanged as the source text.
